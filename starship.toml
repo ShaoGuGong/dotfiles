@@ -86,15 +86,15 @@ text_light = "#26272A"
 
 [os]
 style = 'os'
-format = '[]($style)[ $symbol ](bg:$style fg:text_color)[ ]($style)'
+format = '[]($style)[ $symbol](bg:$style fg:text_color)[]($style)'
 disabled = false
 
 [username]
 style_user = 'user'
 style_root = 'admin'
 format = '[]($style)[ $user ](bg:$style fg:text_color)[]($style)'
-disabled = false
-show_always = true
+disabled = true
+show_always = false
 
 [character]
 success_symbol = "[INSERT─](fg:#78ccc5)"
