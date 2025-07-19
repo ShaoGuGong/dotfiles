@@ -18,4 +18,4 @@ rsync -avhP $HOME/.wezterm.lua "$dotfile_path/"
 paru -Qeq >"$dotfile_path/my_arch_package"
 git add .
 git commit -m "$(date +%m-%d-%Y)"
-git push
+git push origin main
