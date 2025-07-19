@@ -1,16 +1,16 @@
 format = """\
 [╭╴](fg:arrow)\
 $os\
+$time\
 $username\
 $directory\
-$time\
 (\
     $git_branch\
     $git_status\
 )\
 (\
     $python\
-    $conda\
+    $rust\
     $nodejs\
 )\
 $cmd_duration

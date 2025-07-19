@@ -5,7 +5,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 #end
 if status is-interactive
-    set -gx PATH $HOME/Documents/dotfile/ $PATH
+    set -gx PATH $HOME/Documents/dotfiles/ $PATH
     set -x EDITOR nvim
     #                                     ╭─────╮
     #                                     │ fzf │

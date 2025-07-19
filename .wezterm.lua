@@ -61,22 +61,29 @@ config.keys = {
 	{
 		key = "=",
 		mods = "CTRL|ALT",
-		action = wezterm.action_callback(function(window, pane)
+		action = wezterm.action_callback(function(window)
 			set_opacity(window, opacity + 0.1)
 		end),
 	},
 	{
 		key = "-",
 		mods = "CTRL|ALT",
-		action = wezterm.action_callback(function(window, pane)
+		action = wezterm.action_callback(function(window)
 			set_opacity(window, opacity - 0.1)
 		end),
 	},
 	{
 		key = "0",
 		mods = "CTRL|ALT",
-		action = wezterm.action_callback(function(window, pane)
+		action = wezterm.action_callback(function(window)
 			set_opacity(window, 1.0)
+		end),
+	},
+	{
+		key = "5",
+		mods = "CTRL|ALT",
+		action = wezterm.action_callback(function(window)
+			set_opacity(window, 0.5)
 		end),
 	},
 	{

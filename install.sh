@@ -1,26 +1,39 @@
 #! /bin/bash
 
-dotfile_path="$HOME/Documents/dotfiles"
-mkdir -p $dotfile_path
+if ! pacman -Q paru >/dev/null 2>&1; then
+  sudo pacman -S --needed base-devel
+  pushd /tmp >/dev/null
+  git clone https://aur.archlinux.org/paru.git
+  cd paru
+  makepkg -si
+  popd >/dev/null
+else
+  echo -e "\033[1;92mparu is already installed.\033[0m"
+fi
+
+dotfile_path="$HOME/Documents/dotfile"
+
+xargs -a "$dotfile_path/my_arch_package" paru -S --needed
 
 # ──────────────────────────────── Neovim ────────────────────────────────
-rsync -avhP $HOME/.config/nvim/ "$dotfile_path/nvim/" --exclude ".git" --exclude ".gitignore"
+neovim_path="$HOME/.config/nvim/"
+mkdir -p "$neovim_path"
+rsync -avhP "$dotfile_path/nvim/" "$neovim_path" --exclude ".git" --exclude ".gitignore"
 # ───────────────────────────────── Yazi ─────────────────────────────────
-rsync -avhP $HOME/.config/yazi/ "$dotfile_path/yazi/" --exclude ".git" --exclude ".gitignore"
+yazi_path="$HOME/.config/yazi/"
+mkdir -p "$yazi_path"
+rsync -avhP "$dotfile_path/yazi/" "$yazi_path" --exclude ".git" --exclude ".gitignore"
 # ───────────────────────────────── fish ─────────────────────────────────
-rsync -avhP $HOME/.config/fish/ "$dotfile_path/fish/" --exclude ".git" --exclude ".gitignore"
+fish_path="$HOME/.config/fish/"
+mkdir -p "$fish_path"
+rsync -avhP "$dotfile_path/fish/" "$fish_path" --exclude ".git" --exclude ".gitignore"
 # ──────────────────────────────── vivify ────────────────────────────────
-rsync -avhP $HOME/.config/vivify/ "$dotfile_path/vivify/" --exclude ".git" --exclude ".gitignore"
+vivify_path="$HOME/.config/vivify/"
+mkdir -p "$vivify_path"
+rsync -avhP "$dotfile_path/vivify/" "$vivify_path" --exclude ".git" --exclude ".gitignore"
 # ─────────────────────────────── starship ───────────────────────────────
-rsync -avhP $HOME/.config/starship.toml "$dotfile_path/" --exclude ".git" --exclude ".gitignore"
+starship_path="$HOME/.config/"
+mkdir -p "$starship_path"
+rsync -avhP "$dotfile_path/starship.toml" "$starship_path" --exclude ".git" --exclude ".gitignore"
 # ─────────────────────────────── wezterm ─────────────────────────────
-rsync -avhP $HOME/.wezterm.lua "$dotfile_path/"
-
-paru -Qeq >"$dotfile_path/my_arch_package"
-
-pushd $dotfile_path >/dev/null
-git add .
-git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"
-git push origin main
-
-popd >/dev/null
+rsync -avhP "$dotfile_path/.wezterm.lua" "$HOME/"
