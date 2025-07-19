@@ -4,8 +4,9 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #function fish_greeting
 #    # smth smth
 #end
-set -x EDITOR nvim
 if status is-interactive
+    set -gx PATH $HOME/Documents/dotfile/ $PATH
+    set -x EDITOR nvim
     #                                     ╭─────╮
     #                                     │ fzf │
     #                                     ╰─────╯
@@ -33,7 +34,6 @@ if status is-interactive
     alias lg="lazygit"
     alias cd="z"
     alias update="paru -Syu"
-
 
     zoxide init fish | source
     starship init fish | source
