@@ -100,12 +100,12 @@ config.keys = {
 	-- │                      Tab ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "LeftArrow",
+		key = "L",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
-		key = "RightArrow",
+		key = "H",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
@@ -123,22 +123,22 @@ config.keys = {
 	-- │                     Pane ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "LeftArrow",
+		key = "h",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
-		key = "RightArrow",
+		key = "l",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
-		key = "UpArrow",
+		key = "k",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
-		key = "DownArrow",
+		key = "j",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},

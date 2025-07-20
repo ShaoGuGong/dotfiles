@@ -24,7 +24,7 @@ wk.add({
     -- 再掛下面兩個功能
     { "<leader>tf", "<Cmd>ToggleTerm direction=float<CR>", desc = "Open Floating Terminal" },
     { "<leader>tt", "<Cmd>ToggleTermToggleAll<CR>", desc = "Toggle All Terminals" },
-    { "<leader>C", group = "Copilot" },
-    { "<leader>Ca", "<cmd>Copilot enable<cr>", desc = "Enable Copilot" },
-    { "<leader>Cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot" },
+    { "<leader>C", group = "Copilot", icon = "" },
+    { "<leader>Ca", "<cmd>Copilot enable<cr>", desc = "Enable Copilot", icon = "" },
+    { "<leader>Cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot", icon = "" },
 })
