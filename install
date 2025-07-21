@@ -27,13 +27,11 @@ rsync -avhP "$dotfile_path/yazi/" "$yazi_path" --exclude ".git" --exclude ".giti
 fish_path="$HOME/.config/fish/"
 mkdir -p "$fish_path"
 rsync -avhP "$dotfile_path/fish/" "$fish_path" --exclude ".git" --exclude ".gitignore"
-# ──────────────────────────────── vivify ────────────────────────────────
-vivify_path="$HOME/.config/vivify/"
-mkdir -p "$vivify_path"
-rsync -avhP "$dotfile_path/vivify/" "$vivify_path" --exclude ".git" --exclude ".gitignore"
+# ─────────────────────────────── wezterm ─────────────────────────────
+wezterm_path="$HOME/.config/wezterm/"
+mkdir -p "$wezterm_path"
+rsync -avhP "$dotfile_path/wezterm/" "$wezterm_path"
 # ─────────────────────────────── starship ───────────────────────────────
 starship_path="$HOME/.config/"
 mkdir -p "$starship_path"
 rsync -avhP "$dotfile_path/starship.toml" "$starship_path" --exclude ".git" --exclude ".gitignore"
-# ─────────────────────────────── wezterm ─────────────────────────────
-rsync -avhP "$dotfile_path/.wezterm.lua" "$HOME/"
