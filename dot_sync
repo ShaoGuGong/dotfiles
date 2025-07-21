@@ -4,18 +4,20 @@ dotfile_path="$HOME/Documents/dotfiles"
 mkdir -p $dotfile_path
 
 # ──────────────────────────────── Neovim ────────────────────────────────
-rsync -avhP $HOME/.config/nvim/ "$dotfile_path/nvim/" --exclude ".git" --exclude ".gitignore"
+rsync -avhP $HOME/.config/nvim/ "$dotfile_path/nvim/"
 # ───────────────────────────────── Yazi ─────────────────────────────────
-rsync -avhP $HOME/.config/yazi/ "$dotfile_path/yazi/" --exclude ".git" --exclude ".gitignore"
-# ───────────────────────────────── fish ─────────────────────────────────
-rsync -avhP $HOME/.config/fish/ "$dotfile_path/fish/" --exclude ".git" --exclude ".gitignore"
+rsync -avhP $HOME/.config/yazi/ "$dotfile_path/yazi/"
+#───────────────────────────────── fish ─────────────────────────────────
+rsync -avhP $HOME/.config/fish/ "$dotfile_path/fish/"
 # ─────────────────────────────── wezterm ─────────────────────────────
 rsync -avhP $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
+# ──────────────────────────────── vivify ────────────────────────────────
+rsync -avhP $HOME/.config/vivify/ "$dotfile_path/vivify/"
 # ─────────────────────────────── starship ───────────────────────────────
-rsync -avhP $HOME/.config/starship.toml "$dotfile_path/" --exclude ".git" --exclude ".gitignore"
+rsync -avhP $HOME/.config/starship.toml "$dotfile_path/"
 
-paru -Qeq >"$dotfile_path/my_arch_package"
 
+paru -Qeq | tee "$dotfile_path/my_arch_package"
 pushd $dotfile_path >/dev/null
 git add .
 git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"

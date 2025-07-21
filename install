@@ -31,6 +31,10 @@ rsync -avhP "$dotfile_path/fish/" "$fish_path" --exclude ".git" --exclude ".giti
 wezterm_path="$HOME/.config/wezterm/"
 mkdir -p "$wezterm_path"
 rsync -avhP "$dotfile_path/wezterm/" "$wezterm_path"
+# ─────────────────────────────── vivify ─────────────────────────────
+vivify_path="$HOME/.config/vivify/"
+mkdir -p "$vivify_path"
+rsync -avhP "$dotfile_path/vivify/" "$vivify_path"
 # ─────────────────────────────── starship ───────────────────────────────
 starship_path="$HOME/.config/"
 mkdir -p "$starship_path"
