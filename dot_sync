@@ -11,10 +11,10 @@ rsync -avhP $HOME/.config/yazi/ "$dotfile_path/yazi/" --exclude ".git" --exclude
 rsync -avhP $HOME/.config/fish/ "$dotfile_path/fish/" --exclude ".git" --exclude ".gitignore"
 # ──────────────────────────────── vivify ────────────────────────────────
 rsync -avhP $HOME/.config/vivify/ "$dotfile_path/vivify/" --exclude ".git" --exclude ".gitignore"
+# ─────────────────────────────── wezterm ─────────────────────────────
+rsync -avhP $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
 # ─────────────────────────────── starship ───────────────────────────────
 rsync -avhP $HOME/.config/starship.toml "$dotfile_path/" --exclude ".git" --exclude ".gitignore"
-# ─────────────────────────────── wezterm ─────────────────────────────
-rsync -avhP $HOME/.wezterm.lua "$dotfile_path/"
 
 paru -Qeq >"$dotfile_path/my_arch_package"
 

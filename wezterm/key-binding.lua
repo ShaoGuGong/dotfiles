@@ -1,8 +1,5 @@
--- Pull in the wezterm API
 local wezterm = require("wezterm")
-
--- This will hold the configuration.
-local config = wezterm.config_builder()
+local keys = {}
 
 -- This is where you actually apply your config choices.
 local opacity = 1.0
@@ -13,23 +10,8 @@ local function set_opacity(window, value)
 	})
 end
 
-config.show_tab_index_in_tab_bar = false
-
--- For example, changing the initial geometry for new windows:
-config.initial_cols = 120
-config.initial_rows = 30
-
--- or, changing the font size and color scheme.
-config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font Mono", "Maple Mono NF CN" })
-config.font_size = 14.0
-
--- Set Appearance
-config.color_scheme = "Kanagawa (Gogh)"
-config.hide_tab_bar_if_only_one_tab = true
-config.window_background_opacity = opacity
-
 -- Add key bindings
-config.keys = {
+keys = {
 	{
 		key = "UpArrow",
 		mods = "CTRL|SHIFT",
@@ -48,7 +30,7 @@ config.keys = {
 		mods = "CTRL|SHIFT|ALT",
 		action = wezterm.action.PromptInputLine({
 			description = "Rename Tab",
-			action = wezterm.action_callback(function(window, pane, line)
+			action = wezterm.action_callback(function(window, _, line)
 				if line then
 					window:active_tab():set_title(line)
 				end
@@ -100,12 +82,12 @@ config.keys = {
 	-- │                      Tab ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "L",
+		key = "H",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
-		key = "H",
+		key = "L",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
@@ -144,5 +126,4 @@ config.keys = {
 	},
 }
 
--- Finally, return the configuration to wezterm:
-return config
+return keys

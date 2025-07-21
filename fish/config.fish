@@ -6,6 +6,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #end
 if status is-interactive
     set -gx PATH $HOME/Documents/dotfiles/ $PATH
+    set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
     set -x EDITOR nvim
     #                                     ╭─────╮
     #                                     │ fzf │
