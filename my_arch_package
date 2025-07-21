@@ -234,6 +234,7 @@ texlive-langother
 texlive-latexextra
 texlive-pictures
 texlive-xetex
+tree-sitter-cli
 ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
@@ -251,6 +252,7 @@ vi
 vim
 vivaldi
 vivaldi-ffmpeg-codecs
+vivify
 vulkan-radeon
 wezterm
 wget

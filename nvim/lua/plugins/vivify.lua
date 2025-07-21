@@ -5,7 +5,7 @@ return {
             "<leader>cp",
             ft = "markdown",
             "<cmd>Vivify<cr>",
-            desc = "Markdown Preview use Vivify",
+            desc = "Markdown Preview via Vivify",
         },
     },
 }

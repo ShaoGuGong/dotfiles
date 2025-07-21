@@ -28,3 +28,6 @@ for _, event in ipairs(events) do
         command = "silent! !fcitx5-remote -c",
     })
 end
+
+-- 移除自動開啟Spell Check
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
