@@ -11,22 +11,22 @@ else
   echo -e "\033[1;92mparu is already installed.\033[0m"
 fi
 
-dotfile_path="$HOME/Documents/dotfile"
+dotfile_path="$HOME/Documents/dotfiles"
 
 xargs -a "$dotfile_path/my_arch_package" paru -S --needed
 
 # ──────────────────────────────── Neovim ────────────────────────────────
 neovim_path="$HOME/.config/nvim/"
 mkdir -p "$neovim_path"
-rsync -avhP "$dotfile_path/nvim/" "$neovim_path" --exclude ".git" --exclude ".gitignore"
+rsync -avhP "$dotfile_path/nvim/" "$neovim_path"
 # ───────────────────────────────── Yazi ─────────────────────────────────
 yazi_path="$HOME/.config/yazi/"
 mkdir -p "$yazi_path"
-rsync -avhP "$dotfile_path/yazi/" "$yazi_path" --exclude ".git" --exclude ".gitignore"
+rsync -avhP "$dotfile_path/yazi/" "$yazi_path"
 # ───────────────────────────────── fish ─────────────────────────────────
 fish_path="$HOME/.config/fish/"
 mkdir -p "$fish_path"
-rsync -avhP "$dotfile_path/fish/" "$fish_path" --exclude ".git" --exclude ".gitignore"
+rsync -avhP "$dotfile_path/fish/" "$fish_path"
 # ─────────────────────────────── wezterm ─────────────────────────────
 wezterm_path="$HOME/.config/wezterm/"
 mkdir -p "$wezterm_path"
@@ -38,4 +38,4 @@ rsync -avhP "$dotfile_path/vivify/" "$vivify_path"
 # ─────────────────────────────── starship ───────────────────────────────
 starship_path="$HOME/.config/"
 mkdir -p "$starship_path"
-rsync -avhP "$dotfile_path/starship.toml" "$starship_path" --exclude ".git" --exclude ".gitignore"
+rsync -avhP "$dotfile_path/starship.toml" "$starship_path"

@@ -16,7 +16,6 @@ rsync -avhP $HOME/.config/vivify/ "$dotfile_path/vivify/"
 # ─────────────────────────────── starship ───────────────────────────────
 rsync -avhP $HOME/.config/starship.toml "$dotfile_path/"
 
-
 paru -Qeq | tee "$dotfile_path/my_arch_package"
 pushd $dotfile_path >/dev/null
 git add .
