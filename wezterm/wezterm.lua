@@ -16,7 +16,7 @@ config.initial_cols = 120
 config.initial_rows = 30
 
 -- or, changing the font size and color scheme.
-config.font = wezterm.font_with_fallback({ "FiraCode Nerd Font Mono", "Maple Mono NF CN" })
+config.font = wezterm.font_with_fallback({ "Monocraft Nerd Font", "FiraCode Nerd Font Mono", "Maple Mono NF CN" })
 config.font_size = 14.0
 
 -- Set Appearance
