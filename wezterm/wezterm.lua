@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local keys = require("key-binding")
+local fonts = require("fonts")
 
 -- This is where you actually apply your config choices.
 
@@ -16,7 +17,7 @@ config.initial_cols = 120
 config.initial_rows = 30
 
 -- or, changing the font size and color scheme.
-config.font = wezterm.font_with_fallback({ "Monocraft Nerd Font", "FiraCode Nerd Font Mono", "Maple Mono NF CN" })
+config.font = fonts
 config.font_size = 14.0
 
 -- Set Appearance

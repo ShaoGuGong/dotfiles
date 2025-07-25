@@ -5,7 +5,6 @@ mkdir -p $dotfile_path
 
 # ──────────────────────────────── Fonts ──────────────────────────────
 rsync -avhP $HOME/.fonts/ "$dotfile_path/.fonts/"
-
 # ──────────────────────────────── Neovim ────────────────────────────────
 rsync -avhP $HOME/.config/nvim/ "$dotfile_path/nvim/"
 # ───────────────────────────────── Yazi ─────────────────────────────────
