@@ -18,10 +18,14 @@ rsync -avhP --delete $HOME/.config/vivify/ "$dotfile_path/vivify/"
 # ─────────────────────────────── starship ───────────────────────────────
 rsync -avhP --delete $HOME/.config/starship.toml "$dotfile_path/"
 
+echo -e "\033[1;91mArch Packages install list\033[0m"
 paru -Qeq | tee "$dotfile_path/my_arch_package"
+
+echo -e "\033[1;92mGit Messages"
 pushd $dotfile_path >/dev/null
 git add .
 git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"
 git push origin main
+echo -e "\033[0m"
 
 popd >/dev/null
