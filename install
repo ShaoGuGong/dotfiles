@@ -15,6 +15,10 @@ dotfile_path="$HOME/Documents/dotfiles"
 
 xargs -a "$dotfile_path/my_arch_package" paru -S --needed
 
+# ──────────────────────────────── Fonts ──────────────────────────────
+fonts_path="$HOME/.fonts/"
+mkdir -p "$fonts_path"
+rsync -avhP "$dotfile_path/.fonts/" "$fonts_path"
 # ──────────────────────────────── Neovim ────────────────────────────────
 neovim_path="$HOME/.config/nvim/"
 mkdir -p "$neovim_path"
