@@ -4,19 +4,19 @@ dotfile_path="$HOME/Documents/dotfiles"
 mkdir -p $dotfile_path
 
 # ──────────────────────────────── Fonts ──────────────────────────────
-rsync -avhP $HOME/.fonts/ "$dotfile_path/.fonts/"
+rsync -avhP --delete $HOME/.fonts/ "$dotfile_path/.fonts/"
 # ──────────────────────────────── Neovim ────────────────────────────────
-rsync -avhP $HOME/.config/nvim/ "$dotfile_path/nvim/"
+rsync -avhP --delete $HOME/.config/nvim/ "$dotfile_path/nvim/"
 # ───────────────────────────────── Yazi ─────────────────────────────────
-rsync -avhP $HOME/.config/yazi/ "$dotfile_path/yazi/"
+rsync -avhP --delete $HOME/.config/yazi/ "$dotfile_path/yazi/"
 #───────────────────────────────── fish ─────────────────────────────────
-rsync -avhP $HOME/.config/fish/ "$dotfile_path/fish/"
+rsync -avhP --delete $HOME/.config/fish/ "$dotfile_path/fish/"
 # ─────────────────────────────── wezterm ─────────────────────────────
-rsync -avhP $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
+rsync -avhP --delete $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
 # ──────────────────────────────── vivify ────────────────────────────────
-rsync -avhP $HOME/.config/vivify/ "$dotfile_path/vivify/"
+rsync -avhP --delete $HOME/.config/vivify/ "$dotfile_path/vivify/"
 # ─────────────────────────────── starship ───────────────────────────────
-rsync -avhP $HOME/.config/starship.toml "$dotfile_path/"
+rsync -avhP --delete $HOME/.config/starship.toml "$dotfile_path/"
 
 paru -Qeq | tee "$dotfile_path/my_arch_package"
 pushd $dotfile_path >/dev/null
