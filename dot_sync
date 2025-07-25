@@ -3,6 +3,7 @@
 dotfile_path="$HOME/Documents/dotfiles"
 mkdir -p $dotfile_path
 
+echo -e "\033[1;93m Syncing all config to dotfiles: \n"
 # ──────────────────────────────── Fonts ──────────────────────────────
 rsync -avhP --delete $HOME/.fonts/ "$dotfile_path/.fonts/"
 # ──────────────────────────────── Neovim ────────────────────────────────
@@ -18,10 +19,10 @@ rsync -avhP --delete $HOME/.config/vivify/ "$dotfile_path/vivify/"
 # ─────────────────────────────── starship ───────────────────────────────
 rsync -avhP --delete $HOME/.config/starship.toml "$dotfile_path/"
 
-echo -e "\033[1;94mArch Packages install list:\n"
+echo -e "\n\033[1;94mArch Packages install list:\n"
 paru -Qeq | tee "$dotfile_path/my_arch_package"
 
-echo -e "\033[1;92mGit Messages:\n"
+echo -e "\n\033[1;92mGit Messages:\n"
 pushd $dotfile_path >/dev/null
 git add .
 git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"
