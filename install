@@ -18,32 +18,32 @@ xargs -a "$dotfile_path/my_arch_package" paru -S --needed
 # ──────────────────────────────── Fonts ──────────────────────────────
 fonts_path="$HOME/.fonts/"
 mkdir -p "$fonts_path"
-rsync -avhP "$dotfile_path/.fonts/" "$fonts_path"
+cp -rv "$dotfile_path/.fonts/." "$fonts_path"
 # ──────────────────────────────── Neovim ────────────────────────────────
 neovim_path="$HOME/.config/nvim/"
 mkdir -p "$neovim_path"
-rsync -avhP "$dotfile_path/nvim/" "$neovim_path"
+cp -rv "$dotfile_path/nvim/." "$neovim_path"
 # ───────────────────────────────── Yazi ─────────────────────────────────
 yazi_path="$HOME/.config/yazi/"
 mkdir -p "$yazi_path"
-rsync -avhP "$dotfile_path/yazi/" "$yazi_path"
+cp -rv "$dotfile_path/yazi/." "$yazi_path"
 # ───────────────────────────────── fish ─────────────────────────────────
 fish_path="$HOME/.config/fish/"
 mkdir -p "$fish_path"
-rsync -avhP "$dotfile_path/fish/" "$fish_path"
+cp -rv "$dotfile_path/fish/." "$fish_path"
 # ────────────────────────────── fastfetch ────────────────────────────
 fastfetch_path="$HOME/.config/fastfetch/"
 mkdir -p "$fastfetch_path"
-rsync -avhP "$dotfile_path/fastfetch/" "$fastfetch_path"
+cp -rv "$dotfile_path/fastfetch/." "$fastfetch_path"
 # ─────────────────────────────── wezterm ─────────────────────────────
 wezterm_path="$HOME/.config/wezterm/"
 mkdir -p "$wezterm_path"
-rsync -avhP "$dotfile_path/wezterm/" "$wezterm_path"
+cp -rv "$dotfile_path/wezterm/." "$wezterm_path"
 # ─────────────────────────────── vivify ─────────────────────────────
 vivify_path="$HOME/.config/vivify/"
 mkdir -p "$vivify_path"
-rsync -avhP "$dotfile_path/vivify/" "$vivify_path"
+cp -rv "$dotfile_path/vivify/." "$vivify_path"
 # ─────────────────────────────── starship ───────────────────────────────
 starship_path="$HOME/.config/"
 mkdir -p "$starship_path"
-rsync -avhP "$dotfile_path/starship.toml" "$starship_path"
+cp -fv "$dotfile_path/starship.toml" "$starship_path"

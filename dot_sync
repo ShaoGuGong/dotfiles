@@ -26,6 +26,7 @@ paru -Qeq | tee "$dotfile_path/my_arch_package"
 
 echo -e "\n\033[1;92mGit Messages:\n"
 pushd $dotfile_path >/dev/null
+cd ..
 git add .
 git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"
 git push origin main
