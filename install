@@ -11,7 +11,7 @@ else
   echo -e "\033[1;92mparu is already installed.\033[0m"
 fi
 
-dotfile_path="$HOME/Documents/dotfiles"
+dotfile_path="$HOME/Documents/dotfiles/.config"
 
 xargs -a "$dotfile_path/my_arch_package" paru -S --needed
 
@@ -31,6 +31,10 @@ rsync -avhP "$dotfile_path/yazi/" "$yazi_path"
 fish_path="$HOME/.config/fish/"
 mkdir -p "$fish_path"
 rsync -avhP "$dotfile_path/fish/" "$fish_path"
+# ────────────────────────────── fastfetch ────────────────────────────
+fastfetch_path="$HOME/.config/fastfetch/"
+mkdir -p "$fastfetch_path"
+rsync -avhP "$dotfile_path/fastfetch/" "$fastfetch_path"
 # ─────────────────────────────── wezterm ─────────────────────────────
 wezterm_path="$HOME/.config/wezterm/"
 mkdir -p "$wezterm_path"
