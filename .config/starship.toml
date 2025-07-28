@@ -14,7 +14,7 @@ $directory\
     $nodejs\
 )\
 $cmd_duration
-[╰─](fg:arrow)$character\
+[╰](fg:arrow)$character\
 """
 # Add the modules you need
 
@@ -97,10 +97,9 @@ disabled = true
 show_always = false
 
 [character]
-success_symbol = "[INSERT─](fg:#78ccc5)"
-error_symbol = "[INSERT─](fg:red)"
-vimcmd_symbol = "[NORMAL─](fg:#245361)"
-vimcmd_visual_symbol = '[VISUAL─](fg:#9745be)'
+success_symbol = "[─](fg:$text_color)"
+error_symbol = "[─](fg:red)"
+vimcmd_symbol = "[─](fg:$text_color)"
 
 [directory]
 format = " [](fg:directory)[  $path ]($style)[$read_only]($read_only_style)[](fg:directory)"

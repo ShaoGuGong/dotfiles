@@ -1,0 +1,91 @@
+ls
+ll
+ls -all
+la
+ls
+man ls
+ls -a
+fastfetch
+yz
+cd ..
+ll
+ls
+cd nushell/
+ll
+ls
+nvim config.nu
+config
+config nu
+ls
+cd ../nushell/
+ll
+ls
+config nu
+yz
+config nu
+yz
+config nu
+yz
+config nu
+yz
+echo $SHELl
+echo SHELL
+echo $env.SHELL
+echo $env.HOME
+yz
+echo $env.WEZTERM_CONFIG_DIR
+config nu
+z
+zi
+yz
+zi
+yz
+nu
+paru -Qi | fzf
+config nu
+z nushell
+zi
+yz
+yz
+Leet
+yz
+Leet
+ls
+yz
+echo $env.config
+echo $env.ENV_CONVERSIONS
+echo $nu.config-path
+$nu.env-path
+$nu.data-dir
+$nu.home-path
+yz
+config nu
+yz
+nu
+yz
+activate_uv_venv
+yz
+ssh_server
+yz
+nu
+ls
+fzf
+eza
+eza -al --color=always --group-directories-first --icons
+eza -al --group-directories-first --icons --color=never<\n>| lines<\n>| skip 1<\n>| parse '{perm} {links} {user} {group} {size} {month} {day} {time} {name}'
+eza -al -json
+eza -al --json
+eza --json
+man eza
+eza --header
+eza --long
+eza --json
+ls
+eza
+ls
+yz
+chsh
+ls
+yz
+ls
+yz

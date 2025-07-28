@@ -11,6 +11,7 @@ local config = wezterm.config_builder()
 config.show_tab_index_in_tab_bar = false
 config.window_background_opacity = 1.0
 config.keys = keys
+config.default_prog = { "/usr/bin/nu" }
 
 -- For example, changing the initial geometry for new windows:
 config.initial_cols = 140

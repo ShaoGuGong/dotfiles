@@ -12,6 +12,8 @@ rsync -avhP --delete $HOME/.config/nvim/ "$dotfile_path/nvim/"
 rsync -avhP --delete $HOME/.config/yazi/ "$dotfile_path/yazi/"
 #───────────────────────────────── fish ─────────────────────────────────
 rsync -avhP --delete $HOME/.config/fish/ "$dotfile_path/fish/"
+# ─────────────────────────────── nushell ─────────────────────────────
+rsync -avhP --delete $HOME/.config/nushell/ "$dotfile_path/nushell/"
 # ────────────────────────────── fastfetch ────────────────────────────
 rsync -avhP --delete $HOME/.config/fastfetch/ "$dotfile_path/fastfetch/"
 # ─────────────────────────────── wezterm ─────────────────────────────

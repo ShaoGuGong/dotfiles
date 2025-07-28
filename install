@@ -31,6 +31,10 @@ cp -rv "$dotfile_path/yazi/." "$yazi_path"
 fish_path="$HOME/.config/fish/"
 mkdir -p "$fish_path"
 cp -rv "$dotfile_path/fish/." "$fish_path"
+# ─────────────────────────────── nushell ─────────────────────────────
+nushell_path="$HOME/.config/nushell/"
+mkdir -p "$nushell_path"
+cp -rv "$dotfile_path/nushell/." "$nushell_path"
 # ────────────────────────────── fastfetch ────────────────────────────
 fastfetch_path="$HOME/.config/fastfetch/"
 mkdir -p "$fastfetch_path"
