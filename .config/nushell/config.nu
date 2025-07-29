@@ -26,11 +26,12 @@ alias ptt = ssh "bbsu@ptt.cc"
 alias lg = lazygit
 alias cd = z
 alias update = paru -Syu
-alias ls = eza -al --color=always --group-directories-first --icons # preferred listing
-alias la = eza -a --color=always --group-directories-first --icons  # all files and dirs
-alias ll = eza -l --color=always --group-directories-first --icons  # long format
-alias lt = eza -aT --color=always --group-directories-first --icons # tree listing
-alias l. = eza -a | grep -e '^\.'                                     # show only dotfiles
+alias eza_ls = eza -al --color=always --group-directories-first --icons # preferred listing
+alias eza_la = eza -a --color=always --group-directories-first --icons  # all files and dirs
+alias eza_ll = eza -l --color=always --group-directories-first --icons  # long format
+alias eza_lt = eza -aT --color=always --group-directories-first --icons # tree listing
+alias eza_l. = eza -a | grep -e '^\.'                                     # show only dotfiles
+
 
 # ────────────────────────────── functions ────────────────────────────
 use ./scripts/yz.nu

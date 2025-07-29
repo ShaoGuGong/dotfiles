@@ -1,6 +1,5 @@
 format = """\
-[╭╴](fg:arrow)\
-$os\
+[ ](fg:arrow)$os\
 $time\
 $username\
 $directory\
@@ -14,7 +13,7 @@ $directory\
     $nodejs\
 )\
 $cmd_duration
-[╰](fg:arrow)$character\
+$character\
 """
 # Add the modules you need
 
@@ -97,9 +96,10 @@ disabled = true
 show_always = false
 
 [character]
-success_symbol = "[─](fg:$text_color)"
-error_symbol = "[─](fg:red)"
-vimcmd_symbol = "[─](fg:$text_color)"
+success_symbol = "[](fg:$text_color)"
+error_symbol = "[](fg:red)"
+vimcmd_symbol = "[](fg:$text_color)"
+vimcmd_visual_symbol = "[](fg:9745be)"
 
 [directory]
 format = " [](fg:directory)[  $path ]($style)[$read_only]($read_only_style)[](fg:directory)"

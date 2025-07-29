@@ -117,7 +117,7 @@ local keys = {
 			table.insert(fonts_name, table.remove(fonts_name, 1))
 			overrides.font = wezterm.font_with_fallback(fonts)
 			win:set_config_overrides(overrides)
-			win:toast_notification("Font Changed", "Current font: " .. fonts_name[1], nil, 3000)
+			win:toast_notification("Font Changed", "Current font:\n" .. fonts_name[1], nil, 1000)
 		end),
 	},
 	-- ╭─────────────────────────────────────────────────────────╮

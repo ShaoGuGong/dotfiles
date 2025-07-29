@@ -3,10 +3,12 @@
   "logo": {
     "type": "kitty",
     "source": "$(find \"$HOME/.config/fastfetch/assets/\" -name \"*.png\" | sort -R | head -1)",
-    "height": 10,
-    "position": "top",
+    "height": 15,
+    "position": "left",
     "padding": {
-      "left": 25
+      "right": 10,
+      "left": 5,
+      "top": 5
     }
   },
   "display": {

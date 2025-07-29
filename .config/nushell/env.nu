@@ -22,8 +22,8 @@ $env.config = {
 }
 
 $env.EDITOR = "nvim"
-$env.PATH = ($env.PATH | append "$env.HOME/Documents/dotfiles")
-$env.WEZTERM_CONFIG_DIR = "$env.HOME/.config/wezterm"
+$env.PATH = ($env.PATH | append ($env.HOME | path join "Documents/dotfiles"))
+$env.WEZTERM_CONFIG_DIR = $env.HOME | path join ".config/wezterm"
 
 $env.FZF_DEFAULT_OPTS = '
 --height 40%
@@ -36,8 +36,8 @@ $env.FZF_DEFAULT_OPTS = '
 --multi
 '
 
-$env.PROMPT_INDICATOR_VI_INSERT = " INSERT  "
-$env.PROMPT_INDICATOR_VI_NORMAL = " NORMAL  "
+$env.PROMPT_INDICATOR_VI_INSERT = "INSERT  "
+$env.PROMPT_INDICATOR_VI_NORMAL = "NORMAL  "
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")

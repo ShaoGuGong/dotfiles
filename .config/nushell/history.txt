@@ -89,3 +89,121 @@ ls
 yz
 ls
 yz
+dot_sync
+ll
+ls
+cd .config
+ll
+yz
+fastfetch
+activate_uv_venv
+cd
+ll
+ls
+yz
+yz
+echo $SHELL
+echo $env.SHELL
+fastfetch
+nvim
+yz
+fastfetch
+ls
+yz
+fastfetch
+update
+fastfetch
+yz
+fg
+job unfreeze
+fastfetch
+ls
+yz
+fastfetch
+yz
+z
+yz
+fastfetch
+yz
+fastfetch
+yz
+fastfetch
+yz
+fastfetch
+yz
+fastfetch
+yz
+jobs
+fg
+job unfreeze
+job list
+job unfreeze
+fastfetch
+yz
+ls
+ls -a
+eza
+yz
+job list
+help job
+fastfetch
+yz
+Leet
+fastfetch
+yz
+ls
+yz
+eza_ls
+ls
+ls -a
+yz
+ls
+ssh_server
+fastfetch
+yz
+^ls
+ls
+cd
+ll
+ls -a
+ls
+yz
+update
+fzf help
+man fzf
+fastfetch
+Leet
+nu help
+ls help
+help nu
+help ls
+ls -f
+ls
+help find
+cd .config
+ls | find --regex "nu"
+ls | find --regex "nushell"
+ls
+yz
+ls
+yz
+echo $nu.data-dir
+echo $nu.data-dir | cd
+ll
+ls
+cd $nu.data-dir
+ls
+cd vendor/
+ls
+cd autoload/
+ls
+help rm
+ls
+rm starship.nu
+yz
+dot_sync
+echo $env.PATH
+echo $env.HOME
+ls
+echo $env.WEZTERM_CONFIG_DIR
+yz
