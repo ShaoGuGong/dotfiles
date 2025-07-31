@@ -207,3 +207,91 @@ echo $env.HOME
 ls
 echo $env.WEZTERM_CONFIG_DIR
 yz
+dot_sync
+fastfetch
+paru -S flatpak
+reboot
+flatpak install flathub app.zen_browser.zen
+fastfetch
+paru -S bitwarden
+paru -Qi | fzf
+paru -Rns firefox
+paru -Rns firefox firefox-i18n-zh-tw
+update
+reboot
+fc-list | fzf
+paru -Si times-new-roman
+paru -Si ttf-ms-win11-auto
+paru -S ttf-ms-win11-auto
+fc-cache -fv
+fc-list | fzf
+paru -Qe | fzf
+fc-list | fzf
+paru -Qe | fzf
+paru -S adobe-source-han-serif-fonts
+paru -S adobe-source-han-serif-tw-fonts
+fc-list | fzf
+fish
+paru -Qe | fzf
+fish
+paru -Qe | fzf
+paru -Rns adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts
+paru -Qe | fzf
+yz
+ssh_server
+yz
+python
+yz
+fc-cache -fv
+fc-list
+fc-list | fzf
+wezterm
+wezterm --help
+wezterm ssh
+wezterm ssh ray_cluster@192.168.50.157
+wezterm ssh ray_cluster@192.168.50.157 >/dev/null
+ls
+yz
+ls
+yz
+ls
+yz
+wezterm -h
+wezterm cli -h
+wezterm cli list
+yz
+typst note.typ
+typst -h
+typst compile note.typ
+ls
+yz
+typst compile note.typ
+yz
+typst compile note.typ
+yz
+typst compile note.typ
+yz
+typst compile note.typ
+yz
+update
+man flatpak
+flatpak update
+Leet
+fastfetch
+yz
+fastfetch
+yz
+fastfetch
+yz
+man fastfetch
+help fastfetch
+help ls
+man ls
+help ls
+ls -a
+cd ..
+ls
+ls -a | where type == dir
+ls
+cd ..
+ls

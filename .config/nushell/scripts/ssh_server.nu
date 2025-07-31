@@ -13,5 +13,5 @@ export def main [] {
         print (ansi red_bold) + "No server selected" + (ansi reset)
         return
     }
-    ssh $server
+    wezterm ssh $server
 }
