@@ -1,6 +1,3 @@
-#                                    ╭──────╮
-#                                    │ yazi │
-#                                    ╰──────╯
 function yz
     set -l tmp (mktemp -t "yazi-cwd.XXXXXX")
     yazi $argv --cwd-file="$tmp"

@@ -164,7 +164,6 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntp
-nushell
 nvidia-prime
 nvidia-settings
 nvidia-utils
@@ -232,6 +231,7 @@ texlive-langother
 texlive-latexextra
 texlive-pictures
 texlive-xetex
+thunderbird
 tree-sitter-cli
 ttf-bitstream-vera
 ttf-dejavu

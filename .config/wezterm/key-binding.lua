@@ -1,12 +1,5 @@
 local wezterm = require("wezterm")
 local fonts = require("fonts")
-local fonts_name = {
-	"Victor Mono",
-	"FiraCode Nerd Font Mono",
-	"Monocraft Nerd Font",
-	"Maple Mono NF CN",
-	"JetBrains Mono",
-}
 
 -- This is where you actually apply your config choices.
 local opacity = 1.0
@@ -75,6 +68,9 @@ local keys = {
 			set_opacity(window, 0.5)
 		end),
 	},
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │                      Set Close Key                      │
+	-- ╰─────────────────────────────────────────────────────────╯
 	{
 		key = "w",
 		mods = "CTRL|SHIFT",
@@ -108,16 +104,18 @@ local keys = {
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.MoveTabRelative(1),
 	},
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │                        Set Fonts                        │
+	-- ╰─────────────────────────────────────────────────────────╯
 	{
 		key = "f",
 		mods = "CTRL|SHIFT|ALT",
 		action = wezterm.action_callback(function(win)
 			local overrides = win:get_config_overrides() or {}
 			table.insert(fonts, table.remove(fonts, 1))
-			table.insert(fonts_name, table.remove(fonts_name, 1))
 			overrides.font = wezterm.font_with_fallback(fonts)
 			win:set_config_overrides(overrides)
-			win:toast_notification("Font Changed", "Current font:\n" .. fonts_name[1], nil, 1000)
+			win:toast_notification("Font Changed", "Current font:\n" .. fonts[1].family, nil, 1000)
 		end),
 	},
 	-- ╭─────────────────────────────────────────────────────────╮

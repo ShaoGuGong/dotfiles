@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices.
 config.show_tab_index_in_tab_bar = false
 config.window_background_opacity = 1.0
-config.default_prog = { "/usr/bin/nu" }
+config.default_prog = { "/usr/bin/fish" }
 config.keys = keys
 
 -- For example, changing the initial geometry for new windows:
