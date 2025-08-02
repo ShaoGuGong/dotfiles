@@ -50,6 +50,7 @@ char-white
 chwd
 cpupower
 cryptsetup
+cups
 device-mapper
 dhclient
 diffutils
@@ -195,6 +196,7 @@ plymouth-kcm
 poppler-glib
 power-profiles-daemon
 powerdevil
+print-manager
 pv
 python
 python-defusedxml
@@ -220,6 +222,7 @@ steam
 sudo
 switcheroo-control
 sysfsutils
+system-config-printer
 texinfo
 texlive-basic
 texlive-binextra
