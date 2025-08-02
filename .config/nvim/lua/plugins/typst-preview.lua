@@ -7,7 +7,7 @@ return {
         {
             "<leader>cp",
             ft = "typst",
-            "<cmd>TypstPreview<cr>",
+            "<cmd>TypstPreviewStop<cr><cmd>TypstPreview<cr>",
             desc = "Typst Preview",
         },
     },
