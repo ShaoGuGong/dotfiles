@@ -5,12 +5,12 @@ function sys-update
     paru -Syu
 
     echo -e "\033[1;91mYou want to REBOOT NOW? \033[0m"
-    read -P "[Y/n]" response
+    read -P "[y/N]" response
     switch (string lower -- $response)
-        case "" y yes
+        case y yes
             echo -e "\033[1;93mRebooting system...\033[0m"
             sudo reboot
-        case "*" n no
+        case "*" "" n no
             echo -e "\033[1;93mDo Nothing...\033[0m"
     end
 end

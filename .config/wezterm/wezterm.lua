@@ -18,7 +18,7 @@ config.initial_rows = 30
 
 -- or, changing the font size and color scheme.
 config.font = wezterm.font_with_fallback(fonts)
-config.font_size = 14.0
+config.font_size = 12.0
 
 -- Set Appearance
 config.color_scheme = "Kanagawa (Gogh)"

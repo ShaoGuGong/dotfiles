@@ -11,4 +11,17 @@ return {
     dependencies = {
         "saghen/blink.cmp",
     },
+    opts = {
+        preview = {
+            icon_provider = "mini",
+        },
+        typst = {
+            heading = {
+                shift_width = 0,
+            },
+            list_items = {
+                shift_width = 1,
+            },
+        },
+    },
 }
