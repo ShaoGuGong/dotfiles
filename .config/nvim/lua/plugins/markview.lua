@@ -16,11 +16,19 @@ return {
             icon_provider = "mini",
         },
         typst = {
+            code_blocks = {
+                text_direction = "left",
+                style = "simple"
+            },
             heading = {
                 shift_width = 0,
             },
             list_items = {
+                enable = false,
                 shift_width = 1,
+                marker_plus = {
+                    text = "%d.",
+                },
             },
         },
     },
