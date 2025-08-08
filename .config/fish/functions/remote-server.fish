@@ -1,4 +1,4 @@
-function remote_server
+function remote-server
     set -l workdir $argv[1]
     set -l server (awk '/^Host / { print $2}' $HOME/.ssh/config | fzf)
     if test -z "$server"

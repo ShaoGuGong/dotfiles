@@ -1,4 +1,4 @@
-function ssh_server
+function ssh-server
     set -l server (awk '/^Host / { print $2}' $HOME/.ssh/config | fzf)
     if test -z "$server"
         echo -e "\033[1;91mNo server selected\033[0m"

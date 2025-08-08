@@ -1,4 +1,4 @@
-function umount_remote_server
+function umount-remote-server
     cd ~
     if mountpoint -q $HOME/Documents/workspace/remote_server/
         umount -l $HOME/Documents/workspace/remote_server/

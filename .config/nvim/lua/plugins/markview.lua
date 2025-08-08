@@ -16,6 +16,7 @@ return {
             icon_provider = "mini",
         },
         typst = {
+            enable = false,
             code_blocks = {
                 text_direction = "left",
                 style = "simple"

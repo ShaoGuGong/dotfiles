@@ -4,7 +4,7 @@ function sys-update
     echo -e "\033[1;92mUpdating system package...\033[0m"
     paru -Syu
 
-    echo -e "\033[1;91mYou want to REBOOT NOW? \033[0m"
+    echo -e "\033[1;91REBOOT NOW?\033[0m"
     read -P "[y/N]" response
     switch (string lower -- $response)
         case y yes
