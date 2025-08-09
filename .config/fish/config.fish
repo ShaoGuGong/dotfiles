@@ -5,7 +5,7 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 #end
 if status is-interactive
-    set -gx PATH $HOME/Documents/dotfiles/ $PATH
+    set -gx PATH $HOME/.dotfiles/ $PATH
     set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
     set -x EDITOR nvim
     #                                     ╭─────╮
@@ -34,7 +34,7 @@ if status is-interactive
     alias ptt="bbsu@ptt.cc"
     alias lg="lazygit"
     alias cd="z"
-    alias update="paru -Syu"
+    alias update="sys-update"
     alias reload_fish="source $HOME/.config/fish/config.fish"
 
     zoxide init fish | source

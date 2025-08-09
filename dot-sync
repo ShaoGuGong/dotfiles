@@ -1,6 +1,6 @@
 #! /bin/bash
 
-dotfile_path="$HOME/Documents/dotfiles/.config"
+dotfile_path="$HOME/.dotfiles/.config"
 mkdir -p $dotfile_path
 
 echo -e "\033[1;93mSyncing all config to dotfiles: \n"
