@@ -6,6 +6,7 @@ return {
                 style = "icon",
                 icon = " 🐾 ",
             },
+            always_show_bufferline = true,
         },
     },
 }
