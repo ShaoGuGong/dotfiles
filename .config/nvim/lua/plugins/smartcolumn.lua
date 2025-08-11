@@ -11,9 +11,13 @@ return {
             "lspinfo",
             "notice",
             "Trouble",
+            "leetcode.nvim",
+            "snacks_dashboard",
+            "typst",
+            "markdown",
         },
         custom_colorcolumn = {
-            typst = "160",
+            typst = "100",
         },
     },
 }
