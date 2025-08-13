@@ -31,7 +31,7 @@ if status is-interactive
     #                                  │ set alias │
     #                                  ╰───────────╯
     alias Leet="nvim leetcode.nvim"
-    alias ptt="bbsu@ptt.cc"
+    alias ptt="ssh bbsu@ptt.cc"
     alias lg="lazygit"
     alias cd="z"
     alias update="sys-update"

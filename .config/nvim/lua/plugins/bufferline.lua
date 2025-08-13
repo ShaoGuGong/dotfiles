@@ -4,7 +4,7 @@ return {
         options = {
             indicator = {
                 style = "icon",
-                icon = " 🐾 ",
+                icon = "🐾",
             },
             always_show_bufferline = true,
         },
