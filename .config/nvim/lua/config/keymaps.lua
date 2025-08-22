@@ -24,7 +24,42 @@ wk.add({
     -- 再掛下面兩個功能
     { "<leader>tf", "<Cmd>ToggleTerm direction=float<CR>", desc = "Open Floating Terminal" },
     { "<leader>tt", "<Cmd>ToggleTermToggleAll<CR>", desc = "Toggle All Terminals" },
-    { "<leader>C", group = "Copilot", icon = "" },
-    { "<leader>Ca", "<cmd>Copilot enable<cr>", desc = "Enable Copilot", icon = "" },
-    { "<leader>Cd", "<cmd>Copilot disable<cr>", desc = "Disable Copilot", icon = "" },
 })
+
+local copilot_status = true
+Snacks.toggle
+    .new({
+        id = "copilot",
+        name = "Copilot ",
+        get = function()
+            return copilot_status
+        end,
+        set = function(state)
+            if state then
+                vim.cmd("Copilot enable")
+                copilot_status = true
+            else
+                vim.cmd("Copilot disable")
+                copilot_status = false
+            end
+        end,
+    })
+    :map("<leader>C")
+local autosave_status = true
+Snacks.toggle
+    .new({
+        id = "autosave",
+        name = "auto-save",
+        get = function()
+            return autosave_status
+        end,
+        set = function(state)
+            vim.cmd("ASToggle")
+            if state then
+                autosave_status = true
+            else
+                autosave_status = false
+            end
+        end,
+    })
+    :map("<leader>a")

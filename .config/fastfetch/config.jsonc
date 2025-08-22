@@ -6,9 +6,9 @@
     "height": 15,
     "position": "left",
     "padding": {
-      "right": 5,
-      "left": 5,
-      "top": 5
+      "right": 3,
+      "left": 3,
+      "top": 3
     }
   },
   "display": {

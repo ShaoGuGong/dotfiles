@@ -5,7 +5,3 @@
 
 vim.opt.hidden = true
 vim.opt.winborder = "rounded"
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.breakindent = true
-vim.opt.showbreak = " "

@@ -13,7 +13,7 @@ config.default_prog = { "/usr/bin/fish" }
 config.keys = keys
 
 -- For example, changing the initial geometry for new windows:
-config.initial_cols = 140
+config.initial_cols = 110
 config.initial_rows = 30
 
 -- or, changing the font size and color scheme.
@@ -21,7 +21,7 @@ config.font = wezterm.font_with_fallback(fonts)
 config.font_size = 12.0
 
 -- Set Appearance
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "Bamboo"
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Finally, return the configuration to wezterm:

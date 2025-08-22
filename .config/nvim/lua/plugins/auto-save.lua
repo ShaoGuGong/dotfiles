@@ -7,7 +7,4 @@ return {
         -- your config goes here
         -- or just leave it empty :)
     },
-    keys = {
-        { "<leader>a", "<cmd>ASToggle<CR>", desc = "Toggle auto-save" },
-    },
 }

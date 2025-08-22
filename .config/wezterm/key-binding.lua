@@ -9,6 +9,11 @@ local function set_opacity(window, value)
 		window_background_opacity = opacity,
 	})
 end
+local idx = 1
+local color_schemes = {
+	"Bamboo",
+	"Bamboo Light",
+}
 
 -- Add key bindings
 local keys = {
@@ -108,16 +113,31 @@ local keys = {
 	-- │                        Set Fonts                        │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "f",
+		key = "F",
 		mods = "CTRL|SHIFT|ALT",
 		action = wezterm.action_callback(function(win)
 			local overrides = win:get_config_overrides() or {}
 			table.insert(fonts, table.remove(fonts, 1))
 			overrides.font = wezterm.font_with_fallback(fonts)
 			win:set_config_overrides(overrides)
-			win:toast_notification(
-        "Font Changed", "Current font:\n" .. fonts[1].family, nil, 1000
-      )
+			local font_name = "Current font:\n" .. fonts[1].family
+			win:toast_notification("Font Changed", font_name, nil, 1000)
+		end),
+	},
+	-- ╭─────────────────────────────────────────────────────────╮
+	-- │                    Set Color Scheme                     │
+	-- ╰─────────────────────────────────────────────────────────╯
+	{
+		key = "C",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action_callback(function(win)
+			local overrides = win:get_config_overrides() or {}
+			overrides.color_scheme = color_schemes[idx]
+			win:set_config_overrides(overrides)
+			idx = idx + 1
+			if idx > #color_schemes then
+				idx = idx % #color_schemes
+			end
 		end),
 	},
 	-- ╭─────────────────────────────────────────────────────────╮
