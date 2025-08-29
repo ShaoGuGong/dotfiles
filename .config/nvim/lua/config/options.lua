@@ -4,4 +4,3 @@
 -- Add any additional options here
 
 vim.opt.hidden = true
-vim.opt.winborder = "rounded"

@@ -2,7 +2,7 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "bamboo",
+            colorscheme = "kanagawa",
         },
     },
     { "ellisonleao/gruvbox.nvim" },
@@ -17,7 +17,18 @@ return {
             require("bamboo").setup({
                 -- optional configuration here
             })
-            require("bamboo").load()
+        end,
+    },
+    {
+        "neanias/everforest-nvim",
+        version = false,
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("everforest").setup({
+                -- Your config here
+                background = "hard",
+            })
         end,
     },
 }

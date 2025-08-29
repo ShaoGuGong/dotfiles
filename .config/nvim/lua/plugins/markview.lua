@@ -19,7 +19,7 @@ return {
             enable = false,
             code_blocks = {
                 text_direction = "left",
-                style = "simple"
+                style = "simple",
             },
             heading = {
                 shift_width = 0,
