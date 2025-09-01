@@ -112,7 +112,6 @@ kdegraphics-thumbnailers
 kdeplasma-addons
 kdialog
 kinfocenter
-kinit
 kio-admin
 kolourpaint
 konsole
@@ -143,7 +142,6 @@ lsscsi
 lvm2
 man-db
 man-pages
-maplemono-nf-cn-unhinted
 mdadm
 meld
 mesa-utils
@@ -241,7 +239,6 @@ ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
 ttf-meslo-nerd
-ttf-ms-win11-auto
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
 typst
