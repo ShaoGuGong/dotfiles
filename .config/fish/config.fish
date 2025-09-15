@@ -33,6 +33,7 @@ if status is-interactive
     alias Leet="nvim leetcode.nvim"
     alias ptt="ssh bbsu@ptt.cc"
     alias lg="lazygit"
+    alias lj="lazyjj"
     alias cd="z"
     alias update="sys-update"
     alias reload_fish="source $HOME/.config/fish/config.fish"

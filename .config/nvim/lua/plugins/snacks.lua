@@ -29,12 +29,20 @@ return {
         explorer = { enabled = true },
         indent = { enabled = true },
         input = { enabled = true },
-        image = { enabled = false },
+        image = {
+            enabled = true,
+            doc = {
+                enabled = false,
+            },
+            math = {
+                enabled = false,
+            },
+        },
         picker = { enabled = true },
         notifier = { enabled = true },
         quickfile = { enabled = true },
         scope = { enabled = true },
-        scroll = { enabled = false },
+        scroll = { enabled = true },
         statuscolumn = { enabled = true },
         words = { enabled = true },
     },

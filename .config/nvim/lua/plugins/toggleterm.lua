@@ -1,4 +1,1 @@
-return {
-    -- amongst your other plugins
-    { "akinsho/toggleterm.nvim", version = "*", config = true },
-}
+return { "akinsho/toggleterm.nvim", version = "*", config = true }

@@ -119,6 +119,7 @@ kscreen
 kwallet-pam
 kwalletmanager
 lazygit
+lazyjj
 less
 lib32-mesa
 lib32-nvidia-utils
@@ -239,6 +240,7 @@ ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
 ttf-meslo-nerd
+ttf-ms-win11-auto
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
 typst
