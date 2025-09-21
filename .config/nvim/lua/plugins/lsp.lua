@@ -1,6 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     opts = {
+        diagnostics = { virtual_text = false }, -- Disable virtual text
         servers = {
             pyright = {
                 settings = {

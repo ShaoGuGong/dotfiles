@@ -30,13 +30,12 @@ if status is-interactive
     #                                  ╭───────────╮
     #                                  │ set alias │
     #                                  ╰───────────╯
-    alias Leet="nvim leetcode.nvim"
     alias ptt="ssh bbsu@ptt.cc"
     alias lg="lazygit"
     alias lj="lazyjj"
     alias cd="z"
-    alias update="sys-update"
     alias reload_fish="source $HOME/.config/fish/config.fish"
+    alias leetcode="nvim leetcode.nvim"
 
     zoxide init fish | source
     starship init fish | source

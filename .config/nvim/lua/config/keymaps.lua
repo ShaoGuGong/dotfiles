@@ -17,11 +17,11 @@ vim.keymap.set("o", "N", "Nzzzv", { desc = "Repeat search (reverse)" })
 
 function _G.set_terminal_keymaps()
     local opts = { buffer = 0 }
-    vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
-    vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
-    vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
-    vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
-    vim.keymap.set("t", "<C-l>", [[<Cmd>wincmd l<CR>]], opts)
+    -- vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+    vim.keymap.set("t", "<C-M-,>", [[<Cmd>wincmd h<CR>]], opts)
+    vim.keymap.set("t", "<C-,>", [[<Cmd>wincmd j<CR>]], opts)
+    vim.keymap.set("t", "<C-.>", [[<Cmd>wincmd k<CR>]], opts)
+    vim.keymap.set("t", "<C-M-.>", [[<Cmd>wincmd l<CR>]], opts)
     vim.keymap.set("t", "<C-w>", [[<C-\><C-n><C-w>]], opts)
 end
 
@@ -30,14 +30,31 @@ vim.cmd("autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()")
 local wk = require("which-key")
 
 wk.add({
-    { "<leader>ut", "<Cmd>TransparentToggle<CR>", desc = "Toggle TransParent" },
-
     -- 建立 <leader>t 群組
     { "<leader>t", group = "Terminal" }, -- 這一行最重要，讓 <leader>t 變 group
     -- 再掛下面兩個功能
     { "<leader>tf", "<Cmd>ToggleTerm direction=float<CR>", desc = "Open Floating Terminal" },
     { "<leader>tt", "<Cmd>ToggleTermToggleAll<CR>", desc = "Toggle All Terminals" }, -- 建立 <leader>t 群組
 })
+
+local transparent_status = false
+Snacks.toggle
+    .new({
+        id = "transparent",
+        name = "Transparent",
+        get = function()
+            return transparent_status
+        end,
+        set = function(state)
+            vim.cmd("TransparentToggle")
+            if state then
+                transparent_status = true
+            else
+                transparent_status = false
+            end
+        end,
+    })
+    :map("<leader>U")
 
 local copilot_status = true
 Snacks.toggle
@@ -58,7 +75,8 @@ Snacks.toggle
         end,
     })
     :map("<leader>C")
-local autosave_status = true
+
+local autosave_status = false
 Snacks.toggle
     .new({
         id = "autosave",
@@ -76,6 +94,7 @@ Snacks.toggle
         end,
     })
     :map("<leader>a")
+
 local neocolumn_status = false
 Snacks.toggle
     .new({
@@ -94,6 +113,7 @@ Snacks.toggle
         end,
     })
     :map("<leader>cn")
+
 local tab_size = 4
 Snacks.toggle
     .new({

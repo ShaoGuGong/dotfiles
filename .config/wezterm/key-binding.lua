@@ -31,12 +31,25 @@ local keys = {
 	-- │                      Set Tab Title                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "t",
+		key = "r",
 		mods = "CTRL|SHIFT|ALT",
 		action = wezterm.action.PromptInputLine({
 			description = "Rename Tab",
 			action = wezterm.action_callback(function(window, _, line)
 				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
+	{
+		key = "t",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.PromptInputLine({
+			description = "New Tab Name",
+			action = wezterm.action_callback(function(window, pane, line)
+				if line then
+					window:perform_action(wezterm.action({ SpawnTab = "CurrentPaneDomain" }), pane)
 					window:active_tab():set_title(line)
 				end
 			end),
