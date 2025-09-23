@@ -50,6 +50,7 @@ char-white
 chwd
 cpupower
 cryptsetup
+cuda
 cups
 device-mapper
 dhclient
@@ -113,6 +114,7 @@ kdeplasma-addons
 kdialog
 kinfocenter
 kio-admin
+kitty
 kolourpaint
 konsole
 kscreen
@@ -165,6 +167,7 @@ noto-fonts-emoji
 npm
 nss-mdns
 ntp
+nvidia-container-toolkit
 nvidia-prime
 nvidia-settings
 nvidia-utils
@@ -193,6 +196,7 @@ plasma-workspace
 plocate
 plymouth
 plymouth-kcm
+podman
 poppler-glib
 power-profiles-daemon
 powerdevil

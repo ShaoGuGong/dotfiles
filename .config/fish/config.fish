@@ -36,6 +36,7 @@ if status is-interactive
     alias cd="z"
     alias reload_fish="source $HOME/.config/fish/config.fish"
     alias leetcode="nvim leetcode.nvim"
+    alias vim="nvim"
 
     zoxide init fish | source
     starship init fish | source
