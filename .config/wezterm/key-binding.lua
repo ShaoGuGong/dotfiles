@@ -103,12 +103,12 @@ local keys = {
 	-- │                      Tab ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "H",
+		key = "LeftArrow",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
-		key = "L",
+		key = "RightArrow",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
@@ -157,22 +157,22 @@ local keys = {
 	-- │                     Pane ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "h",
+		key = "LeftArrow",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Left"),
 	},
 	{
-		key = "l",
+		key = "RightArrow",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Right"),
 	},
 	{
-		key = "k",
+		key = "UpArrow",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Up"),
 	},
 	{
-		key = "j",
+		key = "DownArrow",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},

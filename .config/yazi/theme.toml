@@ -10,8 +10,8 @@
 # : Flavor {{{
 
 [flavor]
-dark = "kanagawa"
-light = "kanagawa"
+dark = ""
+light = ""
 
 # : }}}
 

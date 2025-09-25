@@ -114,7 +114,6 @@ kdeplasma-addons
 kdialog
 kinfocenter
 kio-admin
-kitty
 kolourpaint
 konsole
 kscreen
@@ -197,6 +196,7 @@ plocate
 plymouth
 plymouth-kcm
 podman
+podman-compose
 poppler-glib
 power-profiles-daemon
 powerdevil

@@ -38,7 +38,5 @@ use = "yazi-rs/plugins:zoom"
 rev = "de53d90"
 hash = "4a47a9cd4d8b3a963cb4cc593664b77e"
 
-[[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "31167ed"
-hash = "a04e157148549bacbb2831aab0e6e8cb"
+[flavor]
+deps = []
