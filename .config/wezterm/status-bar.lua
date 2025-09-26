@@ -3,13 +3,13 @@ local wezterm = require("wezterm")
 -- The powerline < symbol
 -- The filled in variant of the < symbol
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+local DIR = wezterm.nerdfonts.oct_file_directory_open_fill .. " "
 
 -- Color palette for the backgrounds of each cell
 local colors = {
 	"#c7d7e0",
 	"#b5cbd2",
 	"#9fb5c9",
-	"#4d699b",
 }
 
 -- Foreground color for the text across the fade
@@ -27,6 +27,7 @@ local process_icons = { -- for get_process function
 	["vim"] = wezterm.nerdfonts.dev_vim,
 	["go"] = wezterm.nerdfonts.seti_go,
 	["fish"] = wezterm.nerdfonts.dev_terminal,
+	["ssh"] = wezterm.nerdfonts.dev_terminal,
 	["zsh"] = wezterm.nerdfonts.dev_terminal,
 	["bash"] = wezterm.nerdfonts.cod_terminal_bash,
 	["btm"] = wezterm.nerdfonts.mdi_chart_donut_variant,
@@ -66,51 +67,28 @@ local function update_right_status(window, pane)
 	local cells = {}
 
 	table.insert(cells, get_process(pane))
-	-- I like my date/time in this style: "Wed Mar 3 08:14"
-	local date = wezterm.strftime("%H:%M")
-	table.insert(cells, wezterm.nerdfonts.fa_clock_o .. " " .. date)
 
-	-- Figure out the cwd and host of the current pane.
-	-- This will pick up the hostname for the remote host if your
-	-- shell is using OSC 7 on the remote host.
-	local cwd_uri = pane:get_current_working_dir()
-	if cwd_uri then
+	local cwd_url = pane:get_current_working_dir()
+	if cwd_url then
 		local cwd = ""
-		local hostname = ""
-
-		if type(cwd_uri) == "userdata" then
-			-- Running on a newer version of wezterm and we have
-			-- a URL object here, making this simple!
-
-			cwd = cwd_uri.file_path
-			hostname = cwd_uri.host or wezterm.hostname()
+		if type(cwd_url) == "userdata" then
+			cwd = cwd_url.file_path
 		else
 			-- an older version of wezterm, 20230712-072601-f4abf8fd or earlier,
 			-- which doesn't have the Url object
 			cwd_uri = cwd_uri:sub(8)
 			local slash = cwd_uri:find("/")
 			if slash then
-				hostname = cwd_uri:sub(1, slash - 1)
-				-- and extract the cwd from the uri, decoding %-encoding
 				cwd = cwd_uri:sub(slash):gsub("%%(%x%x)", function(hex)
 					return string.char(tonumber(hex, 16))
 				end)
 			end
 		end
-
-		-- Remove the domain name portion of the hostname
-		local dot = hostname:find("[.]")
-		if dot then
-			hostname = hostname:sub(1, dot - 1)
-		end
-		if hostname == "" then
-			hostname = wezterm.hostname()
-		end
-
-		table.insert(cells, cwd)
-		table.insert(cells, hostname)
+		table.insert(cells, DIR .. cwd)
 	end
 
+	local date = wezterm.strftime("%H:%M")
+	table.insert(cells, wezterm.nerdfonts.fa_clock_o .. " " .. date)
 	-- The elements to be formatted
 	local elements = {}
 	-- How many cells have been formatted

@@ -13,9 +13,6 @@ local fonts = {
 	{
 		family = "FiraCode Nerd Font Mono",
 	},
-	{
-		family = "Monoid",
-	},
 }
 
 return fonts

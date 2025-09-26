@@ -29,6 +29,12 @@ scheme.tab_bar = {
 }
 config.color_schemes = { ["Kanagawa"] = scheme }
 config.color_scheme = "Kanagawa"
+config.window_background_image = "/home/shaogu/Pictures/yurukyan.jpg"
+config.window_background_image_hsb = {
+	brightness = 0.1,
+	saturation = 1.0,
+	hue = 1.0,
+}
 
 -- ────────────────────────────( Set Cursor )─────────────────────────
 config.default_cursor_style = "BlinkingBlock"
@@ -37,7 +43,8 @@ config.animation_fps = 120
 config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 
-config.tab_max_width = 20
+-- ────────────────────────────( Set Tab Bar )────────────────────────────
+config.tab_max_width = 25
 config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 config.use_fancy_tab_bar = false
@@ -45,7 +52,7 @@ config.show_new_tab_button_in_tab_bar = false
 config.tab_bar_at_bottom = false
 wezterm.on("format-tab-title", format_tab_bar)
 
-wezterm.on("update-right-status", update_right_status)
+wezterm.on("update-status", update_right_status)
 
 wezterm.on("format-window-title", function(_, _, _, _, _)
 	return ""
