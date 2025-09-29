@@ -44,12 +44,12 @@ config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 
 -- ────────────────────────────( Set Tab Bar )────────────────────────────
-config.tab_max_width = 25
+config.tab_max_width = 20
 config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
-config.tab_bar_at_bottom = false
+config.tab_bar_at_bottom = true
 wezterm.on("format-tab-title", format_tab_bar)
 
 wezterm.on("update-status", update_right_status)
@@ -57,6 +57,10 @@ wezterm.on("update-status", update_right_status)
 wezterm.on("format-window-title", function(_, _, _, _, _)
 	return ""
 end)
+
+config.unix_domains = {
+	{ name = "unix" },
+}
 
 -- Finally, return the configuration to wezterm:
 return config

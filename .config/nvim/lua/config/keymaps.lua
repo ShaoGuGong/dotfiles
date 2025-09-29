@@ -37,7 +37,7 @@ wk.add({
     { "<leader>tt", "<Cmd>ToggleTermToggleAll<CR>", desc = "Toggle All Terminals" }, -- 建立 <leader>t 群組
 })
 
-local transparent_status = false
+local transparent_status = vim.g.transparent_enabled or false
 Snacks.toggle
     .new({
         id = "transparent",

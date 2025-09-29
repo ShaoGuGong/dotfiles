@@ -8,7 +8,7 @@ return {
                 -- icon = "󱩽 ",
                 style = "underline",
             },
-            separator_style = "slant",
+            -- separator_style = "slant",
             always_show_bufferline = true,
         },
         highlights = {
