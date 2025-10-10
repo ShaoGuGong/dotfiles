@@ -6,18 +6,28 @@ mkdir -p $dotfile_path
 echo -e "\033[1;93mSyncing all config to dotfiles: \n"
 # ──────────────────────────────── Fonts ──────────────────────────────
 rsync -avhP --delete $HOME/.fonts/ "$dotfile_path/.fonts/"
+
+# ──────────────────────────────── doom emacs ──────────────────────────────
+rsync -avhP --delete $HOME/.doom.d/ "$dotfile_path/.doom.d/"
+
 # ──────────────────────────────── Neovim ────────────────────────────────
 rsync -avhP --delete $HOME/.config/nvim/ "$dotfile_path/nvim/"
+
 # ───────────────────────────────── Yazi ─────────────────────────────────
 rsync -avhP --delete $HOME/.config/yazi/ "$dotfile_path/yazi/"
+
 #───────────────────────────────── fish ─────────────────────────────────
 rsync -avhP --delete $HOME/.config/fish/ "$dotfile_path/fish/"
+
 # ────────────────────────────── fastfetch ────────────────────────────
 rsync -avhP --delete $HOME/.config/fastfetch/ "$dotfile_path/fastfetch/"
+
 # ─────────────────────────────── wezterm ─────────────────────────────
 rsync -avhP --delete $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
+
 # ──────────────────────────────── kitty ────────────────────────────────
 rsync -avhP --delete $HOME/.config/kitty/ "$dotfile_path/kitty/"
+
 # ─────────────────────────────── starship ───────────────────────────────
 rsync -avhP --delete $HOME/.config/starship.toml "$dotfile_path/"
 

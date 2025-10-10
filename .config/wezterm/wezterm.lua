@@ -38,7 +38,7 @@ config.window_background_image_hsb = {
 
 -- ────────────────────────────( Set Cursor )─────────────────────────
 config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_rate = 800
+config.cursor_blink_rate = 1000
 config.animation_fps = 120
 config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"

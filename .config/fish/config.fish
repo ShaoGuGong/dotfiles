@@ -6,6 +6,8 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #end
 if status is-interactive
     set -gx PATH $HOME/.dotfiles/ $PATH
+    set -gx PATH $HOME/.emacs.d/bin $PATH
+    set -gx PATH /home/shaogu/.local/bin $PATH
     set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
     set -x EDITOR nvim
     #                                     ╭─────╮
@@ -35,7 +37,7 @@ if status is-interactive
     alias lj="lazyjj"
     alias cd="z"
     alias reload_fish="source $HOME/.config/fish/config.fish"
-    alias leetcode="nvim leetcode.nvim"
+    # alias leetcode="nvim leetcode.nvim"
     alias vim="nvim"
 
     zoxide init fish | source

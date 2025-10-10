@@ -29,7 +29,7 @@ local function get_color(id)
 	return colors[(id % #colors) + 1]
 end
 
-local num_displayed = 2
+local num_displayed = 3
 
 -- @params s original string
 -- @params len fixed length

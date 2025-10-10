@@ -1,38 +1,39 @@
 local wezterm = require("wezterm")
 
 local process_icons = { -- for get_process function
-	["docker"] = wezterm.nerdfonts.linux_docker,
-	["docker-compose"] = wezterm.nerdfonts.linux_docker,
-	["psql"] = wezterm.nerdfonts.dev_postgresql,
-	["kuberlr"] = wezterm.nerdfonts.linux_docker,
-	["kubectl"] = wezterm.nerdfonts.linux_docker,
-	["stern"] = wezterm.nerdfonts.linux_docker,
-	["nvim"] = wezterm.nerdfonts.custom_neovim,
-	["make"] = wezterm.nerdfonts.seti_makefile,
-	["vim"] = wezterm.nerdfonts.dev_vim,
-	["go"] = wezterm.nerdfonts.seti_go,
-	["fish"] = wezterm.nerdfonts.dev_terminal,
-	["ssh"] = wezterm.nerdfonts.dev_terminal,
-	["zsh"] = wezterm.nerdfonts.dev_terminal,
 	["bash"] = wezterm.nerdfonts.cod_terminal_bash,
 	["btm"] = wezterm.nerdfonts.mdi_chart_donut_variant,
-	["htop"] = wezterm.nerdfonts.mdi_chart_donut_variant,
 	["cargo"] = wezterm.nerdfonts.dev_rust,
-	["sudo"] = wezterm.nerdfonts.fa_hashtag,
-	["lazydocker"] = wezterm.nerdfonts.linux_docker,
-	["git"] = wezterm.nerdfonts.dev_git,
-	["lua"] = wezterm.nerdfonts.seti_lua,
-	["wget"] = wezterm.nerdfonts.mdi_arrow_down_box,
 	["curl"] = wezterm.nerdfonts.mdi_flattr,
-	["gh"] = wezterm.nerdfonts.dev_github_badge,
-	["ruby"] = wezterm.nerdfonts.cod_ruby,
-	["pwsh"] = wezterm.nerdfonts.seti_powershell,
-	["node"] = wezterm.nerdfonts.dev_nodejs_small,
+	["docker"] = wezterm.nerdfonts.linux_docker,
+	["docker-compose"] = wezterm.nerdfonts.linux_docker,
 	["dotnet"] = wezterm.nerdfonts.md_language_csharp,
+	["emacs-30.2"] = "",
+	["fish"] = wezterm.nerdfonts.dev_terminal,
+	["flatpak"] = " ",
+	["gh"] = wezterm.nerdfonts.dev_github_badge,
+	["git"] = wezterm.nerdfonts.dev_git,
+	["go"] = wezterm.nerdfonts.seti_go,
+	["htop"] = wezterm.nerdfonts.mdi_chart_donut_variant,
+	["kubectl"] = wezterm.nerdfonts.linux_docker,
+	["kuberlr"] = wezterm.nerdfonts.linux_docker,
+	["lazydocker"] = wezterm.nerdfonts.linux_docker,
+	["lua"] = wezterm.nerdfonts.seti_lua,
+	["make"] = wezterm.nerdfonts.seti_makefile,
+	["node"] = wezterm.nerdfonts.dev_nodejs_small,
+	["nvim"] = wezterm.nerdfonts.custom_neovim,
 	["pacman"] = wezterm.nerdfonts.dev_archlinux,
 	["paru"] = wezterm.nerdfonts.dev_archlinux,
+	["psql"] = wezterm.nerdfonts.dev_postgresql,
+	["pwsh"] = wezterm.nerdfonts.seti_powershell,
+	["ruby"] = wezterm.nerdfonts.cod_ruby,
+	["ssh"] = wezterm.nerdfonts.dev_terminal,
+	["stern"] = wezterm.nerdfonts.linux_docker,
+	["sudo"] = wezterm.nerdfonts.fa_hashtag,
+	["vim"] = wezterm.nerdfonts.dev_vim,
+	["wget"] = wezterm.nerdfonts.mdi_arrow_down_box,
 	["yazi"] = wezterm.nerdfonts.cod_folder_opened,
-	["flatpak"] = " ",
+	["zsh"] = wezterm.nerdfonts.dev_terminal,
 }
 
 local function get_process_icon(foreground_process_name)
@@ -43,6 +44,7 @@ local function get_process_icon(foreground_process_name)
 	local process_name = foreground_process_name:match("([^/\\]+)%.exe$") or foreground_process_name:match("([^/\\]+)$")
 	-- local icon = process_icons[process_name] or wezterm.nerdfonts.seti_checkbox_unchecked
 	local icon = process_icons[process_name] or wezterm.nerdfonts.linux_archlinux
+	-- return process_name
 	return icon
 end
 

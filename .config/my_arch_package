@@ -7,6 +7,9 @@ alsa-plugins
 alsa-utils
 amd-ucode
 ark
+arm-none-eabi-gcc
+arm-none-eabi-gdb
+arm-none-eabi-newlib
 astroterm
 awesome-terminal-fonts
 base
@@ -48,6 +51,7 @@ cachyos-zsh-config
 chafa
 char-white
 chwd
+cmake
 cpupower
 cryptsetup
 cuda
@@ -67,6 +71,7 @@ e2fsprogs
 efibootmgr
 efitools
 egl-wayland
+emacs
 ethtool
 exfatprogs
 f2fs-tools
@@ -174,6 +179,7 @@ nvtop
 octopi
 opencl-nvidia
 opendesktop-fonts
+openocd
 openssh
 os-prober
 pacman-contrib

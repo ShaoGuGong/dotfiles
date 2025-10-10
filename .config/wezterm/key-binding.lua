@@ -176,6 +176,17 @@ local keys = {
 		mods = "CTRL|ALT",
 		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
+
+	{
+		key = "s",
+		mods = "CTRL|ALT",
+		action = wezterm.action.AttachDomain("unix"),
+	},
+	{
+		key = "l",
+		mods = "CTRL|ALT",
+		action = wezterm.action.ShowLauncher,
+	},
 }
 
 return keys
