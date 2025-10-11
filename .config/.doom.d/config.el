@@ -78,7 +78,9 @@
 ;; Set font and Themes
 (setq doom-font (font-spec :family "Maple Mono NF CN" :size 20))
 (setq display-line-numbers-type 'relative)
-(load-theme 'kanagawa t)
+;; (load-theme 'kanagawa t)
+;; (setq doom-theme 'doom-tokyo-night)
+(setq doom-theme 'catppuccin)
 
 ;; Typst mode
 (use-package typst-ts-mode
@@ -104,3 +106,32 @@
 (use-package leetcode
   :config
   (setq leetcode-language "rust"))
+
+(use-package eaf
+  :load-path "~/.emacs.d/site-lisp/emacs-application-framework"
+  :custom
+                                        ; See https://github.com/emacs-eaf/emacs-application-framework/wiki/Customization
+  (eaf-browser-continue-where-left-off t)
+  (eaf-browser-enable-adblocker t)
+  (browse-url-browser-function 'eaf-open-browser)
+  :config
+  (defalias 'browse-web #'eaf-open-browser))
+
+(require 'eaf-browser)
+(require 'eaf-pdf-viewer)
+(require 'eaf-image-viewer)
+(require 'eaf-markdown-previewer)
+(require 'eaf-org-previewer)
+(require 'eaf-pyqterminal)
+
+(map! :leader
+      :desc "Open EAF Browser" "o B" #'eaf-open-browser)
+
+(after! lsp-rust
+  (defun my/rust-analyzer-standalone-if-leetcode ()
+    (when (and buffer-file-name
+               (string-match-p "/\\.leetcode/" buffer-file-name))
+      (setq-local lsp-rust-analyzer-cargo-enable nil)
+      (setq-local lsp-rust-analyzer-linked-projects [])))
+  (add-hook 'rust-mode-hook #'my/rust-analyzer-standalone-if-leetcode)
+  (add-hook 'rust-ts-mode-hook #'my/rust-analyzer-standalone-if-leetcode))

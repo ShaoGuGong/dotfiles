@@ -6,6 +6,7 @@ alsa-firmware
 alsa-plugins
 alsa-utils
 amd-ucode
+aria2
 ark
 arm-none-eabi-gcc
 arm-none-eabi-gdb
@@ -138,6 +139,7 @@ libplasma
 libreoffice-fresh
 libreoffice-fresh-zh-tw
 libva-nvidia-driver
+libvdpau-va-gl
 libwnck3
 linux-cachyos
 linux-cachyos-headers
@@ -210,7 +212,13 @@ print-manager
 pv
 python
 python-defusedxml
+python-epc
+python-markdown
 python-packaging
+python-pyqt6
+python-pyqt6-sip
+python-pyqt6-webengine
+python-sexpdata
 qt6-wayland
 rebuild-detector
 reflector
@@ -272,6 +280,7 @@ which
 wireless-regdb
 wireplumber
 wl-clipboard
+wmctrl
 wpa_supplicant
 xdg-desktop-portal
 xdg-desktop-portal-kde

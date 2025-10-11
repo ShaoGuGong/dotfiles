@@ -60,3 +60,4 @@
 (package! typst-ts-mode :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
 (package! leetcode-emacs
   :recipe (:host github :repo "ginqi7/leetcode-emacs"))
+(package! catppuccin-theme)
