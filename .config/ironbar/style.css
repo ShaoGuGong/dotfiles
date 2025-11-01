@@ -1,0 +1,148 @@
+@import "mocha.css";
+
+* {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+    font-family: "Maple Mono NF CN";
+    font-size: 16px;
+}
+
+#bar {
+    margin-top: 5px;
+}
+
+popover, popover contents, calendar {
+    /* background-color: @base; /\* 原本 var(--color-dark-primary) *\/ */
+    background-color: @surface0;
+    background: transparent;
+}
+
+button {
+    background: @surface0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+button:hover, button:active {
+    background-color: @surface1;
+; /* 原本 var(--color-dark-secondary) */
+}
+
+.popup {
+    background-color: rgba(49, 50, 68, 0.5);
+    margin: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+    color: @text;
+}
+
+.popup-music .controls > * {
+    background: rgba(49, 50, 68, 0.5);
+}
+
+.music,
+.workspaces {
+    border: 2px solid @maroon;
+    background: @surface0;
+}
+
+.workspaces,
+.music,
+.tray,
+.clock {
+    background: @surface0;
+}
+
+.workspaces {
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 1em;
+    background-color: @surface0;
+}
+
+.workspaces .item + * {
+    margin-left: 0.5em;
+}
+
+.workspaces .item {
+    border-radius: 1em;
+    border: 2px solid @surface0;
+    background: @surface0;
+    color: @text;
+}
+
+.workspaces .item.focused {
+    color: @sky;
+}
+
+.workspaces .item:hover {
+    border: 2px solid @teal;
+}
+
+.focused {
+    padding: 0 0.5em;
+    border: 2px solid @maroon;
+    border-radius: 1em;
+    margin-right: 1em;
+    background-color: @surface0;
+}
+
+.music {
+    border-radius: 1em;
+    color: @mauve;
+}
+
+.sysinfo,
+.volume,
+.battery,
+.tray,
+.clock {
+    border-top: 2px solid @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+.notifications .button {
+    padding-right: 1.2em;
+    border-top: 2px solid @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+.notifications .count {
+    font-size: 0.8em;
+    color: @red;
+}
+
+.sysinfo {
+    padding: 0 0.5em;
+    border-radius: 1em 0 0 1em;
+    border-left: 2px solid @maroon;
+    background-color: @surface0;
+    color: @sky;
+}
+
+.sysinfo > * + * {
+    margin-left: 0.5em;
+}
+
+.volume {
+    color: @red;
+}
+
+.battery {
+    color: @green;
+}
+
+.tray {
+    padding: 0 0.5em;
+}
+
+.clock {
+    font-weight: bold;
+    margin-right: 1em;
+    border-radius: 0 1em 1em 0;
+    color: @text;
+    border-right: 2px solid @maroon;
+}
+

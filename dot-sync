@@ -1,44 +1,64 @@
 #! /bin/bash
 
+commit_msg="${1:-$(date '+%m-%d-%Y %H:%M:%S')}"
+
 dotfile_path="$HOME/.dotfiles/.config"
-mkdir -p $dotfile_path
+mkdir -p "$dotfile_path"
 
-echo -e "\033[1;93mSyncing all config to dotfiles: \n"
-# ──────────────────────────────── Fonts ──────────────────────────────
-rsync -avhP --delete $HOME/.fonts/ "$dotfile_path/.fonts/"
+echo -e "\033[1;92mSyncing all config to dotfiles: \n"
 
-# ──────────────────────────────── doom emacs ──────────────────────────────
-rsync -avhP --delete $HOME/.doom.d/ "$dotfile_path/.doom.d/"
+sync_file() {
+    local src="$HOME/.config/$1"
+    local dest="$dotfile_path/$2"
 
-# ──────────────────────────────── Neovim ────────────────────────────────
-rsync -avhP --delete $HOME/.config/nvim/ "$dotfile_path/nvim/"
+    if [ -e "$src" ]; then
+        mkdir -p "$dest"
+        rsync -avhP --delete "$src" "$dest"
+    else
+        echo -e "\033[1; 93mWarning: Source $src does not exist. Skipping...\033[0m"
+    fi
+}
 
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                          Editor                          ║
+#          ╚══════════════════════════════════════════════════════════╝
+sync_file "doom/" "doom/"
+sync_file "nvim/" "nvim/"
+
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                          Fonts                           ║
+#          ╚══════════════════════════════════════════════════════════╝
+sync_file ".fonts/" ".fonts/"
+
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                         Terminal                         ║
+#          ╚══════════════════════════════════════════════════════════╝
 # ───────────────────────────────── Yazi ─────────────────────────────────
-rsync -avhP --delete $HOME/.config/yazi/ "$dotfile_path/yazi/"
+sync_file "yazi/" "yazi/"
+sync_file "fish/" "fish/"
+sync_file "fastfetch/" "fastfetch/"
+sync_file "wezterm/" "wezterm/"
+sync_file "kitty/" "kitty/"
+sync_file "starship.toml" "starship.toml"
 
-#───────────────────────────────── fish ─────────────────────────────────
-rsync -avhP --delete $HOME/.config/fish/ "$dotfile_path/fish/"
-
-# ────────────────────────────── fastfetch ────────────────────────────
-rsync -avhP --delete $HOME/.config/fastfetch/ "$dotfile_path/fastfetch/"
-
-# ─────────────────────────────── wezterm ─────────────────────────────
-rsync -avhP --delete $HOME/.config/wezterm/ "$dotfile_path/wezterm/"
-
-# ──────────────────────────────── kitty ────────────────────────────────
-rsync -avhP --delete $HOME/.config/kitty/ "$dotfile_path/kitty/"
-
-# ─────────────────────────────── starship ───────────────────────────────
-rsync -avhP --delete $HOME/.config/starship.toml "$dotfile_path/"
+#          ╔══════════════════════════════════════════════════════════╗
+#          ║                          System                          ║
+#          ╚══════════════════════════════════════════════════════════╝
+sync_file "waybar/" "waybar/"
+sync_file "ironbar/" "ironbar/"
+sync_file "swaync/" "swaync/"
+sync_file "swaylock/" "swaylock/"
+sync_file "niri/" "niri/"
+sync_file "systemd/" "systemd/"
 
 echo -e "\n\033[1;94mArch Packages install list:\n"
 paru -Qeq | tee "$dotfile_path/my_arch_package"
 
-echo -e "\n\033[1;92mGit Messages:\n"
+echo -e "\n\033[1;96mGit Messages:\n"
 pushd $dotfile_path >/dev/null
 cd ..
 git add .
-git commit -m "$(date '+%m-%d-%Y %H:%M:%S')"
+git commit -m "$commit_msg"
 git push origin main
 echo -e "\033[0m"
 

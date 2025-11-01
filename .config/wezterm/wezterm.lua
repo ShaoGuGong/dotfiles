@@ -10,9 +10,20 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 -- config.window_decorations = "RESIZE"
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.8
 config.default_prog = { "/usr/bin/fish" }
 config.keys = keys
+local keys_table = wezterm.gui.default_key_tables()
+table.insert(keys_table.copy_mode, {
+	key = "y",
+	mods = "NONE",
+	action = wezterm.action.Multiple({
+		wezterm.action.CopyTo("Clipboard"),
+		wezterm.action.ClearSelection,
+		wezterm.action.CopyMode("ClearSelectionMode"),
+	}),
+})
+config.key_tables = keys_table
 
 -- For example, changing the initial geometry for new windows:
 config.initial_cols = 110
@@ -29,12 +40,12 @@ scheme.tab_bar = {
 }
 config.color_schemes = { ["Kanagawa"] = scheme }
 config.color_scheme = "Kanagawa"
-config.window_background_image = "/home/shaogu/Pictures/yurukyan.jpg"
-config.window_background_image_hsb = {
-	brightness = 0.1,
-	saturation = 1.0,
-	hue = 1.0,
-}
+-- config.window_background_image = "/home/shaogu/Pictures/yurukyan.jpg"
+-- config.window_background_image_hsb = {
+-- 	brightness = 0.1,
+-- 	saturation = 1.0,
+-- 	hue = 1.0,
+-- }
 
 -- ────────────────────────────( Set Cursor )─────────────────────────
 config.default_cursor_style = "BlinkingBlock"
@@ -50,12 +61,13 @@ config.show_tab_index_in_tab_bar = false
 config.use_fancy_tab_bar = false
 config.show_new_tab_button_in_tab_bar = false
 config.tab_bar_at_bottom = true
+config.window_decorations = "RESIZE"
 wezterm.on("format-tab-title", format_tab_bar)
 
 wezterm.on("update-status", update_right_status)
 
 wezterm.on("format-window-title", function(_, _, _, _, _)
-	return ""
+	return "Wezterm Terminal Emulator"
 end)
 
 config.unix_domains = {

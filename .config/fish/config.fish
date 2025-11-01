@@ -10,6 +10,7 @@ if status is-interactive
     set -gx PATH /home/shaogu/.local/bin $PATH
     set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
     set -x EDITOR nvim
+    set -gx DOOMDIR $HOME/.config/doom
     #                                     ╭─────╮
     #                                     │ fzf │
     #                                     ╰─────╯
@@ -42,7 +43,8 @@ if status is-interactive
 
     zoxide init fish | source
     starship init fish | source
-    fish_vi_key_bindings
+    fish_default_key_bindings
+    # fish_vi_key_bindings
     set fish_cursor_default block blink
     set fish_cursor_replace underline blink
 end

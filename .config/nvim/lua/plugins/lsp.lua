@@ -17,7 +17,7 @@ return {
             ruff_lsp = {
                 init_options = {
                     settings = {
-                        configuration = "/home/shaogu/.config/nvim/lua/plugins/ruff.toml",
+                        configuration = "/home/shaogu/.config/nvim/lua/plugins/setting/ruff.toml",
                     },
                 },
             },

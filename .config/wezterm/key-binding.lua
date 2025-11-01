@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local fonts = require("fonts")
 
 -- This is where you actually apply your config choices.
-local opacity = 1.0
+local opacity = 0.8
 local function set_opacity(window, value)
 	opacity = math.max(0.1, math.min(1.0, value))
 	window:set_config_overrides({
@@ -134,7 +134,7 @@ local keys = {
 			overrides.font = wezterm.font_with_fallback(fonts)
 			win:set_config_overrides(overrides)
 			local font_name = "Current font:\n" .. fonts[1].family
-			win:toast_notification("Font Changed", font_name, nil, 1000)
+			win:toast_notification("Font Changed", font_name, nil, 5000)
 		end),
 	},
 	-- ╭─────────────────────────────────────────────────────────╮

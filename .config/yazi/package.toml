@@ -38,5 +38,10 @@ use = "yazi-rs/plugins:zoom"
 rev = "de53d90"
 hash = "4a47a9cd4d8b3a963cb4cc593664b77e"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "8f1d971"
+hash = "4fccaaf10c36dc2466e2438a386ff017"
+
 [flavor]
 deps = []

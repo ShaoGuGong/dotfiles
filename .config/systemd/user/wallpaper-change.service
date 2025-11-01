@@ -1,0 +1,7 @@
+[Unit]
+Description=Random wallpaper changer for swww
+After=graphical-session.target niri.service swww.service
+
+[Service]
+ExecStart=/home/shaogu/.local/bin/random_bg.sh
+Type=oneshot

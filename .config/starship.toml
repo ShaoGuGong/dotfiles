@@ -96,10 +96,12 @@ disabled = true
 show_always = false
 
 [character]
-success_symbol = "[INSERT  ](fg:#78ccc5)"
-error_symbol = "[INSERT  ](fg:red)"
-vimcmd_symbol = "[NORMAL  ](fg:$text_color)"
-vimcmd_visual_symbol = "[VISUAL  ](fg: #9745be)"
+success_symbol = "[ ](fg:#78ccc5)"
+error_symbol = "[ ](fg:red)"
+# success_symbol = "[INSERT  ](fg:#78ccc5)"
+# error_symbol = "[INSERT  ](fg:red)"
+# vimcmd_symbol = "[NORMAL  ](fg:$text_color)"
+# vimcmd_visual_symbol = "[VISUAL  ](fg: #9745be)"
 
 [directory]
 format = " [](fg:directory)[  $path ]($style)[$read_only]($read_only_style)[](fg:directory)"

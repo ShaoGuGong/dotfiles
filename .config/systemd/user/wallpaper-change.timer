@@ -1,0 +1,12 @@
+[Unit]
+Description=Run wallpaper changer every 5 minutes
+After=graphical-session.target swww.service
+PartOf=graphical-session.target
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

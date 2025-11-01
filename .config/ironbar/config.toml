@@ -1,0 +1,75 @@
+position = "top"
+height = 20
+
+[[start]]
+type = "workspaces"
+
+[start.name_map]
+web = "  "
+code = "  "
+term = "  "
+work = "  "
+music = "  "
+docs = "  "
+1 = "  "
+2 = "  "
+3 = "  "
+4 = "  "
+5 = "  "
+6 = "  "
+7 = "  "
+8 = "  "
+9 = "  "
+
+[[start]]
+type = "music"
+icon_size = 16
+
+[start.truncate]
+mode = "end"
+max_length = 30
+
+
+[[end]]
+type = "focused"
+icon_size = 24
+
+[end.truncate]
+mode = "end"
+max_length = 30
+
+[[end]]
+type = 'sys_info'
+format = [
+    " {cpu_percent}%",
+    " {memory_used}GB",
+]
+
+[end.interval]
+cpu = 1
+memory = 30
+
+[[end]]
+type = "tray"
+icon_size = 16
+
+[[end]]
+type = "battery"
+format = "{percentage}%"
+
+[[end]]
+type = "notifications"
+show_count = true
+
+[end.icons]
+closed_none = "󰍥"
+closed_some = "󱥂"
+closed_dnd = "󱅯"
+open_none = "󰍡"
+open_some = "󱥁"
+open_dnd = "󱅮"
+
+
+[[end]]
+type = "clock"
+format = " %H:%M %m-%d"
