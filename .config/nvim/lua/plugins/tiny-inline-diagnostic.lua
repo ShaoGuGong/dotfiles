@@ -10,10 +10,8 @@ return {
                     enabled = true,
                     always_show = true,
                 },
-                throttle = 0,
                 show_all_diags_on_cursorline = true,
-                enable_on_insert = true,
-                enable_on_select = true,
+                throttle = 100,
             },
         })
         vim.diagnostic.config({ virtual_text = false }) -- Disable default virtual text

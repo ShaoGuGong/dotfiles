@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
-local fonts = require("fonts")
+local fonts = require("settings/fonts")
 
 -- This is where you actually apply your config choices.
 local opacity = 0.8
@@ -186,6 +186,11 @@ local keys = {
 		key = "l",
 		mods = "CTRL|ALT",
 		action = wezterm.action.ShowLauncher,
+	},
+	{
+		key = "N",
+		mods = "SHIFT|CTRL",
+		action = wezterm.action.ShowTabNavigator,
 	},
 }
 

@@ -42,9 +42,7 @@ local function get_process_icon(foreground_process_name)
 	end
 
 	local process_name = foreground_process_name:match("([^/\\]+)%.exe$") or foreground_process_name:match("([^/\\]+)$")
-	-- local icon = process_icons[process_name] or wezterm.nerdfonts.seti_checkbox_unchecked
 	local icon = process_icons[process_name] or wezterm.nerdfonts.linux_archlinux
-	-- return process_name
 	return icon
 end
 

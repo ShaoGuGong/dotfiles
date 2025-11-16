@@ -127,26 +127,11 @@
   :config
   (add-hook 'python-mode-hook #'lsp!))
 
-;; use leetcode package
-(use-package leetcode
-  :config
-  (setq leetcode-language "rust"))
-
-
-(after! lsp-rust
-  (defun my/rust-analyzer-standalone-if-leetcode ()
-    (when (and buffer-file-name
-               (string-match-p "/\\.leetcode/" buffer-file-name))
-      (setq-local lsp-rust-analyzer-cargo-enable nil)
-      (setq-local lsp-rust-analyzer-linked-projects [])))
-  (add-hook 'rust-mode-hook #'my/rust-analyzer-standalone-if-leetcode)
-  (add-hook 'rust-ts-mode-hook #'my/rust-analyzer-standalone-if-leetcode))
-
 (use-package wakatime-mode
   :ensure t)
 (global-wakatime-mode)
 
-; (setq typst-preview-browser "eaf-browser")
+;; (setq typst-preview-browser "eaf-browser")
 (setq typst-preview-invert-colors "never")
 
 (defun my/fcitx5-deactivate ()

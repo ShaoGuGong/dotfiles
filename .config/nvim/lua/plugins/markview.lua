@@ -1,10 +1,11 @@
 -- For `plugins/markview.lua` users.
 return {
     "OXY2DEV/markview.nvim",
-    lazy = false,
+    -- lazy = false,
+    ft = { "typst", "markdown", "latex" },
 
     -- For `nvim-treesitter` users.
-    priority = 49,
+    -- priority = 49,
 
     -- For blink.cmp's completion
     -- source

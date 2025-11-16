@@ -1,16 +1,16 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local keys = require("key-binding")
-local fonts = require("fonts")
-local format_tab_bar = require("format-tab-bar")
-local update_right_status = require("status-bar")
+local keys = require("settings/key-binding")
+local fonts = require("settings/fonts")
+local format_tab_bar = require("settings/format-tab-bar")
+local update_right_status = require("settings/status-bar")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices.
 -- config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 1.0
 config.default_prog = { "/usr/bin/fish" }
 config.keys = keys
 local keys_table = wezterm.gui.default_key_tables()
@@ -26,7 +26,7 @@ table.insert(keys_table.copy_mode, {
 config.key_tables = keys_table
 
 -- For example, changing the initial geometry for new windows:
-config.initial_cols = 110
+config.initial_cols = 150
 config.initial_rows = 30
 
 -- or, changing the font size and color scheme.
@@ -40,12 +40,12 @@ scheme.tab_bar = {
 }
 config.color_schemes = { ["Kanagawa"] = scheme }
 config.color_scheme = "Kanagawa"
--- config.window_background_image = "/home/shaogu/Pictures/yurukyan.jpg"
--- config.window_background_image_hsb = {
--- 	brightness = 0.1,
--- 	saturation = 1.0,
--- 	hue = 1.0,
--- }
+config.window_background_image = "/home/shaogu/Pictures/linus-nvidia.jpg"
+config.window_background_image_hsb = {
+	brightness = 0.15,
+	saturation = 1.0,
+	hue = 1.0,
+}
 
 -- ────────────────────────────( Set Cursor )─────────────────────────
 config.default_cursor_style = "BlinkingBlock"
@@ -55,7 +55,7 @@ config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 
 -- ────────────────────────────( Set Tab Bar )────────────────────────────
-config.tab_max_width = 20
+config.tab_max_width = 25
 config.hide_tab_bar_if_only_one_tab = false
 config.show_tab_index_in_tab_bar = false
 config.use_fancy_tab_bar = false

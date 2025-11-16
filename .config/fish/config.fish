@@ -1,6 +1,6 @@
 # overwrite greeting
 # potentially disabling fastfetch
-source /usr/share/cachyos-fish-config/cachyos-config.fish
+# source /usr/share/cachyos-fish-config/cachyos-config.fish
 #function fish_greeting
 #    # smth smth
 #end
@@ -38,8 +38,29 @@ if status is-interactive
     alias lj="lazyjj"
     alias cd="z"
     alias reload_fish="source $HOME/.config/fish/config.fish"
-    # alias leetcode="nvim leetcode.nvim"
+    alias Leet="nvim leetcode.nvim"
     alias vim="nvim"
+
+    # alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+    # alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
+    # alias ll='eza -l --color=always --group-directories-first --icons' # long format
+    # alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
+    # alias l.="eza -a | grep -e '^\.'" # show only dotfiles
+
+    alias ls='eza --color=always --group-directories-first --icons' # preferred listing
+    alias lt='eza -T --color=always --group-directories-first --icons' # tree listing
+    alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
+    alias lat='eza -aT --color=always --group-directories-first --icons' # all files and dirs
+    alias ll='eza -l --color=always --group-directories-first --icons' # long format
+    alias lal='eza -al --color=always --group-directories-first --icons' # long format
+
+    alias ..='cd ..'
+    alias ...='cd ../..'
+    alias ....='cd ../../..'
+    alias .....='cd ../../../..'
+    alias ......='cd ../../../../..'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     zoxide init fish | source
     starship init fish | source
@@ -47,4 +68,6 @@ if status is-interactive
     # fish_vi_key_bindings
     set fish_cursor_default block blink
     set fish_cursor_replace underline blink
+
+    fastfetch
 end

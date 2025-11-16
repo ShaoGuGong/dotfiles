@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
-local get_process_icon = require("get_process_icon")
+-- local get_process_icon = require("settings/get_process_icon")
 
 local RIGHT = wezterm.nerdfonts.ple_right_half_circle_thick
 local LEFT_ARROW = wezterm.nerdfonts.cod_arrow_left
@@ -100,9 +100,9 @@ local function format_tab_bar(tab, tabs, _, _, _, max_width)
 
 		local process_icon = wezterm.nerdfonts.md_monitor
 
-		if not tab.is_active then
-			process_icon = get_process_icon(tab.active_pane.foreground_process_name)
-		end
+		-- if not tab.is_active then
+		-- 	process_icon = get_process_icon(tab.active_pane.foreground_process_name)
+		-- end
 
 		-- title = wezterm.truncate_right(title, max_width - 4)
 		title = fixed_string_length(title, max_width - 4)

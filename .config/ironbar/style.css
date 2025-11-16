@@ -63,7 +63,7 @@ button:hover, button:active {
 }
 
 .workspaces .item + * {
-    margin-left: 0.5em;
+    margin: 0 0.5em;
 }
 
 .workspaces .item {
@@ -71,9 +71,11 @@ button:hover, button:active {
     border: 2px solid @surface0;
     background: @surface0;
     color: @text;
+    margin: 0 0.5em;
 }
 
 .workspaces .item.focused {
+    margin: 0 0.5em;
     color: @sky;
 }
 
@@ -81,20 +83,20 @@ button:hover, button:active {
     border: 2px solid @teal;
 }
 
-.focused {
-    padding: 0 0.5em;
-    border: 2px solid @maroon;
-    border-radius: 1em;
-    margin-right: 1em;
-    background-color: @surface0;
-}
+/* .focused { */
+/*     padding: 0 0.5em; */
+/*     border: 2px solid @maroon; */
+/*     border-radius: 1em; */
+/*     margin-right: 1em; */
+/*     background-color: @surface0; */
+/* } */
 
 .music {
     border-radius: 1em;
     color: @mauve;
 }
 
-.sysinfo,
+/* .sysinfo, */
 .volume,
 .battery,
 .tray,
@@ -107,27 +109,28 @@ button:hover, button:active {
     padding-right: 1.2em;
     border-top: 2px solid @maroon;
     border-bottom: 2px solid @maroon;
+    color: @text;
 }
 
 .notifications .count {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: @red;
 }
 
-.sysinfo {
-    padding: 0 0.5em;
-    border-radius: 1em 0 0 1em;
-    border-left: 2px solid @maroon;
-    background-color: @surface0;
-    color: @sky;
-}
-
-.sysinfo > * + * {
-    margin-left: 0.5em;
-}
-
+/* .sysinfo { */
+/*     padding: 0 0.5em; */
+/*     border-radius: 1em 0 0 1em; */
+/*     border-left: 2px solid @maroon; */
+/*     background-color: @surface0; */
+/*     color: @sky; */
+/* } */
+/**/
+/* .sysinfo > * + * { */
+/*     margin-left: 0.5em; */
+/* } */
+/**/
 .volume {
-    color: @red;
+    color: @text;
 }
 
 .battery {
@@ -136,6 +139,8 @@ button:hover, button:active {
 
 .tray {
     padding: 0 0.5em;
+    border-radius: 1em 0 0 1em;
+    border-left: 2px solid @maroon;
 }
 
 .clock {

@@ -2,17 +2,17 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "evergarden",
+            colorscheme = "kanagawa",
         },
     },
-    { "ellisonleao/gruvbox.nvim" },
+    -- { "ellisonleao/gruvbox.nvim" },
     { "rebelot/kanagawa.nvim" },
     { "Mofiqul/vscode.nvim" },
-    { "savq/melange-nvim" },
+    -- { "savq/melange-nvim" },
     {
         "ribru17/bamboo.nvim",
-        lazy = false,
-        priority = 1000,
+        -- lazy = false,
+        -- priority = 1000,
         config = function()
             require("bamboo").setup({
                 -- optional configuration here
@@ -22,8 +22,8 @@ return {
     {
         "neanias/everforest-nvim",
         version = false,
-        lazy = false,
-        priority = 1000,
+        -- lazy = false,
+        -- priority = 1000,
         config = function()
             require("everforest").setup({
                 -- Your config here
@@ -34,6 +34,7 @@ return {
     {
         "everviolet/nvim",
         name = "evergarden",
+        lazy = false,
         priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
         opts = {
             theme = {
@@ -53,10 +54,10 @@ return {
             },
         },
     },
-    {
-        "nyngwang/nvimgelion",
-        config = function()
-            -- do whatever you want for further customization~
-        end,
-    },
+    -- {
+    --     "nyngwang/nvimgelion",
+    --     config = function()
+    --         -- do whatever you want for further customization~
+    --     end,
+    -- },
 }

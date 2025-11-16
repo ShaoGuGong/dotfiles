@@ -9,6 +9,9 @@ return {
                 hlgroup = "Todo",
             },
         },
+        foldKeymaps = {
+            setup = false,
+        },
     }, -- needed even when using default config
 
     -- recommended: disable vim's auto-folding

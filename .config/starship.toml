@@ -1,6 +1,5 @@
 format = """\
 (fg:arrow)$os\
-$time\
 $username\
 $directory\
 (\
@@ -95,21 +94,18 @@ format = '[]($style)[ $user ](bg:$style fg:text_color)[]($style)'
 disabled = true
 show_always = false
 
+
 [character]
 success_symbol = "[ ](fg:#78ccc5)"
 error_symbol = "[ ](fg:red)"
-# success_symbol = "[INSERT  ](fg:#78ccc5)"
-# error_symbol = "[INSERT  ](fg:red)"
-# vimcmd_symbol = "[NORMAL  ](fg:$text_color)"
-# vimcmd_visual_symbol = "[VISUAL  ](fg: #9745be)"
 
 [directory]
 format = " [](fg:directory)[  $path ]($style)[$read_only]($read_only_style)[](fg:directory)"
-truncation_length = 2
+truncation_length = 3
 style = "fg:text_color bg:directory"
 read_only_style = "fg:text_color bg:directory"
 before_repo_root_style = "fg:text_color bg:directory"
-truncation_symbol = "…/"
+truncation_symbol = "󰇘/"
 truncate_to_repo = true
 read_only = "  "
 

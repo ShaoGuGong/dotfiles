@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
-local get_process_icon = require("get_process_icon")
+local get_process_icon = require("settings/get_process_icon")
 
 -- The powerline < symbol
 -- The filled in variant of the < symbol
@@ -53,19 +53,19 @@ local function update_status(window, pane)
 		if len > path_len then
 			cwd = DOTS .. "/" .. cwd
 		end
-		local hostname = cwd_uri.host or wezterm.hostname()
+		table.insert(cells, DIR .. " " .. cwd)
+		-- local hostname = cwd_uri.host or wezterm.hostname()
 
 		-- Remove the domain name portion of the hostname
-		local dot = hostname:find("[.]")
-		if dot then
-			hostname = hostname:sub(1, dot - 1)
-		end
-		if hostname == "" then
-			hostname = wezterm.hostname()
-		end
+		-- local dot = hostname:find("[.]")
+		-- if dot then
+		-- 	hostname = hostname:sub(1, dot - 1)
+		-- end
+		-- if hostname == "" then
+		-- 	hostname = wezterm.hostname()
+		-- end
 
-		table.insert(cells, DIR .. " " .. cwd)
-		table.insert(cells, LINUX .. " " .. hostname)
+		-- table.insert(cells, LINUX .. " " .. hostname)
 	end
 
 	local date = wezterm.strftime("%H:%M")

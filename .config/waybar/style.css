@@ -12,29 +12,9 @@
   margin: 5px 5px;
 }
 
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
-}
-
-#workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
-}
-
-#workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
-}
-
+#window,
+#workspaces,
+#custom-notification,
 #network,
 #custom-music,
 #tray,
@@ -50,6 +30,8 @@
   margin: 3px 0;
 }
 
+#window,
+#custom-notification,
 #workspaces,
 #network,
 #custom-music,
@@ -65,10 +47,23 @@
   border-bottom: 2px solid @maroon;
 }
 
+#window,
 #workspaces,
 #custom-music {
   border-left: 2px solid @maroon;
   border-right: 2px solid @maroon;
+}
+
+#window {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
 #clock {
@@ -86,9 +81,9 @@
 
 #backlight {
   color: @yellow;
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  border-right: 2px solid @maroon;
+  /* margin-right: 1rem; */
+  /* border-radius: 0px 1rem 1rem 0px; */
+  /* border-right: 2px solid @maroon; */
 }
 
 #network {
@@ -99,6 +94,9 @@
 
 #battery {
   color: @green;
+  /* margin-right: 1rem; */
+  /* border-radius: 0px 1rem 1rem 0px; */
+  /* border-right: 2px solid @maroon; */
 }
 
 #battery.charging {
@@ -113,8 +111,12 @@
   color: @maroon;
 }
 
-#pluseaudio, #battery, #bluetooth #backlight {
-  border-radius: 0;
+/* #pluseaudio, #battery, #bluetooth #backlight { */
+/*   border-radius: 0; */
+/* } */
+
+#custom-notification {
+  font-family: "Maple Mono NF CN";
 }
 
 #bluetooth {
@@ -124,6 +126,7 @@
 #custom-music {
   color: @mauve;
   border-radius: 1rem;
+  margin-left: 1rem;
 }
 
 
@@ -138,3 +141,22 @@
     color: @red;
 }
 
+#workspaces {
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}

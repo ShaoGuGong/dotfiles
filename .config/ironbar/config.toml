@@ -5,21 +5,21 @@ height = 20
 type = "workspaces"
 
 [start.name_map]
-web = "  "
-code = "  "
-term = "  "
-work = "  "
-music = "  "
-docs = "  "
-1 = "  "
-2 = "  "
-3 = "  "
-4 = "  "
-5 = "  "
-6 = "  "
-7 = "  "
-8 = "  "
-9 = "  "
+web = ""
+code = ""
+term = ""
+work = ""
+music = ""
+docs = ""
+1 = " "
+2 = " "
+3 = " "
+4 = " "
+5 = " "
+6 = " "
+7 = " "
+8 = " "
+9 = " "
 
 [[start]]
 type = "music"
@@ -30,24 +30,21 @@ mode = "end"
 max_length = 30
 
 
-[[end]]
-type = "focused"
-icon_size = 24
+# [[end]]
+# type = "focused"
+# icon_size = 24
+#
+# [end.truncate]
+# mode = "end"
+# max_length = 30
 
-[end.truncate]
-mode = "end"
-max_length = 30
-
-[[end]]
-type = 'sys_info'
-format = [
-    " {cpu_percent}%",
-    " {memory_used}GB",
-]
-
-[end.interval]
-cpu = 1
-memory = 30
+# [[end]]
+# type = 'sys_info'
+# format = [" {cpu_percent}%", " {memory_used}GB"]
+#
+# [end.interval]
+# cpu = 30
+# memory = 30
 
 [[end]]
 type = "tray"
@@ -56,6 +53,18 @@ icon_size = 16
 [[end]]
 type = "battery"
 format = "{percentage}%"
+
+[[end]]
+type = "volume"
+format = "{icon} {percentage}%"
+max_volume = 100
+truncate = "middle"
+
+[end.icons]
+volume_high = "󰕾"
+volume_medium = "󰖀"
+volume_low = "󰕿"
+muted = "󰝟"
 
 [[end]]
 type = "notifications"
