@@ -319,7 +319,8 @@ spawn-sh-at-startup "vicinae server"
 // Open GUI Package at startup
 spawn-at-startup "thunderbird"
 spawn-at-startup "discord"
-spawn-at-startup "steam"
+
+prefer-no-csd
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -414,7 +415,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
-    Mod+D hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
+    Mod+SPACE hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
     Mod+E hotkey-overlay-title="Open Emacs" { spawn "emacs"; }
     Mod+N hotkey-overlay-title="Open Neovim" { spawn-sh "wezterm -e nvim"; }
     Mod+Y hotkey-overlay-title="Open Yazi" { spawn-sh "wezterm -e yazi"; }
@@ -518,12 +519,12 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
+    Mod+D              { focus-workspace-down; }
+    Mod+U              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
+    Mod+Ctrl+D         { move-column-to-workspace-down; }
+    Mod+Ctrl+U         { move-column-to-workspace-up; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -531,8 +532,8 @@ binds {
 
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
+    Mod+Shift+D         { move-workspace-down; }
+    Mod+Shift+U         { move-workspace-up; }
 
     // You can bind mouse wheel scroll ticks using the following syntax.
     // These binds will change direction based on the natural-scroll setting.
@@ -705,6 +706,7 @@ window-rule {
 
 window-rule {
     match is-active=false
+    exclude app-id="^libreoffice.*"
     exclude title="子母畫面"
     exclude title="^Typst Preview*"
     exclude app-id="org.pwmt.zathura"

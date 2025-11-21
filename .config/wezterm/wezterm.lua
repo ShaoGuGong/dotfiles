@@ -40,9 +40,9 @@ scheme.tab_bar = {
 }
 config.color_schemes = { ["Kanagawa"] = scheme }
 config.color_scheme = "Kanagawa"
-config.window_background_image = "/home/shaogu/Pictures/linus-nvidia.jpg"
+config.window_background_image = "/home/shaogu/Pictures/my_wallpapers/wallpapers/linux/Wallpaper-gnu.jpeg"
 config.window_background_image_hsb = {
-	brightness = 0.15,
+	brightness = 0.1,
 	saturation = 1.0,
 	hue = 1.0,
 }

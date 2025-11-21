@@ -1,25 +1,6 @@
 position = "top"
 height = 20
 
-[[start]]
-type = "workspaces"
-
-[start.name_map]
-web = ""
-code = ""
-term = ""
-work = ""
-music = ""
-docs = ""
-1 = " "
-2 = " "
-3 = " "
-4 = " "
-5 = " "
-6 = " "
-7 = " "
-8 = " "
-9 = " "
 
 [[start]]
 type = "music"
@@ -29,6 +10,25 @@ icon_size = 16
 mode = "end"
 max_length = 30
 
+[[center]]
+type = "workspaces"
+
+[center.name_map]
+web = "  "
+code = "  "
+term = "  "
+work = "  "
+music = "  "
+docs = "  "
+1 = "  "
+2 = "  "
+3 = "  "
+4 = "  "
+5 = "  "
+6 = "  "
+7 = "  "
+8 = "  "
+9 = "  "
 
 # [[end]]
 # type = "focused"

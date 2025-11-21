@@ -26,8 +26,8 @@ button {
 }
 
 button:hover, button:active {
-    background-color: @surface1;
-; /* 原本 var(--color-dark-secondary) */
+    /* background-color: @surface1; */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .popup {
@@ -35,41 +35,44 @@ button:hover, button:active {
     margin: 1em;
     padding: 0.5em;
     border-radius: 1em;
-    color: @text;
+    color: @maroon;
 }
 
 .popup-music .controls > * {
     background: rgba(49, 50, 68, 0.5);
 }
 
-.music,
-.workspaces {
-    border: 2px solid @maroon;
-    background: @surface0;
+.music {
+    border: 2px solid @teal;
 }
 
-.workspaces,
+.notifications,
+.volume,
+.battery,
 .music,
 .tray,
 .clock {
-    background: @surface0;
+    /* background: @surface0; */
+    /* background-color: @surface0; */
+    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .workspaces {
     margin-left: 1em;
     margin-right: 1em;
     border-radius: 1em;
-    background-color: @surface0;
+    background-color: transparent;
+    background: transparent;
 }
-
 .workspaces .item + * {
     margin: 0 0.5em;
 }
 
 .workspaces .item {
     border-radius: 1em;
-    border: 2px solid @surface0;
-    background: @surface0;
+    /* border: 2px solid @surface0; */
+    background: transparent;
     color: @text;
     margin: 0 0.5em;
 }
@@ -80,55 +83,37 @@ button:hover, button:active {
 }
 
 .workspaces .item:hover {
-    border: 2px solid @teal;
+    /* border: 2px solid @teal; */
 }
-
-/* .focused { */
-/*     padding: 0 0.5em; */
-/*     border: 2px solid @maroon; */
-/*     border-radius: 1em; */
-/*     margin-right: 1em; */
-/*     background-color: @surface0; */
-/* } */
 
 .music {
     border-radius: 1em;
-    color: @mauve;
+    color: @sapphire;
 }
 
-/* .sysinfo, */
 .volume,
 .battery,
 .tray,
 .clock {
-    border-top: 2px solid @maroon;
-    border-bottom: 2px solid @maroon;
+    border-top: 2px solid @teal;
+    border-bottom: 2px solid @teal;
 }
 
 .notifications .button {
     padding-right: 1.2em;
-    border-top: 2px solid @maroon;
-    border-bottom: 2px solid @maroon;
+    border-top: 2px solid @teal;
+    border-bottom: 2px solid @teal;
     color: @text;
+    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .notifications .count {
     font-size: 0.9em;
     color: @red;
+    background: transparent;
 }
 
-/* .sysinfo { */
-/*     padding: 0 0.5em; */
-/*     border-radius: 1em 0 0 1em; */
-/*     border-left: 2px solid @maroon; */
-/*     background-color: @surface0; */
-/*     color: @sky; */
-/* } */
-/**/
-/* .sysinfo > * + * { */
-/*     margin-left: 0.5em; */
-/* } */
-/**/
 .volume {
     color: @text;
 }
@@ -140,7 +125,7 @@ button:hover, button:active {
 .tray {
     padding: 0 0.5em;
     border-radius: 1em 0 0 1em;
-    border-left: 2px solid @maroon;
+    border-left: 2px solid @teal;
 }
 
 .clock {
@@ -148,6 +133,6 @@ button:hover, button:active {
     margin-right: 1em;
     border-radius: 0 1em 1em 0;
     color: @text;
-    border-right: 2px solid @maroon;
+    border-right: 2px solid @teal;
 }
 

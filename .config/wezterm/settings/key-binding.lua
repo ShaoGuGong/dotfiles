@@ -103,12 +103,12 @@ local keys = {
 	-- │                      Tab ShortCuts                      │
 	-- ╰─────────────────────────────────────────────────────────╯
 	{
-		key = "LeftArrow",
+		key = "h",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(-1),
 	},
 	{
-		key = "RightArrow",
+		key = "l",
 		mods = "CTRL|SHIFT",
 		action = wezterm.action.ActivateTabRelative(1),
 	},
