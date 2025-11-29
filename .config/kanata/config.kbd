@@ -1,0 +1,68 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 300
+
+  left-hand-keys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
+  right-hand-keys (
+    y u i o p
+    h j k l ;
+    n m , . /
+  )
+)
+
+(defsrc
+  a   s   d   f   m   ,   .   /
+  esc
+)
+
+(deflayer base
+  @a  @s  @d  @f  @m  @,  @.  @/
+  @esc
+)
+
+(deflayer nomods
+  a   s   d   f   m   ,   .   /
+  @esc
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+
+
+
+(defalias
+  tap (multi
+    (layer-switch nomods)
+    (on-idle-fakekey to-base tap 150)
+  )
+
+  toggle (switch
+    ((layer base)) (layer-switch nomods) break
+    ((layer nomods)) (layer-switch base) break
+  )
+
+  a (tap-hold-release-keys $tap-time $hold-time (multi a @tap) lctl $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-time (multi s @tap) lsft $left-hand-keys)
+  d (tap-hold-release-keys $tap-time $hold-time (multi d @tap) lmet $left-hand-keys)
+  f (tap-hold-release-keys $tap-time $hold-time (multi f @tap) lalt $left-hand-keys)
+
+  m (tap-hold-release-keys $tap-time $hold-time (multi m @tap) lalt $right-hand-keys)
+  , (tap-hold-release-keys $tap-time $hold-time (multi , @tap) lmet $right-hand-keys)
+  . (tap-hold-release-keys $tap-time $hold-time (multi . @tap) lsft $right-hand-keys)
+  / (tap-hold-release-keys $tap-time $hold-time (multi / @tap) lctl $right-hand-keys)
+
+  esc (tap-hold $tap-time $hold-time esc @toggle)
+  caps (tap-hold $tap-time $hold-time esc @toggle)
+)

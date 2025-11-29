@@ -5,10 +5,10 @@
 local keymap_set = LazyVim.safe_keymap_set
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
-vim.keymap.del("n", "<C-h>")
-vim.keymap.del("n", "<C-j>")
-vim.keymap.del("n", "<C-k>")
-vim.keymap.del("n", "<C-l>")
+-- vim.keymap.del("n", "<C-h>")
+-- vim.keymap.del("n", "<C-j>")
+-- vim.keymap.del("n", "<C-k>")
+-- vim.keymap.del("n", "<C-l>")
 
 local modes = { "n", "v", "i", "s", "x", "o", "c", "t" }
 keymap_set(modes, "<C-[>", "<ESC>", { desc = "Escape from any mode" })
@@ -17,7 +17,7 @@ keymap_set("i", "kj", "<esc>", { desc = "Escape from insert mode" })
 keymap_set("t", "<esc>", [[<C-\><C-n>]], { desc = "Terminal: Exit to Normal Mode" })
 keymap_set({ "n", "x", "o" }, "n", "nzzzv", { desc = "Next Search Result" })
 keymap_set({ "n", "x", "o" }, "N", "Nzzzv", { desc = "Prev Search Result" })
-keymap_set("n", "<C-j>", "i<cr><ESC>", { desc = "Insert Below" })
+keymap_set("n", "<C-S-J>", "i<cr><ESC>", { desc = "Insert Below" })
 
 local wk = require("which-key")
 wk.add({
@@ -25,7 +25,6 @@ wk.add({
 })
 local transparent_status = vim.g.transparent_enabled or false
 local copilot_status = true
-local autosave_status = false
 local tab_size = 4
 
 local toggles = {
@@ -46,7 +45,7 @@ local toggles = {
         end,
     },
     {
-        map = "<leader>C",
+        map = "<leader>a",
         id = "copilot",
         name = "Copilot ",
         get = function()
@@ -59,22 +58,6 @@ local toggles = {
             else
                 vim.cmd("Copilot disable")
                 copilot_status = false
-            end
-        end,
-    },
-    {
-        map = "<leader>a",
-        id = "autosave",
-        name = "auto-save",
-        get = function()
-            return autosave_status
-        end,
-        set = function(state)
-            vim.cmd("ASToggle")
-            if state then
-                autosave_status = true
-            else
-                autosave_status = false
             end
         end,
     },

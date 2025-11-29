@@ -31,6 +31,5 @@ end
 
 -- 移除自動開啟Spell Check
 vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
-vim.cmd("ASToggle")
 vim.diagnostic.config({ virtual_text = false })
-vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "Outline" })
+-- vim.g.transparent_groups = vim.list_extend(vim.g.transparent_groups or {}, { "Outline" })

@@ -55,9 +55,9 @@ chafa
 char-white
 chwd
 cmake
+cowsay
 cpupower
 cryptsetup
-cuda
 cups
 ddcci-driver-linux-dkms-git
 device-mapper
@@ -90,6 +90,7 @@ ffmpegthumbnailer
 ffmpegthumbs
 filelight
 flatpak
+fortune-mod
 fsarchiver
 fuzzel
 git
@@ -116,6 +117,7 @@ ironbar-bin
 iwd
 jfsutils
 jujutsu
+kanata-bin
 kate
 kcalc
 kde-gtk-config
@@ -125,6 +127,7 @@ kdeplasma-addons
 kdialog
 kinfocenter
 kio-admin
+kitty
 kolourpaint
 konsole
 kscreen
@@ -142,8 +145,6 @@ libdvdcss
 libgsf
 libopenraw
 libplasma
-libreoffice-fresh
-libreoffice-fresh-zh-tw
 libva-nvidia-driver
 libvdpau-va-gl
 libwnck3
@@ -234,6 +235,7 @@ s-nail
 sddm
 sddm-kcm
 sg3_utils
+skim
 smartmontools
 snapper
 sof-firmware

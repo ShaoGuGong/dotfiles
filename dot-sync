@@ -50,6 +50,7 @@ sync_file "swaync/" "swaync/"
 sync_file "swaylock/" "swaylock/"
 sync_file "niri/" "niri/"
 sync_file "systemd/" "systemd/"
+sync_file "kanata/" "kanata/"
 
 echo -e "\n\033[1;94mArch Packages install list:\n"
 paru -Qeq | tee "$dotfile_path/my_arch_package"

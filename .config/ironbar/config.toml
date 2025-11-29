@@ -78,7 +78,7 @@ open_none = "󰍡"
 open_some = "󱥁"
 open_dnd = "󱅮"
 
-
 [[end]]
 type = "clock"
-format = " %H:%M %m-%d"
+format = " %H:%M"
+format_popup = "%m-%d-%Y"

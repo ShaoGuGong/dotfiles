@@ -1,7 +1,7 @@
 -- For `plugins/markview.lua` users.
 return {
     "OXY2DEV/markview.nvim",
-    -- lazy = false,
+    lazy = false,
     ft = { "typst", "markdown", "latex" },
 
     -- For `nvim-treesitter` users.

@@ -44,6 +44,7 @@ button:hover, button:active {
 
 .music {
     border: 2px solid @teal;
+    margin-left: 1em;
 }
 
 .notifications,

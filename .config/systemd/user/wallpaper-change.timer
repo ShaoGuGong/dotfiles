@@ -1,7 +1,6 @@
 [Unit]
 Description=Run wallpaper changer every 5 minutes
-After=graphical-session.target swww.service
-PartOf=graphical-session.target
+After=niri.service swww.service
 
 [Timer]
 OnBootSec=1min
