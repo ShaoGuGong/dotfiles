@@ -12,11 +12,12 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.showbreak = "↪ "
-vim.opt.breakindent = true
-vim.opt.breakindentopt = { "shift:2", "min:20" }
+-- vim.opt.textwidth = 120
+-- vim.opt.wrap = true
+-- vim.opt.linebreak = true
+-- vim.opt.showbreak = "↪ "
+-- vim.opt.breakindent = true
+-- vim.opt.breakindentopt = { "shift:2", "min:20" }
 
 vim.opt.list = true
 vim.opt.lcs = {

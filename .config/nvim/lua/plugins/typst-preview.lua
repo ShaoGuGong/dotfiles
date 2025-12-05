@@ -4,11 +4,16 @@ return {
     ft = { "typst" },
     version = "1.*",
     opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+    config = function()
+        require("typst-preview").setup({
+            port = 8000,
+        })
+    end,
     keys = {
         {
             "<leader>cp",
             ft = "typst",
-            "<cmd>TypstPreviewStop<cr><cmd>TypstPreview<cr>",
+            "<cmd>TypstPreview<cr>",
             desc = "Typst Preview",
         },
     },

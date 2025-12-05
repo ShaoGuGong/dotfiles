@@ -1,6 +1,6 @@
 [Unit]
 Description=Random wallpaper changer for swww
-After=niri.service swww.service
+After=swww.service
 
 [Service]
 ExecStart=/home/shaogu/.local/bin/random_bg.sh

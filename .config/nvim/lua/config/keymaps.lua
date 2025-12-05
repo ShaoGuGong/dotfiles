@@ -22,6 +22,19 @@ keymap_set("n", "<C-S-J>", "i<cr><ESC>", { desc = "Insert Below" })
 local wk = require("which-key")
 wk.add({
     { "<leader>t", "<cmd>terminal<cr>", desc = "Open terminal" },
+    { "<leader>n", group = "Noice" },
+    {
+        "<leader>nh",
+        function()
+            if Snacks.config.picker and Snacks.config.picker.enabled then
+                Snacks.picker.notifications()
+            else
+                Snacks.notifier.show_history()
+            end
+        end,
+        desc = "Notification History",
+    },
+    { "<leader>nc", "<cmd>Noice dismiss<cr>", desc = "Dismiss All Notifications" },
 })
 local transparent_status = vim.g.transparent_enabled or false
 local copilot_status = true

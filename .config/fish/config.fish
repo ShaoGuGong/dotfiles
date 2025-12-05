@@ -64,5 +64,5 @@ if status is-interactive
     set fish_cursor_replace underline blink
 
     fastfetch
-    cowfortune
+    # cowfortune
 end
