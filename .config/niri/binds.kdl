@@ -125,7 +125,7 @@ binds {
     Mod+Page_Up        { focus-workspace-up; }
     Mod+D              { focus-workspace-down; }
     Mod+U              { focus-workspace-up; }
-    Mod+Tab            { focus-workspace-previous; }
+    // Mod+Tab            { focus-workspace-previous; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+D         { move-column-to-workspace-down; }
@@ -221,7 +221,7 @@ binds {
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
+    Mod+F { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.

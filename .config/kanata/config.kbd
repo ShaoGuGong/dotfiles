@@ -7,5 +7,5 @@
 )
 
 (deflayer base
-  lctl caps
+  rctl caps
 )

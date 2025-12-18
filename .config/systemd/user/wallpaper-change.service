@@ -5,3 +5,7 @@ After=swww.service
 [Service]
 ExecStart=/home/shaogu/.local/bin/random_bg.sh
 Type=oneshot
+Restart=on-failure
+RestartSec=1min
+StartLimitIntervalSec=600
+StartLimitBurst=3

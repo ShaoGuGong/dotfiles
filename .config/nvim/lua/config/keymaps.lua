@@ -35,10 +35,10 @@ wk.add({
         desc = "Notification History",
     },
     { "<leader>nc", "<cmd>Noice dismiss<cr>", desc = "Dismiss All Notifications" },
+    { "<leader>m", group = "Markdown" },
 })
 local transparent_status = vim.g.transparent_enabled or false
 local copilot_status = true
-local tab_size = 4
 
 local toggles = {
     {
@@ -79,9 +79,10 @@ local toggles = {
         id = "tabsize",
         name = "tabsize 4/2",
         get = function()
-            return tab_size == 4
+            return (vim.opt.tabstop == 4)
         end,
         set = function(state)
+            local tab_size
             if state then
                 tab_size = 4
             else

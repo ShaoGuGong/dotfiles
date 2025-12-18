@@ -8,6 +8,8 @@ if status is-interactive
     set -gx PATH $HOME/.dotfiles/ $PATH
     set -gx PATH $HOME/.emacs.d/bin $PATH
     set -gx PATH /home/shaogu/.local/bin $PATH
+    set -gx PATH /home/shaogu/Scripts $PATH
+
     set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
     set -x EDITOR nvim
     set -gx DOOMDIR $HOME/.config/doom

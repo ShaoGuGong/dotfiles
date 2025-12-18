@@ -156,6 +156,7 @@ linux-firmware
 logrotate
 lsb-release
 lsscsi
+luarocks
 lvm2
 man-db
 man-pages
@@ -195,6 +196,7 @@ openocd
 openssh
 os-prober
 pacman-contrib
+pandoc-cli
 paru
 pavucontrol
 perl

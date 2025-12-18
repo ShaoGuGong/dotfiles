@@ -15,9 +15,10 @@ return {
     opts = {
         preview = {
             icon_provider = "mini",
+            enable = false,
         },
         typst = {
-            enable = false,
+            enable = true,
             code_blocks = {
                 text_direction = "left",
                 style = "simple",
@@ -26,7 +27,7 @@ return {
                 shift_width = 0,
             },
             list_items = {
-                enable = false,
+                enable = true,
                 shift_width = 1,
                 marker_plus = {
                     text = "%d.",
@@ -34,4 +35,9 @@ return {
             },
         },
     },
+    keys = { {
+        "<leader>mv",
+        "<CMD>Markview<CR>",
+        { desc = "Toggle MarkView" },
+    } },
 }

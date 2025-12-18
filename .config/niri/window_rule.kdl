@@ -61,6 +61,7 @@ window-rule {
     exclude title="子母畫面"
     exclude title="^Typst Preview*"
     exclude app-id="org.pwmt.zathura"
+    exclude app-id="app.zen_browser.zen"
     opacity 0.9
 }
 

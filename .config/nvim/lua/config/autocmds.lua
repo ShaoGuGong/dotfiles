@@ -9,10 +9,11 @@
 
 -- Set Fcitx5 autocmds auto switch input method to English
 -- 建立一個 augroup，防止重複定義
-local group = vim.api.nvim_create_augroup("Fcitx5Toggle", { clear = true })
+local input_method_group = vim.api.nvim_create_augroup("Fcitx5Toggle", { clear = true })
+local c_dev_group = vim.api.nvim_create_augroup("CDevSetting", { clear = true })
 
 -- 定義要綁定的事件
-local events = {
+local input_method_events = {
     "InsertEnter",
     "InsertLeave",
     "BufEnter",
@@ -21,11 +22,27 @@ local events = {
 }
 
 -- 綁定每個事件
-for _, event in ipairs(events) do
+for _, event in ipairs(input_method_events) do
     vim.api.nvim_create_autocmd(event, {
-        group = group,
+        group = input_method_group,
         pattern = "*",
         command = "silent! !fcitx5-remote -c",
+    })
+end
+
+local c_dev_events = {
+    "BufRead",
+    "BufNewFile",
+}
+
+for _, event in ipairs(c_dev_events) do
+    vim.api.nvim_create_autocmd(event, {
+        group = c_dev_group,
+        pattern = { "*.c", "*.h", "*.cpp", "*.hpp", ".typ" },
+        callback = function()
+            vim.opt_local.tabstop = 2
+            vim.opt_local.shiftwidth = 2
+        end,
     })
 end
 

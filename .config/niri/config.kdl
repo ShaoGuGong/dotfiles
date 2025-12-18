@@ -63,5 +63,6 @@ spawn-sh-at-startup "vicinae server"
 // Open GUI Package at startup
 spawn-at-startup "thunderbird"
 spawn-at-startup "discord"
+spawn-at-startup "steam"
 
 prefer-no-csd

@@ -105,8 +105,9 @@ button:hover, button:active {
     border-top: 2px solid @teal;
     border-bottom: 2px solid @teal;
     color: @text;
-    background: rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.2);
+    background: transparent;
+    /* background: rgba(0, 0, 0, 0.2); */
+    /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .notifications .count {
@@ -129,6 +130,9 @@ button:hover, button:active {
     border-left: 2px solid @teal;
 }
 
+.tray > * {
+    background: transparent;
+}
 .clock {
     font-weight: bold;
     margin-right: 1em;
