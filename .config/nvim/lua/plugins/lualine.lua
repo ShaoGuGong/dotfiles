@@ -4,6 +4,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
+        opts.options.theme = "nord"
         local icons = LazyVim.config.icons
         -- opts.options.component_separators = ""
         opts.options.component_separators = ""

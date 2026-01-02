@@ -225,8 +225,13 @@ pv
 pwvucontrol
 python
 python-defusedxml
+python-epc
 python-markdown
 python-packaging
+python-pyqt6
+python-pyqt6-sip
+python-pyqt6-webengine
+python-sexpdata
 qt6-wayland
 rebuild-detector
 reflector
@@ -291,6 +296,7 @@ vivaldi
 vivaldi-ffmpeg-codecs
 vulkan-radeon
 waybar
+wev
 wezterm
 wget
 which

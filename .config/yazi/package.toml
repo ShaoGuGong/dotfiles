@@ -1,47 +1,47 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "3d0c7c6"
-hash = "9dce00232a0e0e2502565c7aa2b0ed4e"
+rev = "398796d"
+hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "3d0c7c6"
-hash = "7918aab6a71caf31b58411f789195677"
+rev = "398796d"
+hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "7a08a09"
-hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
+rev = "0e56060"
+hash = "ab2e66065a94cca4886b303518e44bd8"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "e5f00e2"
-hash = "d6f60c24d8c0cf57a855bf46115b2502"
+rev = "398796d"
+hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [[plugin.deps]]
 use = "Rolv-Apneseth/starship"
-rev = "6a0f3f7"
-hash = "d5a74d95c2e8194ac352c5e10e81e64f"
+rev = "eca1861"
+hash = "e519d894e94ded741e06aae4d4775981"
 
 [[plugin.deps]]
 use = "GianniBYoung/rsync"
-rev = "55631aa"
-hash = "fb38b3c546e6594961b335cee4eaa340"
+rev = "14d2828"
+hash = "7394430ba473dce1023721622438bf3d"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "b886025"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "398796d"
+hash = "73788c7dc5827ef4677c502c3ea8fa19"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:zoom"
-rev = "de53d90"
-hash = "4a47a9cd4d8b3a963cb4cc593664b77e"
+rev = "398796d"
+hash = "a638db397a5a41d3f3a08a7427ccead1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "8f1d971"
-hash = "4fccaaf10c36dc2466e2438a386ff017"
+rev = "398796d"
+hash = "e2d4bfccf31e5ab05f46fee4797c5215"
 
 [flavor]
 deps = []

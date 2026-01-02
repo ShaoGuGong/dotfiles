@@ -2,7 +2,8 @@ return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "kanagawa",
+            -- colorscheme = "kanagawa",
+            colorscheme = "nord",
         },
     },
     -- { "ellisonleao/gruvbox.nvim" },
@@ -53,6 +54,11 @@ return {
                 },
             },
         },
+    }, -- If you are using Packer
+    {
+        "shaunsingh/nord.nvim",
+        lazy = false,
+        priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
     },
     -- {
     --     "nyngwang/nvimgelion",

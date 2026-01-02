@@ -6,23 +6,29 @@
     background-color: transparent;
     box-shadow: none;
     font-family: "Maple Mono NF CN";
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #bar {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-popover, popover contents, calendar {
+/* popover, popover contents, calendar { */
+popover, calendar {
     /* background-color: @base; /\* 原本 var(--color-dark-primary) *\/ */
-    background-color: @surface0;
-    background: transparent;
+    margin-top: 1em;
+    background-color: rgba(49, 50, 68, 0.5);
+    border-radius: 1em;
+    border: 2px solid @maroon;
+    color: @text;
 }
 
 button {
     background: @surface0;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 0 0.5em;
+    color: @text;
+    background: transparent;
 }
 
 button:hover, button:active {
@@ -32,7 +38,7 @@ button:hover, button:active {
 
 .popup {
     background-color: rgba(49, 50, 68, 0.5);
-    margin: 1em;
+    /* margin: 1em; */
     padding: 0.5em;
     border-radius: 1em;
     color: @maroon;
@@ -50,6 +56,7 @@ button:hover, button:active {
 .notifications,
 .volume,
 .battery,
+.script,
 .music,
 .tray,
 .clock {
@@ -60,12 +67,12 @@ button:hover, button:active {
 }
 
 .workspaces {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: 0 1em;
     border-radius: 1em;
     background-color: transparent;
     background: transparent;
 }
+
 .workspaces .item + * {
     margin: 0 0.5em;
 }
@@ -89,15 +96,26 @@ button:hover, button:active {
 
 .music {
     border-radius: 1em;
-    color: @sapphire;
+    color: @green;
 }
 
 .volume,
 .battery,
+.script,
 .tray,
 .clock {
     border-top: 2px solid @teal;
     border-bottom: 2px solid @teal;
+}
+
+
+.focused.widget {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0 0.5em;
+    margin-right: 1em;
+    /* border: 2px solid @teal; */
+    border-radius: 1em;
+    color: @peach;
 }
 
 .notifications .button {
@@ -111,7 +129,7 @@ button:hover, button:active {
 }
 
 .notifications .count {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: @red;
     background: transparent;
 }
@@ -133,6 +151,7 @@ button:hover, button:active {
 .tray > * {
     background: transparent;
 }
+
 .clock {
     font-weight: bold;
     margin-right: 1em;

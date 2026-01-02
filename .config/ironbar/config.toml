@@ -10,16 +10,15 @@ icon_size = 16
 mode = "end"
 max_length = 30
 
+# [start.marquee]
+# enable = true
+# max_length = 30
+
 [[center]]
 type = "workspaces"
+sort = "name"
 
 [center.name_map]
-web = "  "
-code = "  "
-term = "  "
-work = "  "
-music = "  "
-docs = "  "
 1 = "  "
 2 = "  "
 3 = "  "
@@ -29,26 +28,30 @@ docs = "  "
 7 = "  "
 8 = "  "
 9 = "  "
+# web = "  "
+# code = "  "
+# term = "  "
+# work = "  "
+# music = "  "
+# docs = "  "
 
-# [[end]]
-# type = "focused"
-# icon_size = 24
-#
-# [end.truncate]
-# mode = "end"
-# max_length = 30
+[[end]]
+type = "focused"
+icon_size = 24
 
-# [[end]]
-# type = 'sys_info'
-# format = [" {cpu_percent}%", " {memory_used}GB"]
-#
-# [end.interval]
-# cpu = 30
-# memory = 30
+[end.truncate]
+mode = "end"
+length = 5
+max_length = 20
 
 [[end]]
 type = "tray"
 icon_size = 16
+
+[[end]]
+type = "script"
+cmd = "/home/shaogu/.cargo/bin/weather"
+interval = 1800000
 
 [[end]]
 type = "battery"
@@ -77,6 +80,7 @@ closed_dnd = "󱅯"
 open_none = "󰍡"
 open_some = "󱥁"
 open_dnd = "󱅮"
+
 
 [[end]]
 type = "clock"

@@ -9,9 +9,9 @@ return {
     keys = {
         {
             mode = { "v", "n" },
-            "<leader>C",
+            "<leader>cM",
             "<cmd>MCstart<cr>",
-            desc = "Create a selection for selected text or word under the cursor",
+            desc = "muticursors",
         },
     },
 }

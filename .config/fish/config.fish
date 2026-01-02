@@ -4,15 +4,16 @@
 #function fish_greeting
 #    # smth smth
 #end
-if status is-interactive
-    set -gx PATH $HOME/.dotfiles/ $PATH
-    set -gx PATH $HOME/.emacs.d/bin $PATH
-    set -gx PATH /home/shaogu/.local/bin $PATH
-    set -gx PATH /home/shaogu/Scripts $PATH
+set -gx PATH $HOME/.dotfiles/ $PATH
+set -gx PATH $HOME/.emacs.d/bin $PATH
+set -gx PATH /home/shaogu/.local/bin $PATH
+set -gx PATH /home/shaogu/Scripts $PATH
 
-    set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
-    set -x EDITOR nvim
-    set -gx DOOMDIR $HOME/.config/doom
+set -gx WEZTERM_CONFIG_DIR $HOME/.config/wezterm
+set -gx EDITOR nvim
+set -gx DOOMDIR $HOME/.config/doom
+
+if status is-interactive
     #                                     ╭─────╮
     #                                     │ fzf │
     #                                     ╰─────╯
@@ -41,7 +42,6 @@ if status is-interactive
     alias cd="z"
     alias reload_fish="source $HOME/.config/fish/config.fish"
     alias Leet="nvim leetcode.nvim"
-    alias vim="nvim"
 
     alias ls='eza --color=always --group-directories-first --icons' # preferred listing
     alias lt='eza -T --color=always --group-directories-first --icons' # tree listing
@@ -64,7 +64,5 @@ if status is-interactive
     # fish_vi_key_bindings
     set fish_cursor_default block blink
     set fish_cursor_replace underline blink
-
-    fastfetch
     # cowfortune
 end

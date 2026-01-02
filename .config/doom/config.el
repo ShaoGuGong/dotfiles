@@ -77,12 +77,17 @@
 
 ;; Set font and Themes
 (setq doom-font (font-spec :family "Maple Mono NF CN" :size 20))
+(custom-set-faces!
+  '(line-number :family "Maple Mono NF CN" :height 1.0)
+  `(line-number-current-line :family "Maple Mono NF CN" :height 1.0 :weight bold :foreground ,(doom-color 'blue))
+  '(font-lock-keyword-face :family "Maple Mono NF CN" :slant italic))
+
 (setq display-line-numbers-type 'relative)
 ;; (load-theme 'kanagawa t)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'catppuccin)
 ;; (setq doom-theme 'doom-rouge)
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-nord-aurora)
 
 ;; Typst mode
 (use-package typst-ts-mode
@@ -127,11 +132,13 @@
   :config
   (add-hook 'python-mode-hook #'lsp!))
 
+(setq lsp-inlay-hint-enable t)
+
 (use-package wakatime-mode
   :ensure t)
 (global-wakatime-mode)
 
-;; (setq typst-preview-browser "eaf-browser")
+(setq typst-preview-browser "eaf-browser")
 (setq typst-preview-invert-colors "never")
 
 (defun my/fcitx5-deactivate ()
@@ -149,7 +156,7 @@
 
 (global-whitespace-mode +1)
 (setq whitespace-style '
-      (face tabs spaces trailing lines space-before-tab
+      (face tabs spaces trailing space-before-tab
             space-after-tab space-mark tab-mark missing-newline-at-eof)
       )
 
@@ -168,5 +175,58 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+(after! lsp-mode
+  (setq lsp-ui-doc-enable nil)            ; 1. 關閉那個討厭的大文件框
+  (setq lsp-signature-auto-activate nil)  ; 2. 關閉輸入參數時的浮動提示
+  (setq lsp-lens-enable nil)              ; 3. (選配) 關閉代碼上方的參照數量顯示，讓畫面更乾淨
+  )
+
+;; 讓 Company 選單出現時，Copilot 稍微安靜一點
+(after! company
+  (add-hook 'company-completion-started-hook 'copilot-clear-overlay))
 
 (blink-cursor-mode 1)
+(add-hook 'rust-mode-hook 'lsp-deferred)
+
+
+;; ;; EAF (Emacs Application Framework) settings
+(add-to-list 'load-path "~/.emacs.d/site-lisp/emacs-application-framework/")
+(require 'eaf)
+(require 'eaf-browser)
+(require 'eaf-pdf-viewer)
+(require 'eaf-image-viewer)
+(require 'eaf-pyqterminal)
+(require 'eaf-evil)
+(define-key key-translation-map (kbd "SPC")
+            (lambda (prompt)
+              (if (derived-mode-p 'eaf-mode)
+                  (pcase eaf--buffer-app-name
+                    ("browser" (if  eaf-buffer-input-focus
+                                   (kbd "SPC")
+                                 (kbd eaf-evil-leader-key)))
+                    ("pdf-viewer" (kbd eaf-evil-leader-key))
+                    ("image-viewer" (kbd eaf-evil-leader-key))
+                    (_  (kbd "SPC")))
+                (kbd "SPC"))))
+
+(setq eaf-browser-dark-mode nil)
+(setq eaf-browser-default-search-engine "duckduckgo")
+(map! :leader
+      :desc "Open EAF-Browser" "o b" #'eaf-open-browser)
+
+(setq compile-command "")
+(add-hook 'rust-mode-hook
+          (lambda ()
+            (let ((root (locate-dominating-file (buffer-file-name) "Cargo.toml")))
+              (when root
+                (setq-local compile-command
+                            (format "cd %s && cargo run"
+                                    (shell-quote-argument (expand-file-name root))))))))
+
+(add-hook 'typst-ts-mode-hook
+          (lambda ()
+            (let ((root (locate-dominating-file (buffer-file-name) "main.typ")))
+              (when root
+                (setq-local compile-command
+                            (format "cd %s && typst compile main.typ"
+                                    (shell-quote-argument (expand-file-name root))))))))

@@ -14,7 +14,7 @@ Thanks to [chrissabug](https://x.com/chrissabug) for creating lovely art!
 ## Installation
 
 ```sh
-ya pack -a GianniBYoung/rsync
+ya pkg add GianniBYoung/rsync
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ desc = "Copy files using rsync"
 ```toml
 [[mgr.prepend_keymap]]
 on   = [ "R" ]
-run  = "plugin rsync --args='user@server.com'"
+run  = "plugin rsync 'user@server.com'"
 desc = "Copy files using rsync to default location"
 ```
 

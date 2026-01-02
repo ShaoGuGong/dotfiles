@@ -19,7 +19,7 @@ return {
         local wk = require("which-key")
         wk.add({
             {
-                "<leader>e",
+                "<leader>.",
                 "<cmd>Oil<cr>",
                 desc = "Open Oil",
                 icon = " ",

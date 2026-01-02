@@ -11,6 +11,7 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
+vim.opt.swapfile = false
 
 -- vim.opt.textwidth = 120
 -- vim.opt.wrap = true
@@ -23,6 +24,8 @@ vim.opt.list = true
 vim.opt.lcs = {
     tab = "󰌒 ",
     space = "·",
-    -- trail = "-",
+    -- trail = " ",
     nbsp = "+",
 }
+-- vim.api.nvim_set_hl(0, "ExtraWhitespace", { link = "Substitute" })
+-- vim.fn.matchadd("ExtraWhitespace", [[\s\+$]])
