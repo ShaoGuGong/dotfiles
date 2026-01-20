@@ -40,6 +40,7 @@ sync_file "fastfetch/" "fastfetch/"
 sync_file "wezterm/" "wezterm/"
 sync_file "kitty/" "kitty/"
 sync_file "ghostty/" "ghostty/"
+sync_file "zellij/" "zellij/"
 sync_file "starship.toml" "starship.toml"
 
 #          ╔══════════════════════════════════════════════════════════╗
