@@ -61,8 +61,11 @@ if status is-interactive
     zoxide init fish | source
     starship init fish | source
     fish_default_key_bindings
-    # fish_vi_key_bindings
     set fish_cursor_default block blink
     set fish_cursor_replace underline blink
-    # cowfortune
+
+    if set -q ZELLIJ
+    else
+        start_zellij
+    end
 end

@@ -76,10 +76,10 @@
 ;; they are implemented.
 
 ;; Set font and Themes
-(setq doom-font (font-spec :family "Maple Mono NF CN" :size 20))
+(setq doom-font (font-spec :family "Maple Mono NF CN" :size 22))
 (custom-set-faces!
   '(line-number :family "Maple Mono NF CN" :height 1.0)
-  `(line-number-current-line :family "Maple Mono NF CN" :height 1.0 :weight bold :foreground ,(doom-color 'blue))
+  `(line-number-current-line :family "Maple Mono NF CN" :height 1.0 :weight bold :slant italic :foreground ,(doom-color 'blue))
   '(font-lock-keyword-face :family "Maple Mono NF CN" :slant italic))
 
 (setq display-line-numbers-type 'relative)
@@ -184,6 +184,8 @@
 ;; 讓 Company 選單出現時，Copilot 稍微安靜一點
 (after! company
   (add-hook 'company-completion-started-hook 'copilot-clear-overlay))
+(map! :leader
+      :desc "Toggle lsp-ui-imenu" "t o" #'lsp-ui-imenu)
 
 (blink-cursor-mode 1)
 (add-hook 'rust-mode-hook 'lsp-deferred)
@@ -197,22 +199,14 @@
 (require 'eaf-image-viewer)
 (require 'eaf-pyqterminal)
 (require 'eaf-evil)
-(define-key key-translation-map (kbd "SPC")
-            (lambda (prompt)
-              (if (derived-mode-p 'eaf-mode)
-                  (pcase eaf--buffer-app-name
-                    ("browser" (if  eaf-buffer-input-focus
-                                   (kbd "SPC")
-                                 (kbd eaf-evil-leader-key)))
-                    ("pdf-viewer" (kbd eaf-evil-leader-key))
-                    ("image-viewer" (kbd eaf-evil-leader-key))
-                    (_  (kbd "SPC")))
-                (kbd "SPC"))))
+(setq eaf-evil-leader-key "SPC")
 
 (setq eaf-browser-dark-mode nil)
 (setq eaf-browser-default-search-engine "duckduckgo")
 (map! :leader
       :desc "Open EAF-Browser" "o b" #'eaf-open-browser)
+(map! :leader
+      :desc "Open EAF-pyqterminal here" "o T" #'eaf-open-pyqterminal)
 
 (setq compile-command "")
 (add-hook 'rust-mode-hook
@@ -230,3 +224,10 @@
                 (setq-local compile-command
                             (format "cd %s && typst compile main.typ"
                                     (shell-quote-argument (expand-file-name root))))))))
+
+(add-hook 'dired-mode-hook
+          (lambda ()
+            (setq-local compile-command
+                        (format "git clone"))))
+
+(global-auto-revert-mode 1)

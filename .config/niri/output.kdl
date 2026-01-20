@@ -45,7 +45,7 @@ output "Acer Technologies XV272U TKCTT0018543" {
     mode "2560x1440@119.998"
     scale 1
     transform "normal"
-    position x=1746 y=0
+    position x=1746 y=-360
     focus-at-startup
 }
 output "Acer Technologies V226HQL LY7TT0018540" {

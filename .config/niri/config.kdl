@@ -11,6 +11,7 @@ include "output.kdl"
 include "layout.kdl"
 include "window_rule.kdl"
 include "binds.kdl"
+include "layer_rule.kdl"
 
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -48,6 +49,10 @@ cursor {
     xcursor-size 36
 }
 
+environment {
+    QT_QPA_PLATFORMTHEME "qt6ct"
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -55,10 +60,11 @@ cursor {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "waybar"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "swaync"
-spawn-at-startup "ironbar"
-spawn-sh-at-startup "vicinae server"
+// spawn-at-startup "swww-daemon"
+// spawn-at-startup "swaync"
+// spawn-at-startup "ironbar"
+// spawn-sh-at-startup "vicinae server"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 
 // Open GUI Package at startup
 spawn-at-startup "steam"

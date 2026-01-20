@@ -2,8 +2,8 @@
 local wezterm = require("wezterm")
 local keys = require("settings/key-binding")
 local fonts = require("settings/fonts")
-local format_tab_bar = require("settings/format-tab-bar")
-local update_right_status = require("settings/status-bar")
+-- local format_tab_bar = require("settings/format-tab-bar")
+-- local update_right_status = require("settings/status-bar")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -55,48 +55,49 @@ config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 
 -- ────────────────────────────( Set Tab Bar )────────────────────────────
-config.tab_max_width = 25
-config.hide_tab_bar_if_only_one_tab = false
-config.show_tab_index_in_tab_bar = false
-config.use_fancy_tab_bar = false
-config.show_new_tab_button_in_tab_bar = false
-config.tab_bar_at_bottom = true
+config.enable_tab_bar = false
+-- config.tab_max_width = 25
+-- config.hide_tab_bar_if_only_one_tab = false
+-- config.show_tab_index_in_tab_bar = false
+-- config.use_fancy_tab_bar = false
+-- config.show_new_tab_button_in_tab_bar = false
+-- config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
-wezterm.on("format-tab-title", format_tab_bar)
-
-wezterm.on("update-status", update_right_status)
+-- wezterm.on("format-tab-title", format_tab_bar)
+--
+-- wezterm.on("update-status", update_right_status)
 
 wezterm.on("format-window-title", function(_, _, _, _, _)
 	return "Wezterm Terminal Emulator"
 end)
 
-wezterm.on("window-resized", function(window, _)
-	local overrides = window:get_config_overrides() or {}
-	local dims = window:get_dimensions()
-
-	local font_size = overrides.font_size or window:effective_config().font_size
-	local dpi = dims.dpi
-
-	-- 字體大小 (pt) → 像素 (px)
-	local font_px = font_size * (dpi / 72.0)
-
-	-- 單一字元寬度（估計值：monospace ~ 0.55～0.62）
-	local char_px = font_px * 0.60
-
-	-- 希望 tab 佔視窗一半寬，並放 5 個 tab
-	local desired_px_per_tab = (dims.pixel_width * 0.8) / 5
-
-	-- 必須換算成字元數
-	local new_width = math.floor(desired_px_per_tab / char_px)
-
-	-- 安全限制，避免太窄/太寬
-	new_width = math.max(10, math.min(new_width, 25))
-
-	if overrides.tab_max_width ~= new_width then
-		overrides.tab_max_width = new_width
-		window:set_config_overrides(overrides)
-	end
-end)
+-- wezterm.on("window-resized", function(window, _)
+-- 	local overrides = window:get_config_overrides() or {}
+-- 	local dims = window:get_dimensions()
+--
+-- 	local font_size = overrides.font_size or window:effective_config().font_size
+-- 	local dpi = dims.dpi
+--
+-- 	-- 字體大小 (pt) → 像素 (px)
+-- 	local font_px = font_size * (dpi / 72.0)
+--
+-- 	-- 單一字元寬度（估計值：monospace ~ 0.55～0.62）
+-- 	local char_px = font_px * 0.60
+--
+-- 	-- 希望 tab 佔視窗一半寬，並放 5 個 tab
+-- 	local desired_px_per_tab = (dims.pixel_width * 0.8) / 5
+--
+-- 	-- 必須換算成字元數
+-- 	local new_width = math.floor(desired_px_per_tab / char_px)
+--
+-- 	-- 安全限制，避免太窄/太寬
+-- 	new_width = math.max(10, math.min(new_width, 25))
+--
+-- 	if overrides.tab_max_width ~= new_width then
+-- 		overrides.tab_max_width = new_width
+-- 		window:set_config_overrides(overrides)
+-- 	end
+-- end)
 
 config.unix_domains = {
 	{ name = "unix" },

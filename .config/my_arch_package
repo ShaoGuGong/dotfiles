@@ -54,6 +54,7 @@ cachyos-zsh-config
 chafa
 char-white
 chwd
+cliphist
 cmake
 cowsay
 cpupower
@@ -93,6 +94,7 @@ flatpak
 fortune-mod
 fsarchiver
 fuzzel
+ghostty
 git
 glances
 grub
@@ -113,7 +115,6 @@ hwinfo
 hyphen-en
 inetutils
 iptables-nft
-ironbar-bin
 iwd
 jfsutils
 jjui-bin
@@ -128,7 +129,6 @@ kdeplasma-addons
 kdialog
 kinfocenter
 kio-admin
-kitty
 kolourpaint
 konsole
 kscreen
@@ -177,6 +177,7 @@ networkmanager-openvpn
 nfs-utils
 nilfs-utils
 niri
+noctalia-shell
 noto-color-emoji-fontconfig
 noto-fonts
 noto-fonts-cjk
@@ -189,6 +190,7 @@ nvidia-prime
 nvidia-settings
 nvidia-utils
 nvtop
+nwg-look
 octopi
 opencl-nvidia
 opendesktop-fonts
@@ -228,11 +230,14 @@ python-defusedxml
 python-epc
 python-markdown
 python-packaging
+python-pymupdf
 python-pyqt6
 python-pyqt6-sip
 python-pyqt6-webengine
+python-pyte
 python-sexpdata
 qt6-wayland
+qt6ct
 rebuild-detector
 reflector
 resvg
@@ -253,10 +258,7 @@ starship
 steam
 sudo
 swayidle
-swaylock-effects-git
-swaync
 switcheroo-control
-swww
 sysfsutils
 system-config-printer
 texinfo
@@ -290,7 +292,6 @@ usb_modeswitch
 usbutils
 uv
 vi
-vicinae-bin
 vim
 vivaldi
 vivaldi-ffmpeg-codecs
@@ -325,5 +326,6 @@ yarn
 yazi
 zathura
 zathura-pdf-mupdf
+zellij
 zotero
 zoxide

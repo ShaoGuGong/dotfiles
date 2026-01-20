@@ -68,7 +68,7 @@ window-rule {
 
 window-rule {
     match app-id="Emacs"
-    opacity 0.95
+    opacity 1.0
 }
 
 window-rule {
