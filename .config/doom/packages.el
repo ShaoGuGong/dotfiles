@@ -54,9 +54,10 @@
 ;; (unpin! t)
 
 (package! autothemer)
-(package! kanagawa-theme
-  :recipe (:host github :repo "rebelot/kanagawa.nvim"
-           :files (("extras/emacs/kanagawa.el" . "kanagawa-theme.el"))))
+;; (package! kanagawa-theme
+;;   :recipe (:host github :repo "rebelot/kanagawa.nvim"
+;;            :files (("extras/emacs/kanagawa.el" . "kanagawa-theme.el"))))
+(package! kanagawa-theme :recipe (:host github :repo "Fabiokleis/kanagawa-emacs"))
 (package! typst-ts-mode :recipe (:host nil :repo "https://git.sr.ht/~meow_king/typst-ts-mode"))
 (package! catppuccin-theme)
 (package! wakatime-mode)

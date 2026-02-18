@@ -18,21 +18,23 @@ if status is-interactive
     #                                     │ fzf │
     #                                     ╰─────╯
     # Enable fzf keybindings
-    fzf_key_bindings
+    # fzf_key_bindings
     # Optional: Better preview layout
-    set -gx FZF_DEFAULT_OPTS '
-    --height 40%
-    --reverse
-    --bind ctrl-n:preview-down,ctrl-p:preview-up,f3:toggle-preview
-    --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
-    --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
-    --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
-    --color=selected-bg:#45475a
-    --multi
-    '
+    # set -gx FZF_DEFAULT_OPTS '
+    # --height 40%
+    # --reverse
+    # --bind ctrl-n:preview-down,ctrl-p:preview-up,f3:toggle-preview
+    # --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
+    # --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
+    # --color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
+    # --color=selected-bg:#45475a
+    # --multi
+    # '
     # Optional: Use fd for faster and cleaner file searching (if installed)
-    set -gx FZF_DEFAULT_COMMAND 'fd --type f'
+    # set -gx FZF_DEFAULT_COMMAND 'fd --type f'
 
+    # skim_key_bindings
+    tv init fish | source
     #                                  ╭───────────╮
     #                                  │ set alias │
     #                                  ╰───────────╯
@@ -64,8 +66,8 @@ if status is-interactive
     set fish_cursor_default block blink
     set fish_cursor_replace underline blink
 
-    if set -q ZELLIJ
-    else
-        start_zellij
-    end
+    # if set -q ZELLIJ
+    # else
+    #     start_zellij
+    # end
 end

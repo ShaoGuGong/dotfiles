@@ -25,7 +25,6 @@ binds {
     Mod+B hotkey-overlay-title="Random Wallpaper" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "random"; }
     Mod+Shift+B hotkey-overlay-title="Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 
-
     // Audio controls
     XF86AudioRaiseVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "increase"; }
     XF86AudioLowerVolume { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "volume" "decrease"; }
@@ -34,9 +33,9 @@ binds {
     // Utility shortcuts
     Mod+P { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
     // Mod+C { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "calculator"; }
-    Mod+ALT+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+    Mod+Shift+Alt+L { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
 
-    Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm"; }
     // Mod+SPACE hotkey-overlay-title="Run an Application: vicinae" { spawn-sh "vicinae toggle"; }
     Mod+E hotkey-overlay-title="Open Emacs" { spawn-sh "emacsclient -c -a \"\""; }
     Mod+N hotkey-overlay-title="Open Neovim" { spawn-sh "kitty nvim"; }
@@ -46,9 +45,7 @@ binds {
     }
     Mod+Return hotkey-overlay-title="Open File Manager: Dolphin" { spawn "dolphin"; }
     // Mod+A hotkey-overlay-title="Reload Ironbar" { spawn-sh "ironbar reload"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
-        spawn-sh "swaylock --screenshots --clock --indicator  --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --effect-vignette 0.5:0.5 --grace 2 --fade-in 0.2";
-    }
+    Mod+M hotkey-overlay-title="Open Spotify" { spawn "spotify-launcher"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.

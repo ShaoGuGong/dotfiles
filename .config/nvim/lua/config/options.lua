@@ -4,7 +4,7 @@
 -- Add any additional options here
 
 vim.opt.guicursor = "a:block-blinkon500-blinkoff500-blinkwait500,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor,o:hor50"
-vim.opt.winborder = "none"
+vim.opt.winborder = "single"
 
 vim.opt.hidden = true
 vim.opt.expandtab = true
@@ -13,9 +13,9 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.swapfile = false
 
--- vim.opt.textwidth = 120
--- vim.opt.wrap = true
--- vim.opt.linebreak = true
+vim.opt.textwidth = 120
+vim.opt.wrap = true
+vim.opt.linebreak = true
 -- vim.opt.showbreak = "↪ "
 -- vim.opt.breakindent = true
 -- vim.opt.breakindentopt = { "shift:2", "min:20" }

@@ -83,11 +83,11 @@
   '(font-lock-keyword-face :family "Maple Mono NF CN" :slant italic))
 
 (setq display-line-numbers-type 'relative)
-;; (load-theme 'kanagawa t)
 ;; (setq doom-theme 'doom-tokyo-night)
 ;; (setq doom-theme 'catppuccin)
 ;; (setq doom-theme 'doom-rouge)
-(setq doom-theme 'doom-nord-aurora)
+;; (setq doom-theme 'doom-nord-aurora)
+(setq doom-theme 'kanagawa-wave)
 
 ;; Typst mode
 (use-package typst-ts-mode
@@ -156,9 +156,19 @@
 
 (global-whitespace-mode +1)
 (setq whitespace-style '
-      (face tabs spaces trailing space-before-tab
-            space-after-tab space-mark tab-mark missing-newline-at-eof)
+      (face tabs spaces trailing
+            space-mark tab-mark)
       )
+
+(custom-set-faces!
+  ;; 設定空格：繼承 'shadow (通常是暗淡的灰色)，且背景透明
+  '(whitespace-space :inherit 'font-lock-comment-face :background nil)
+  ;; 設定 Tab：同上
+  '(whitespace-tab :inherit 'font-lock-comment-face :background nil)
+  ;; 設定換行符：可以使用註解的顏色 ('font-lock-comment-face)，通常也很淡
+  ;; 行尾多餘空白：這個建議還是維持顯眼的紅色，或者繼承 'error
+  '(whitespace-trailing :inherit 'error :background nil)
+  )
 
 (map! :leader
       :desc "Toggle whitespace-mode" "o w" #'whitespace-mode)
@@ -209,6 +219,14 @@
       :desc "Open EAF-pyqterminal here" "o T" #'eaf-open-pyqterminal)
 
 (setq compile-command "")
+(add-hook 'python-ts-mode-hook
+          (lambda ()
+            (let ((root (locate-dominating-file (buffer-file-name) "pyproject.toml")))
+              (when root
+                (setq-local compile-command
+                            (format "cd %s && uv run main.py"
+                                    (shell-quote-argument (expand-file-name root))))))))
+
 (add-hook 'rust-mode-hook
           (lambda ()
             (let ((root (locate-dominating-file (buffer-file-name) "Cargo.toml")))

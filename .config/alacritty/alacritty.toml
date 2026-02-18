@@ -1,0 +1,15 @@
+[general]
+import = ["~/.config/alacritty/themes/kanagawa_wave.toml"]
+
+[window]
+opacity = 0.85
+
+[terminal]
+shell = "/usr/bin/nu"
+
+[font]
+normal = { family = "Maple Mono NF CN", style = "Regular" }
+size = 14
+
+[cursor]
+style = { shape = "Block", blinking = "On" }

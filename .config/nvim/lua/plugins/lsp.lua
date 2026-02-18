@@ -7,7 +7,7 @@ return {
                 settings = {
                     python = {
                         analysis = {
-                            typeCheckingMode = "off", -- Disable type checking
+                            typeCheckingMode = "on", -- Enable type checking
                             reportUnusedVariable = false,
                             reportUnusedFunction = false,
                         },

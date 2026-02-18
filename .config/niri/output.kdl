@@ -51,8 +51,8 @@ output "Acer Technologies XV272U TKCTT0018543" {
 output "Acer Technologies V226HQL LY7TT0018540" {
     mode "1920x1080@60.000"
     scale 1
-    transform "normal"
-    position x=4306 y=0
+    transform "90"
+    position x=4306 y=-400
 }
 output "Samsung Electric Company LF24T35 H4ZT800098" {
     mode "1920x1080@74.973"

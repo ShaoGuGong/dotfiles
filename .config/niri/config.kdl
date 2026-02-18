@@ -53,6 +53,12 @@ environment {
     QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -65,11 +71,14 @@ environment {
 // spawn-at-startup "ironbar"
 // spawn-sh-at-startup "vicinae server"
 spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "gnome-keyring-daemon" "--start" "--components=secrets"
 
 // Open GUI Package at startup
-spawn-at-startup "steam"
+spawn-at-startup "spotify-launcher"
 spawn-at-startup "discord"
 spawn-at-startup "thunderbird"
 
 prefer-no-csd
+
+
 

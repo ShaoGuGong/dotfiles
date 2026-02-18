@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local fonts = require("settings/fonts")
 
 -- This is where you actually apply your config choices.
-local opacity = 0.8
+local opacity = 0.85
 local function set_opacity(window, value)
 	opacity = math.max(0.1, math.min(1.0, value))
 	window:set_config_overrides({

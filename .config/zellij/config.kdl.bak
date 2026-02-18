@@ -161,21 +161,21 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt Shift f" { ToggleFloatingPanes; }
+        bind "Alt i" { MoveTab "left"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
-        // bind "Alt i" { MoveTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
-        bind "Alt Shift o" { ToggleFocusFullscreen; }
-        bind "Alt x" { CloseFocus; }
+        bind "Alt o" { ToggleFocusFullscreen; }
         bind "Alt p" { TogglePaneInGroup; }
+        bind "Alt x" { CloseFocus; }
         bind "Alt Shift p" { ToggleGroupMarking; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Ctrl q" { Quit; }
-        bind "Ctrl d" { Detach;}
+        bind "Ctrl d" { Detach; }
     }
     shared_except "locked" "entersearch" {
         bind "enter" { SwitchToMode "locked"; }
@@ -254,13 +254,13 @@ plugins {
         welcome_screen true
     }
     zjframes location="file:/home/shaogu/.config/zellij/plugins/zjframes.wasm" {
-        hide_frame_except_for_fullscreen false
-        hide_frame_except_for_search false
-        hide_frame_for_single_pane true
+        hide_frame_for_single_pane       "true"
+        hide_frame_except_for_search     "false"
+        hide_frame_except_for_fullscreen "false"
     }
     zjstatus-hints location="file:/home/shaogu/.config/zellij/plugins/zjstatus-hints.wasm" {
+        max_length 150
         hide_in_base_mode true
-        max_length "150"
     }
 }
 
@@ -269,8 +269,9 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
     zjframes
-    // zjstatus-hints
-    compact-bar
+    zjstatus-hints
+    // compact-bar
+    // status-bar
 }
 web_client {
     font "monospace"
@@ -296,7 +297,7 @@ default_mode "locked"
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
 // 
-default_shell "nu"
+// default_shell "fish"
  
 // Choose the path to override cwd that zellij will use for opening new panes
 // 
@@ -366,10 +367,10 @@ default_shell "nu"
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
-copy_command "wl-copy"
+// copy_command "pbcopy"
  
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
@@ -388,7 +389,6 @@ copy_command "wl-copy"
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
 // scrollback_editor "/usr/bin/vim"
-scrollback_editor "/usr/bin/helix"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`
@@ -439,8 +439,6 @@ scrollback_editor "/usr/bin/helix"
  
 // How often in seconds sessions are serialized
 // 
-// serialization_interval 10000
-serialization_interval 300
  
 // Enable or disable writing of session metadata to disk (if disabled, other sessions might not know
 // metadata info on this session)

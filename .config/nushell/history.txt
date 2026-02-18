@@ -1,0 +1,2410 @@
+ls
+ll
+ls all
+ls
+ll
+ls help
+ls --help
+lt
+eza
+ls
+cd .dotfils
+cd .dotfiles/
+ls
+lazygit
+ls
+config nu
+cd .config
+ls
+...
+ls
+cd .config
+ls
+yz
+y
+yazi
+ls
+z nu
+ls
+cd nushell
+ls
+nvim config.nu
+ls
+nvim config.nu
+ls
+cd .config/nushell
+ls
+nvim config.nu
+zoxide
+zoxide init nushell --help
+ls
+ls
+nvim config.nu
+ls
+nvim config.nu
+z nu
+ls
+nvim config.nu
+tv files
+ls
+la
+ls -a
+ls --help
+ls
+nvim config.nu
+cd python
+nvim config.nu
+cd python
+cd nushell
+ls
+ps
+ps | sort-by mem | head 10
+ps | sort-by mem | first 5
+ps | sort-by mem | reverse |  first 5
+cd ghostty
+ls
+nvim config.nu
+nvim config
+which nu
+nvim config
+ls
+cd nushell
+nvim config.nu
+cd $nu.data-dir
+ls
+cd vendor/
+ls
+cd autoload/
+ls
+rm starship.nu
+rm tv.nu
+rm zoxide.nu
+ls
+ls
+cd nushell
+ls
+nvim config.nu
+cd $nu.data-dir
+ls
+cd vendor/
+ls
+cd autoload/
+ls
+rm zoxide.nu
+rm starship.nu
+rm tv.nu
+ls
+cd config.nu
+cd codnfig
+cd nushell
+ls
+ps
+ls
+fastfetch --help
+nvim config.nu
+cd niri
+ls
+nvim config.kdl
+nvim binds.kdl
+cd fish
+nvim config.fish
+echo $SHELL
+echo $env.SHELL
+chsh -s /usr/bin/nu
+cd fish
+ls
+cd nushell
+zi
+ls
+nvim config.nu
+ls
+cd nes
+ls
+cd nushell
+ls
+mkdir themes
+ls
+cd themes
+ls
+wget https://raw.githubusercontent.com/catppuccin/nushell/refs/heads/main/themes/catppuccin_mocha.nu
+ls
+..
+nvim config.nu
+echo $nu.config-path
+echo $nu.home-dir
+echo $nu.vendor-autoload-dirs
+ls
+nvim config.nu
+path --help 
+echo ($nu.config-path | path dirname)
+nvim config.nu
+fg
+job list 
+job 0
+job --help
+job unfreeze 0
+job unfreeze --help
+job lisb
+job list
+job unfreeze 3
+job flush
+job list
+job spawn 1
+ls
+cd nes
+ls
+nvim .
+jjui
+ls
+yz
+yazi
+jjui
+yazi
+cd nushell
+ls
+nvim config.nu
+yz
+nvim config.nu
+print $nu.user-autoload-dirs
+ls
+mkdir $nu.user-autoload-dirs
+mkdir ($nu.user-autoload-dirs)
+mkdir ($nu.user-autoload-dirs | first)
+ls
+cd autoload/
+ls
+nvim .
+yz
+ls
+yz
+jjui
+cd Ray_PBT
+ls
+jjui
+cd nes
+jjui
+cd Downloads/
+fish
+pdftoppm -png -r 學術倫理.pdf
+pdftoppm -png -r 600 學術倫理.pdf
+pdftoppm -png -r 600 學術倫理.pdf 學術倫理.png
+yz
+pdftoppm -png -r 300 學術倫理.pdf 學術倫理.png
+pdftoppm -png -r 300 學術倫理.pdf 學術倫理yz
+yz
+pdftoppm -png -r 300 學術倫理.pdf 學術倫理
+ls
+jjui
+nvim .
+uv run pytest -v
+nvim .
+jj st
+jj help
+jj resolve tests/test_models.py
+jj st
+nvim .
+jj st
+jj log
+jj st
+nvim .
+jjui
+ls
+jj st
+nvim .
+jj st
+nvim .
+ls
+uv run pytest -v
+nvim .
+uv run pytest -v
+jjui
+jju
+jjui
+uv run pytest -v
+jj git --help
+jj git remote add origin git@github.com:ShaoGuGong/NES.git
+jjui
+jj git push -b main
+jj git push -b main origin
+jj git push --help
+jj git remote list
+jj git push -b main
+jj git push --help
+jj git push -b main
+jjui
+jj git push -b main
+nivm .
+nvim .
+cd nvim
+ls
+nvim lua/plugins/
+pushd --help
+dir
+dirs
+cd nes
+ls
+nvim 
+cd nvim
+ls
+nvim lua
+cd nes
+ls
+nvim .
+cd nvim
+ls
+nvim 
+cd nes
+nvim .
+fish
+rsync -azhP ./ a6000:/home/ray_cluster/Documents/workspace/shaogu/Ray_PBT -n --exclude ".venv/"
+rsync -azhP ./ a6000:/home/ray_cluster/Documents/workspace/shaogu/Ray_PBT -n --exclude ".venv/" --exclude ".jj" --exclude ".git"
+rsync -azhP ./ a6000:/home/ray_cluster/Documents/workspace/shaogu/Ray_PBT --exclude ".venv/" --exclude ".jj" --exclude ".git"
+fish
+pushd --help
+./src
+..
+ls
+factor 30
+factor 30 | math sum
+factor 30
+factor 30 | describe
+split | describe 
+split --help
+factor 30 | split chars ":"
+factor 30 | split words
+factor 30 | split words | drop 1 | math sum
+factor 30 | split words | drop 1 | into int | math sum
+factor 30 | split words | drop 1 
+factor 30 | split words | drop nth 0 | into int | math sum
+ls
+nushell
+cd nushell
+ls
+cd autoload/
+nvim .
+cd fish
+ls
+batman ls
+nvim .
+git diff
+fg
+jobs list
+job list
+job 1
+job unfreeze 1
+ls
+nvim .
+rsync -azhP ./ a6000:/home/ray_cluster/Documents/workspace/shaogu/Ray_PBT --exclude ".venv/" --exclude ".jj" --exclude ".git"
+nvim .
+nvim oil-ssh://a6000/home/ray_cluster/Documents/workspace
+nvim oil-ssh://a6000/home/ray_cluster/Documents/workspace/
+nvim oil-ssh://a6000/home/ray_cluster/Documents/workspace/shaogu
+cd .ssh
+ls
+ssh-agent --help
+ssh-agent -s
+ssh-add ~/.ssh/lab_ed25519
+ssh-add -l
+ssh-agent -s
+^ssh-agent -c <\n>    | lines <\n>    | first 2 <\n>    | parse "setenv {name} {value};" <\n>    | transpose -r <\n>    | into record <\n>    | load-env
+ssh-agent -c | lines | first 2 | parse "setenv {name} {value};" | transpose -r | into record | load-env
+ssh-add ~/.ssh/lab_ed25519
+ssh-add -l
+nvim oil-ssh://a6000/home/ray_cluster/Documents/workspace/shaogu
+nvim oil-ssh://a6000:/home/ray_cluster/Documents/workspace/shaogu
+nvim
+fish
+ls
+leetcode e -d
+nvim /home/shaogu/.local/state/nvim/lsp.log
+rustup component add rust-analyzer
+leetcode e -d
+leetcode t -d
+leetcode e -d
+leetcode t -d
+leetcode e -d
+leetcode t -d
+leetcode e -d
+leetcode t -d
+leetcode x -d
+ls
+leetcode e -d
+leetcode t -d
+leetcode x -d
+jjui
+ls
+uv run pytest -v
+uv pip list
+uv pip list --format json
+uv pip list --format json | from json | where name = "*torch"
+uv pip list --format json | from json
+uv pip list --format json | from json | where name == "*torch"
+uv pip list --format json | from json | where name == "pytorch"
+uv pip list --format json | from json | where name == "torch"
+uv pip list --format json | from json | where name =~ "*torch"
+uv pip list --format json | from json | where name =~ *torch
+uv pip list --format json | from json | where name =~ .*torch
+uv pip list --format json | from json | where name =~ torch 
+uv pip list --format json | from json | where name =~ "torch|ray"
+uv run pytest -v
+sys-update
+fish
+ls
+~/.config/nushell
+ls
+sus-update
+sys-update
+cd note
+yz
+nvim .
+fish
+sys-update
+sys-update
+reboot
+ls
+nu
+ls
+cd nushell
+ls
+nvim config.nu
+ssh-agent -l
+ssh-agent --help
+ssh-add -l
+ssh-add .ssh/lab_ed25519
+ssh-add -l
+ls
+ls --help
+ls -l
+ls -la
+ls -l
+ls -l | sort-by modified
+ls -l | sort-by modified | reverse
+cd Downloads
+ls
+ll
+nvim config.nu
+cd nushell
+ls
+nu shell
+ll
+nvim autoload
+nvim
+fastfetch
+sys-update
+cd
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+cd leetcode
+ls
+nvim Problems
+nvim .
+leetcode t =d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode e -d
+leetcode x -d
+ls
+nvim leetcode.toml
+ls
+nvim Problems
+ls
+ls -l | where type == file
+ls -l | where type == file | sort-by size | reverse
+cd nes
+ls -l | where type == file | sort-by size | reverse
+ls --help
+find --help
+ls
+fd --help
+tldr $(tv tldr)
+tldr $"tv tldr"
+tldr (tv tldr)
+fd -e py
+du main.py
+du (fd -e py)
+du (^fd -e py)
+df ./src/__init__.py
+du ./src/__init__.py
+du (fd -e py | lines)
+glob --help
+glob **/*.py
+glob --help
+glob "[!\.venv]**/*.py"
+glob "[!.venv]**/*.py"
+glob **/*.py --exclude [**/.venv/**]
+glob **/*.py --exclude [**/.venv/**] | ls $in
+glob **/*.py --exclude [**/.venv/**] | ls
+glob **/*.py --exclude [**/.venv/**] | du $in
+glob **/*.py --exclude [**/.venv/**] | each {|it| ls $it}
+glob **/*.py --exclude [**/.venv/**] | each {|it| ls $it} | flatten
+glob **/*.py --exclude [**/.venv/**] | each {|it| ls $it} | flatten | sort-by size
+glob **/*.py --exclude [**/.venv/**] | each {|it| ls $it} | flatten | sort-by size | reverse
+glob --help
+ls
+ls -t
+eza -t
+eat -T
+cal
+^cal
+cal
+cal --help
+cal -t
+cal 
+cal -m
+cal -q
+cal
+cd Ray_PBT
+ls
+zellij --help
+zellij delete-all-sessions
+cd zellij
+nvim config.kel
+nvim config.kdl
+cd nushell
+cd fish
+zellij list-sessions -n
+nvim .
+zellij list-sessions --help
+zellij list-sessions
+tv --help
+tv list-channels
+tv zellij-session
+zellij list-sessions
+zellij list-sessions --help
+zellij --help
+tv zellij-session
+zellij list-sessions -n
+tv zellij-session
+zellij --help
+zellij setup
+ls
+tv zellij-session
+zellij attach --hlep
+zellij attach --help
+tv zellij-session
+fish
+ls
+tv zellij-session
+zellij attach Terminal
+ls
+zellij list-sessions --help
+zellij list-sessions -s
+tv zellij-session
+zellij help
+tv
+tv zellij-session
+zellij k --help
+tv zellij-session
+nvim functions/
+cd nushell
+nvim functions/
+tv zellij-session
+let name = input | print $name
+let name = input | print name
+tv zellij-session
+let name = input | print name
+let name = input | zellij a -c name
+zellij a --help
+zellij help
+nvim 
+cd fish
+ls
+nvim functions/
+let name = input | print name
+print input
+let name = input | print (name)
+let name = input | print ($name)
+input | print
+cd nushell
+yz
+date
+date today
+date "today"
+today
+date time
+date "now"
+date --help
+date
+now
+date now
+date ttime
+date time
+date humanize
+date now | date humanize
+cd fish
+date +%m
+date 
+zellij_start
+tv ze
+clear
+zellij_start
+tv zellij-session
+zellij_start
+cd nushell
+nvim functions
+cd tele
+ls
+cd nushell
+cd autoload/
+echo $nu.user-autoload-dirs
+tv zellij-session
+ls
+nvim autoload/
+echo $nu.home-dir
+yz
+nu zellij_start.nu
+tv zellij-session
+nvim cable/
+tv zellij-session
+zellij -c -l
+zellij -l wellcome --help
+zellij -l wellcome
+ls
+paru -Qeq
+paru -Qeq | wl-copy
+sudo pacman -Rns \<\n>plasma-desktop plasma-workspace plasma-nm plasma-pa plasma-firewall \<\n>plasma-browser-integration plasma-systemmonitor plasma-thunderbolt \<\n>plasma-integration powerdevil bluedevil \<\n>dolphin gwenview kate kcalc kdialog kinfocenter kio-admin \<\n>konsole kscreen kwalletmanager kolourpaint spectacle \<\n>kdeconnect kdegraphics-thumbnailers kdeplasma-addons kde-gtk-config \<\n>libplasma plymouth-kcm
+sudo pacman -Rns <\n>plasma-desktop plasma-workspace plasma-nm plasma-pa plasma-firewall <\n>plasma-browser-integration plasma-systemmonitor plasma-thunderbolt <\n>plasma-integration powerdevil bluedevil <\n>dolphin gwenview kate kcalc kdialog kinfocenter kio-admin <\n>konsole kscreen kwalletmanager kolourpaint spectacle <\n>kdeconnect kdegraphics-thumbnailers kdeplasma-addons kde-gtk-config <\n>libplasma plymouth-kcm
+sudo pacman -Rns plasma-desktop plasma-workspace plasma-nm plasma-pa plasma-firewall plasma-browser-integration plasma-systemmonitor plasma-thunderbolt plasma-integration powerdevil bluedevil dolphin gwenview kate kcalc kdialog kinfocenter kio-admin konsole kscreen kwalletmanager kolourpaint spectacle kdeconnect kdegraphics-thumbnailers kdeplasma-addons kde-gtk-config libplasma plymouth-kcm
+sudo pacman -Rns plasma-desktop plasma-workspace plasma-nm plasma-pa plasma-firewall plasma-browser-integration plasma-systemmonitor plasma-thunderbolt plasma-integration powerdevil bluedevil dolphin gwenview kate kcalc kdialog kinfocenter kio-admin konsole kscreen kwalletmanager kolourpaint spectacle kdeconnect kdegraphics-thumbnailers kdeplasma-addons kde-gtk-config libplasma plymouth-kcm print-manager xdg-desktop-portal-kde
+reboot
+yz
+ls
+cd niri
+ls
+nvim config.kdl
+nvim .
+nu
+tv zellij-session
+cd nes
+cd Ray_PBT
+cd nes
+cd new
+cd nes
+sddm --help
+yz
+cd nvim
+nvim .
+cd nvim
+nvim .
+..
+cd
+ls
+yz
+nvim 
+cd nvim
+nvim 
+nvim .
+..
+cd
+nvim
+nvim 
+ls
+cd nvim
+nvim 
+nvim .
+nvim
+nvim .
+cd nes
+zi
+yz
+nvim .
+cd niri
+nvim .
+paru -S dolphin
+cd
+ls
+git clone https://github.com/vinceliuice/Orchis-theme.git
+cd Orchis-theme/
+ls
+./install.sh
+cd niri
+ls
+nvim layout.kdl
+nvim window_rule.kdl
+paru -S kvantum-qt6
+paru -S paru -S kvantum
+paru -S kvantum
+paru -Rns kvantum
+paru -Ss qt | grep -i style
+paru -Ss qt
+paru -S adwaita-qt6
+xdg-mime default org.kde.dolphin.desktop inode/directory
+yz
+cd
+ls
+yz
+ls
+nvim line.yml
+ls
+fastfetch
+watch -n 1 fastfetch
+watch --help
+ghostty +list-keybinds --default<\n>
+watch --help
+watch { || fastfetch}
+watch (fastfetch)
+loop { clear; fastfetch; sleep 1}
+loop { clear; fastfetch; sleep 1 }
+sleep --help
+loop { clear; fastfetch; sleep 1sec }
+cd
+leetcode e -d
+cd nvim
+nvim .
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+cd .leetcode
+ls
+nvim .
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+cd zellij
+ls
+test
+tv zellij-session
+zellij delete-all-sessions
+cd zellj
+cd zellij
+ls
+nvim config.kdl
+ls
+cd zellij
+nvim config.kd
+nvim config.kdl
+ls
+cd zellij
+ls
+nvim config.kdl
+zellij list-sessions
+zellij attach -n nes
+zellij attach -c nes
+zellij list-sessions
+zellij delete-all-sessions
+zellij --help
+zellij a --help
+zellij a -c nes
+zellij list-sessions
+zellij a -c nes
+nvim .
+cd nes
+zellij list-sessions
+tv zellij-session
+cd television
+nvim cable/
+tv zellij-session
+ls
+nvim cable/
+ls
+tv zellij-session
+zellij ls
+zellij ls help
+zellij ls --help
+tv zellij-session
+ls
+nvim cable
+nvim .
+ls
+tv zellij-session
+ls
+nvim cable
+cd zellij
+nvim config.kdl
+ls
+nvim config.kdl
+ls
+nvim config.kdl
+paru -S smartmontools
+lsblk
+sudo smartctl --help
+lsblk
+sudo smartctl -a /dev/nvme1n1
+sudo smartctl -a /dev/nvme1n1 | wl-copy
+sudo smartctl -a /dev/nvme0n1 | wl-copy
+sudo smartctl -a /dev/nvme1n1
+ls
+last -x | grep -E "shutdown|reboot"
+bash
+ls
+nvim config.kdl
+ls
+cd
+ls
+ls --help
+ls -d
+cd code
+ls
+cd
+ls
+cd code
+cd
+yz
+ls -d
+cd python
+ls -d
+cd ExecutionTime/
+ls -d
+ls -ad
+..
+ls
+ls -ad
+ls -ad | sort-by size | reverse
+cd model
+ls
+ls -ad 
+cd .venv
+ls -ad 
+.....
+ls
+ls --help
+tv zellij-session
+cd zelij
+cd zellij
+ls
+nvim config.kdl
+tv zellij-session
+ls
+ls --help
+cd code
+ls
+cd Code
+ls
+ls -tau
+ls --help
+ls -t
+ls -tu
+ls -tda
+ls
+yz
+ls -tau
+ls -tad
+yz
+ls
+yz
+tv zellij-session
+paru -S helix
+hx
+helix
+ls
+sys-update
+tv zellij-session
+lsbkl
+lsblk
+sudo smartctl -a /dev/nvme0n1
+tv text
+tv help
+tv -k
+sudo smartctl -a /dev/nvme0n1
+sys-update
+sudo smartctl -a /dev/nvme0n1
+sudo smartctl -a /dev/nvme1n1
+reboot
+lsblk
+sudo smartctl -a /dev/nvme0n1
+ls
+cd
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode e -d
+ls
+ls
+hx
+fish
+ls
+cd nushell
+ls
+nvim config.nu
+hx
+ls
+cd
+hx main.c
+ls
+hx
+ls
+hx
+ls
+cd .config
+yz
+ls
+hx config.toml
+ls
+hx config.toml
+job unfreeze 1
+ls
+hx --help
+hx -g 
+hx -g fetch
+ls
+yz
+ls
+hx languages.toml
+hx -g fetch
+ls
+hx languages.toml
+hx --help
+hx --health rust
+ls
+cd leetcode
+ls
+nvim leetcode.toml
+leetcode e -d
+cd nes
+hx main.py
+hx --health python
+hx main.py
+leetcode e -d
+cd helix
+ls
+nvim config.toml
+hx config.toml
+ls
+helix
+hx
+helix -g fetch
+ls
+hx config.toml
+ls
+hx
+ls
+languages.toml
+hx languages.toml
+ls
+ls -u
+ls -d
+rm runtime/
+rm -r runtime/
+helix -g fetch
+ls -d
+hx 
+ls
+hx
+helix
+ls
+hx config.toml
+cd
+ls
+ls -d
+ls -td
+cd code
+ls -td
+cd Code
+ls
+ls -td
+cd python
+ls
+ls -td
+cd model
+ls
+..
+ls
+ls -td
+ls
+ls -tda
+cd
+ls -tdal
+tv zellij-session
+ls
+cd helix
+hx languages.toml
+tv zellij-session
+ls
+cd helix
+ls
+cd config.toml
+hx languages.toml
+hx config.toml
+hx --health typst
+hx config.toml
+leetcode e -d
+helix --health rust
+cd zellij
+ls
+nvim config.kdl
+hx config.toml
+hx config.kdl
+tv zellij-session
+cd zellij
+hx config.kdl
+tv zellij-session
+ls
+hx config.kdl
+zellij
+hx config.kdl
+zellij
+hx config.kdl
+ls
+sudo smartctl -a /dev/nvme0n1
+ls
+hx config.kdl
+which hx
+which helix
+hx config.kel
+hx config.kdl
+fastfetch
+zellij
+tv zellij-session
+hx config.kdl
+ls
+zellij
+zellij ls
+zellij
+zellij ls
+nvim config.kdl
+echo test
+zellij
+tv zellij-session
+zellij delete-all-sessions
+hx config.kdl
+zellij
+tv zellij-session
+zellij delete-all-sessions
+zellij help
+cd zellij
+cd television
+hx
+leetcode e -d
+ls
+tv zellij-session
+cd Templates/
+cd television
+hx .
+ls
+cd zellij
+nvim config.kdl
+hx config.kdl
+ls
+hx config.kdl.bak.1
+ls
+yz
+git diff config.kdl config.kdl.bak
+ls
+hx config.kdl
+zellij help
+tv zellij-session
+ls
+cd helix
+nvim config.toml
+hx config.toml
+ls
+hx config.toml
+ls
+cd leetcode
+ls
+nvim Problems
+ls
+cd code
+ls
+hx
+ls
+..
+cargo new --help
+cargo init --help
+cargo init --lib
+ls
+nvim leetcode.toml
+ls
+..
+mkdir leetcode
+ls
+cd .leetcode
+hx leetcode.toml
+cd ../leetcode
+ls
+cargo init --lib
+ls
+cd src
+ls
+ls
+cd code
+ls
+ls | wl-copy
+hx leetcode.toml
+..
+hx lib.rs
+ls
+..
+ls
+hx build.rs
+ls
+hx src
+nvim 
+hx
+cargo build
+leetcode e -d
+leetcode data -v
+leetcode data -u
+leetcode e -d
+ls
+yz
+ls
+cargo build
+ls
+hx build.rs
+cargo build
+hx
+leetcode e 1
+ip a
+ip n
+ip a
+ip n
+ip a
+ip n
+ip a
+ip n
+ip a 
+ip n
+leetcode t -d
+leetcode x -d
+leetcode e -d
+tv zellij-session
+hx
+hx --health org-mode
+hx --health org
+hx --health zig
+hx --health cpp
+hx --health rust
+hx --health holyc
+hx --health holy-c
+hx --health haskell
+hx --health elisp
+hx --health vim
+hx --health toml
+fish
+hx config.nu
+ls
+cd nushell
+hx config.nu
+helix
+ls
+hx themes
+ls
+sys-update
+print --help
+sys-update
+hx 
+ansi --help
+tv zellij-session
+helix --health rust
+hx --health rust
+hx
+ls
+paru -S lldb
+hx --health rust
+man 2 write
+batman 2 write
+tv zellij-session
+leetcode e -d
+ls
+yz
+cd helix
+hx config.toml
+..
+ls
+..
+yz
+ls
+pwd | wl-copy
+pwd
+pwd | wl-copy
+cd /home/shaogu/Documents/typst/weekly-reports/ubi-media
+ls
+tinymist --help
+tinymist preview slide.pdf
+tinymist preview slide.typ
+ls
+typst --help
+tinymist --help
+tinymist preview slide.typ
+hx slide.typ
+cd helix
+ls
+hx --health typst
+hx --help
+hx -c
+hx --health all
+hx languages.toml
+typst preview --help
+tinymist preview --help
+..
+..
+ls
+cp template/ test/
+cp -r template/ test/
+cp --help
+mkdir test
+cp -r template/ test/
+ls
+cd test
+ls
+..
+ls
+rm -r test
+cp --help
+ls
+cp template/ ./test
+cp -r template/ ./test
+ls
+cd test
+ls
+hx main.py
+tinymist preview main.typ
+ls
+cd test/
+hx main.typ
+tinymist preview main.typ --open
+ls
+tinymist preview --help
+tinymist preview --help | bat
+cd zellij
+hx config.kdl
+tinymist preview main.typ --partial-rendering
+tinymist preview main.typ --partial-rendering true
+tinymist preview main.typ 
+typst-preview --help
+tinymist preview --help
+tinymist preview main.typ 
+ls
+ls
+cd test
+ls
+typst preview main.typ
+tinymist preview main.typ 
+tinymist preview main.typ 
+ls
+typst watch main.typ
+helix 
+ls
+..
+rm -r test
+ls
+zzils
+ls
+cd nes
+helix
+hx 
+hx main.py
+nvim src/sta
+nvim src/states.py
+hx src/states.py
+cd
+leetcode e -d
+cd helix
+ls
+nvim config.toml
+hx config.toml
+tv zellij-session
+ls
+ls
+hx main.py
+cd zellij
+hx config.kdl
+hx config.nu
+ssh a6000
+ssh-add -l ~/.ssh/lab_ed25519
+ssh-add  ~/.ssh/lab_ed25519
+ssh-add -l
+yz
+ls
+cd helix
+ls
+hx --health nu
+hx languages.toml
+hx -g fetch
+hx --version
+hx config.toml
+hx --health toml
+hx --health helix
+hx --health kdl
+hx --health lua
+ls
+..
+ls
+hx starship.toml
+cd helix
+hx config.toml
+hx --tutor
+job unfreeze 1
+ls
+ls
+cd
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode e -d
+yz
+....
+cd zellij
+ls
+hx
+cd helix
+hx config.toml
+cd nes
+hx main.py
+sys-update
+ls
+yz
+hx
+ls
+yz
+..
+hx config.toml
+ls
+hx .ignore
+hx config.toml
+hx --health git
+hx
+yz
+hx --health rust
+hx --health markdown
+hx
+ls
+sudo smartctl -a /dev/nvme0n1
+hx
+cd nes
+hx
+cd zellij
+ls
+nvim config.kdl
+hx config.kdl
+cd helix
+hx themes/custom.toml
+chsh --help
+chsh -s
+chsh -s /usr/bin/bash
+which sh
+ls
+cd helix
+ls
+hx config.toml
+sh -c echo Hello
+ls
+hx config.toml
+hx
+hx --health
+hx config.toml
+echo $env.SHELL
+cd
+cd nes
+hx 
+cd helix
+hx config.toml
+cd nes
+hx main.py
+ls
+cd helix
+hx config.toml
+hx --tutor
+hx config.toml
+leetcode e -d
+cd ghostyy
+zi
+ls
+hx config
+cd niri
+hx
+hx 
+ls
+cd ghostty
+hx config
+hx
+cd ghostty
+hx config
+ls
+z
+zi
+hx --tutor
+nvim --help
+nvim
+vim
+cd ghostty
+hx config
+tv zellij-session
+sys-update
+tv zellij-session
+ls
+hx config
+ls
+leetcode e -d
+ls
+leetcode e -d
+yz
+cargo build
+leetcode e -d
+cd helix
+ls
+hx config.toml
+leetcode e -d
+cd leetcode
+leetcode e -d
+cd helix
+ls
+hx config.toml
+cd leetcode
+leetcode e -d
+leetcode t -d
+leetcode x -d
+cd ghostty
+ls
+hx config
+ls
+tv zellij-session
+ls
+cd television
+ls
+yz
+tv zellij-session
+ls
+hx zellij.toml
+ls
+cd Scripts
+ls
+hx zellij_start.n
+hx zellij_start.nu
+ls
+ls -l
+chmod +x zellij_start.nu
+ls -l
+./zellij_start.nu
+ls
+cd
+ls
+cd television
+yz
+tv zellij-session
+ls
+cd zellij
+ls
+hx config.kdl
+zellij
+ls
+cd
+ls
+cd code
+ls
+..
+yz
+cargo new lifegame
+ls
+cd lifegame/
+ls
+hx
+la
+jj git init
+ls
+la
+yz
+jjui
+cd
+ls
+hx test
+cd helix
+ls
+hx config.toml
+cd test
+cd
+ls
+hx test
+for i in 0..10 { printf "%s." i }
+for i in 0..10 { printf "%d." i }
+for i in 0..10 { printf "%d." $i }
+hx test
+ls
+tv zellij-session
+hx
+ls
+hx --version
+hx --help
+hx --health all
+hx
+ls
+yz
+ls
+hx note.md
+ls
+ls --help
+ls *.md
+ls
+find --help
+find *.md
+ls --help
+ls ...(glob **/*.typ)
+... help
+glob --help
+cargo help
+cargo help install
+cargo install --list
+ls
+yz
+cal
+^cal
+cal --help
+cal -m
+cal --full-year
+cal --full-year 2026
+cal -t
+cal --help
+cal --month-names
+cal --month-names -t
+cal --month-names -t --full-year 2026
+ls
+rust-gdb
+ls
+cd
+ls
+cd rust
+ls
+yz
+cargo build
+rust-gdb target/debug/weather
+rust-lldb target/debug/weather
+ls
+rust-lldb target/debug/weather
+ls
+..
+ls
+cargo new hello-world
+ls
+cd hello-world/
+ls
+hx 
+hx src/
+cargo build
+rust-lldb --help
+rust-lldb target/debug/hello-world
+ls
+rust-gdb target/debug/hello-world
+paru -S gdb
+rust-gdb target/debug/hello-world
+rust-lldb target/debug/hello-world
+rust-gdb target/debug/hello-world
+leetcode e -d
+ls
+cargo add itertools
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode e -d
+cd .leetcode
+ls
+hx leetcode.toml
+cd leetcode
+leetcode e -d
+cd .leetcode
+ls
+hx leetcode.toml
+nvim leetcode.toml
+hx leetcode.toml
+cd leetcode
+ls
+yz
+leetcode e -d
+cargo test --help
+cargo test 3713.longest-balanced-substring-i.rs
+cargo test
+leetcode t -d
+cargo test
+ls
+cd .leetcode
+hx leetcode.toml
+ls
+rm leetcode.tmp.toml
+hx leetcode.toml
+tv zellij-session
+sys-update
+ls
+cd rust
+ls
+cargo new ratatui-counter-app
+cd ratatui-counter-app/
+ls
+hx src/main.rs
+cargo add ratatui
+cargo add crossterm
+fg
+job unfreeze
+cd helix
+hx config.toml
+tv zellij-session
+ls -d
+yz
+cd wallpapers/
+yz
+ls -dtl
+yz
+ls
+ls -dtl
+cd
+ls
+cd nushell
+ls
+hx config.nu
+cd $nu.data-dir
+ls
+yz
+fish
+zi
+z
+cd nushell
+z nushell
+fish
+$nu.vendor-autoload-dirs
+pwd
+fish
+z nushell
+ls
+hx login.nu
+nu help
+help nu
+nu --help
+ls
+hx login.nu
+cd helix
+z helix
+ls
+hx config.toml
+nvim config.toml
+z nushell
+hx config.nu
+ls
+cd helix
+ls
+hx
+helix login.nu
+ls
+rm login.nu
+ll
+hx
+cd helix
+tv zellij-session
+astroterm 
+fish
+astroterm -Ccu -r 3.0 -f 60 -i Banqiao
+astroterm -Ccu -r 3.0 -f 120 -t 4.0 -i Banqiao
+astroterm -Ccum -r 4.0 -f 120 -t 4.0 -i Banqiao
+astroterm -Ccum -r 4.0 -f 120 -i Banqiao
+astroterm -Ccum -r 4.0 -f 120 -t 4.5 -i Banqiao
+astroterm -Ccum -r 2.0 -f 120 -t 4.5 -i Banqiao
+astroterm -Ccum -f 120 -t 4.5 -i Banqiao
+astroterm -Ccum -r 3.0 -f 120 -t 4.5 -i Banqiao
+astroterm -Ccum -r 3.0 -f 60 -t 4.5 -i Banqiao
+nu shell
+nu --help
+paru -S alacritty
+ls
+mkdir alacritty
+ls
+cd alacritty
+ls
+hx
+ls
+cd ghostty
+ls
+hx config
+cd alacritty
+ls
+hx alacritty.toml
+ls
+cd niri
+hx binds.kdl
+ls
+cd fastfetch
+ls
+fastfetch
+yz
+cd alacritty
+hx
+ls
+mkdir themes
+ls
+cd themes
+wget https://raw.githubusercontent.com/alacritty/alacritty-theme/refs/heads/master/themes/kanagawa_wave.toml
+..
+job unfreeze
+ls
+cd alacritty
+ls
+hx
+hx alacritty.toml
+fastfetch
+ls
+leetcode e -d
+cd ghostty
+ls
+cd alacritty
+ls
+hx config
+leetcode t -d
+leetcode x -d
+leetcode e -d
+ls
+cd zellij
+ls
+hx config.kdl
+cd niri
+hx config.kdl
+cd zellij
+sudo smartctl -a /dev/nvme0n1
+sudo smartctl -a /dev/nvme1n1
+cd zellij
+hx config.kdl
+zellij delete-all-sessions
+ls
+tv zellij-session
+wezterm --version
+paru -Rns wezterm
+paru -Syu wezterm-git
+paru -S wezterm
+ls
+ghostty +list-keybinds --default<\n>
+ls
+nvim
+cd nvim
+ls
+nvim
+ghostty +list-keybinds --default<\n>
+cd niri
+ls
+hx binds.kdl
+cd ghostty
+ls
+hx config
+ghostty +list-keybinds --default<\n>
+cd wezterm
+ls
+hx settings/
+ls
+hx wezterm.lua
+yz
+cd niri
+yz
+cd wezterm
+ls
+hx .
+hx --health lua
+paru -S lua-language-server
+hx wezterm.lua
+nvim wezterm.lua
+ls
+cd helix
+hx
+ls
+hx wezterm.lua
+paru -Rns wezterm
+rustup --help
+rustup self --help
+rustup self uninstall
+cd .cargo/bin
+ls
+rustup self uninstall
+fish
+cd nushell
+ls
+yz
+rustc --version
+paru -S wezterm-git
+ls
+cd wezterm
+ls
+hx wezterm.lua
+cd niri
+ls
+wezterm window_rule.kdl
+hx window_rule.kdl
+yz
+ls
+wezterm --help
+wezterm show-keys
+wezterm show-keys | bat
+cd zellij
+ls
+cd
+ls
+cd wezterm
+ls
+hx wezterm.lua
+yz
+tv zellij-session
+yz
+fastfetch
+cd nushell
+ls
+fish
+cargo install leetcode-cli
+rustup --help
+rustup update stable
+cargo install leetcode-cli
+rustup default stable
+cargo install leetcode-cli
+leetcode e -d
+cd leetcode
+leetcode e -d
+ls
+yz
+leetcode e -d
+yz
+cd .leetcode
+hx leetcode.toml
+leetcode e -d
+cd nushell
+ls
+yz
+hx leet.nu
+Leet
+~
+yz
+cd nushell
+hx
+Leet
+yz
+cd leetcode
+ls
+yz
+hx --help
+cd helix
+ls
+cd leetcoe
+yz
+hx leetcode.toml
+leetcode e -d
+hx leetcode.toml
+leetcode e -d
+hx leetcode.toml
+leetcode e -d
+pwd
+hx leetcode.toml
+leetcode e -d
+yz
+ls
+..
+glob **/*.lua --exclude [**/.venv/**] | each {|it| ls $it} | flatten | sort-by size | reverse
+glob **/*.nu | each {|it| ls $it} | flatten | sort-by size | reverse
+..
+glob **/*.lua | each {|it| ls $it} | flatten | sort-by size | reverse
+..
+ls
+cd zellij
+ls
+cd
+ls
+cd rust
+ls
+cargo --version
+ls
+cd hello-world/
+hx .
+cargo build
+cargo run
+rust-lldb target/debug/hello-world
+ls
+hx .
+cargo build
+cargo run
+hx .
+rust-gdb target/debug/hello-world
+rust-lldb target/debug/hello-world
+rust-gdb target/debug/hello-world
+ls
+rust-gdb target/debug/hello-world
+ls
+yz
+ls
+hx main.c
+hx --health c
+ls
+hx main.c
+cd helix
+ls
+hx config
+hx config.toml
+cd C
+ls
+yz
+hx main.c
+cd helix
+yz
+helix
+gcc -g main.c -o main
+ls
+gdb main
+ed
+bash
+edit
+edit --help
+edit
+vi
+hx --help
+ls
+hx main.c
+ls
+mkdir test
+yz
+ls
+hx
+hx main.c
+ls
+gcc -g main.c -o main
+hx Makefile
+ls
+hx main.c
+make
+ls
+hx Makefile
+yz
+ls
+yz
+hx Makefile
+make
+hx Makefile
+ls
+make
+ls
+./main
+^./main
+main
+ls
+./main
+ls
+hx src/main.c
+make
+./main
+ls
+hx config.toml
+ls
+..
+ls
+cd helix
+ls
+hx
+hx config.toml
+ls
+hx .gitignore
+hx
+ls
+cd nes
+ls
+hx .gitignore
+git init
+ls
+hx 
+git branch -m main
+ls
+hx main.c
+ls
+hx main
+ldd --help
+ldd main
+nm main
+hx .
+make
+hx Makefile
+ls
+rm -rf obg
+ls
+rm -rf obj
+make
+gdb main
+ls
+hx
+ls
+gdb main
+hx .
+make and ./main
+make ;and ./main
+make ; ./main
+ls
+hx .
+make
+./main
+hx .
+hx
+ls
+input | path join (pwd)
+input | echo
+input | echo $input
+ls
+cd nu
+ls
+hx autoload/
+cd Scripts
+ls
+hx zellij_start.nu
+cd test
+ls
+yz
+hx
+hx 
+ls
+hx config.toml
+hx src/main.c
+ls
+hx .gitignore
+ls
+hx config.toml
+hx src/main.c
+tv zellij-session
+sys-update
+journalctl -u sddm.service -b 0
+cd /etc
+ls
+cd sddm.conf
+ls
+yz
+sudo mv kde_settings.conf ~/kde_settings.conf
+sudo cp kde_settings.conf ~/kde_settings.conf
+ls
+sudo cp kde_settings.conf niri.conf
+ls
+yz
+ls
+sudo rm kde_settings.conf
+ls
+sudo hx niri.conf
+sudo helix niri.conf
+sudo systemctl restart sddm
+reboot
+ls
+cd
+reboot
+sudo reboot
+sudo systemctl restart sddm
+ls
+yz
+sudo helix niri.conf
+reboot
+journalctl -u sddm.service -b 0
+cd /usr/share/wayland-sessions/
+ls
+cd /etc/sddm.conf.d/
+sudo helix niri.conf
+ls
+sudo systemctl restart sddm
+tv zellij-session
+leetcode e -d
+ls
+cd nu
+ls
+hx config.nu
+ls
+cd cargo/bin
+ls
+cd nushell
+ls
+hx config.nu
+leetcode e -d
+ls
+cd leetcode
+yz
+leetcode e -d
+hx --health rust
+leetcode e -d
+rustup component add rust-analyzer
+leetcode e -d
+ls
+cd
+leetcode e -d
+echo $env.PATH
+leetcode e -d
+cd zellijj
+cd zellij
+ls
+hx config.kdl
+cd helix
+ls
+hx config.toml
+cd
+leetcode t -d
+cd helix
+hx config.toml
+ls
+hx config.toml
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+job unfreeze
+hx --tutor
+ls
+leetcode t -d
+leetcode x -d
+leetcode e -d
+ls
+helix
+ls
+zellij a -c leetcode
+ls
+cd nes
+ls
+hx .
+jjui
+ls
+cd wezterm
+ls
+hx wezterm.lua
+zellij a -c nes
+ls
+cd zellij
+ls
+hx config.toml
+hx config.kdl
+ls
+hx 
+hx .
+zellij list-sessions
+hx
+zellij a -c nes
+ls
+cd Rust
+ls
+yz
+cargo new better-hints
+lz
+ls
+cd better-hints/
+ls
+hx
+jj git init
+jjui
+lss
+..
+ls
+yz
+git clone https://github.com/zellij-org/rust-plugin-example.git ./better-hints
+ls
+cd better-hints/
+ls
+jj git init
+jjui
+ls
+yz
+jjui
+hx
+ls
+jjui
+ls
+hx src/main.rs
+jjui
+ls
+hx Cargo.toml
+ls
+..
+yz
+zellij a -c Zellij-Plugin
+ls
+cd zellij
+hx .
+zellij a -c Zellij-Plugin
+ls
+hx .
+zellij a -c Zellij-Plugin
+hx .
+cd better
+ls
+hx .
+jjui
+cargo add zellij-tile-utils ansi_term
+hx
+git diff
+hx
+cargo add zellij-tile-utils ansi_term
+cargo --version
+ls
+hx
+cargo update
+bat Cargo.toml
+cargo update zellij-tile
+bat Cargo.toml
+cargo upgrade
+cargo --help
+cargo update --help
+bat Cargo.lock
+cargo install cargo-edit
+cargo upgrade zellij-tile
+cargo upgrade --help
+cargo upgrade
+bat Cargo.toml
+ls
+cargo upgrade --help
+cargo upgrade -i
+ls
+cd
+paru -Syu element-desktop
+sys-update
+zellij a -c Zellij-Plugin
+ls
+cd /usr/share/
+yz
+..
+sddm --version
+sddm --help
+paru -Q sddm
+playerctl
+playerctl metadata
+cd
+ls
+cd niri
+yz
+qs -c noctalia.kdl
+qs -c noctalia-shell
+paru -S cava ddcutil
+reboot
+ls
+zellij
+zellij ls
+zellij help
+cd zellij
+hx
+ls
+hx config.kdl
+cd rust
+ls
+cargo new add
+ls
+cd add
+hx
+cargo test
+cargo run
+ls
+hx .
+ls
+hx src/main.rs
+cargo run
+hx src/main.rs
+cargo run
+hx src/main.rs
+cargo run
+hx src/main.rs
+cargo run
+hx src/main.rs
+yz
+hx
+zellij ls
+cd nushell
+hx config.nu
+zel ls
+zel a nes
+zel a --help
+zel help options
+yz
+hx
+cd helix
+ls
+hx config.toml
+ansi --help
+hx config.toml
+ls
+hx config.toml
+ls
+hx config.toml
+ls
+hx config.toml
+ls
+hx config.toml
+yx
+cd helix
+hx config.toml
+hx config.toml
+ls
+hx config.toml
+bash -c "echo hello"
+cd zellij
+hx config.kdl
+cd helix
+ls
+bash -c "echo hello"
+bash -c "printf \x1b[?1049h\x1b[?2004h > /dev/tty"
+bash -c $"printf \x1b[?1049h\x1b[?2004h > /dev/tty"
+bash -c "printf '\x1b[?1049h\x1b[?2004h' > /dev/tty"
+bash -c 'printf "\x1b[?1049h\x1b[?2004h" > /dev/tty'
+hx config.kdl
+hx config.toml
+bash -c 'printf "\x1b[?1049h\x1b[?2004h' > /dev/tty
+bash -c "printf '\x1b[?1049h\x1b[?2004h' > /dev/tty"
+hx config.toml
+ls
+hx config.toml
+cd zellij
+ls
+yz
+hx --health kdl
+paru -S kdlfmt
+hx default.kdl
+zel a -c NES
+ls
+cd zellij
+hx 
+sudo pacman -S gnome-keyring libsecret
+element-desktop --password-store="gnome-libsecret"
+ls
+cd niri
+hx
+ls
+rm noctalia.kdl
+hx config.kdl
+zel a -c config
+cd rust
+ls
+cd better-tooltips/
+ls
+jjui
+ls
+yz
+cd rust
+zel a -c better-tooltips
+cd rust
+ls
+cargo new better-tooltips
+ls
+cd better-tooltips/ and echo hello
+cd better-tooltips/ ;and echo hello
+cd better-tooltips/ && echo hello
+cd better-tooltips/
+ls
+cargo add zellij-tile-utils ansi_term zellij-tile
+ls
+cd helxi
+cd helix
+hx config.kdl
+hx config.toml
+hx src/main.rs
+..
+yz
+ls
+zellij -l zellij.kdl
+hx 
+ls
+jjui
+yz
+jjui
+jj git remote list
+ls
+hx src/main.rs
+jjui
+ls
+hx src/main.rs
+zi
+hx 
+hx
+hx 
+ls
+fg
+job help
+job --help
+job id
+cd nushell
+ls
+hx
+hx
+hx 
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+cd helix
+hx config.toml
+leetcode e -d
+cd .leetcode
+hx --health toml
+paru -S taplo
+hx --health toml
+hx config.toml
+hx --health toml
+paru -Rns taplo
+paru -Rns taplo-cli
+paru -S tombi
+hx --health toml
+hx config.toml
+hx
+hx leetcode.toml
+leetcode e -d
+ls
+leetcode e 43
+cd
+sys-update
+ls
+hx --health lua
+fastfetch
+1 + 1
+1 6 2
+1 ^ 2
+1 ** 0.5
+4 ** 0.5
+1290 bit-xor 12
+1290 bit-xor 1290
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+ls
+hx config.toml
+yz
+sys-update
+flatpak update
+cargo help
+cargo help install
+cd helix
+hx
+leetcode e -d
+hx themes/custom.toml
+cd wezterm
+ls
+hx wezterm.lua
+yz
+ls
+fc-list | fzf
+ls
+leetcode e -d
+ls
+zellij a -c Leetcode
+ls
+cd
+leetcode t -d
+leetcode x -d
+zellij a -c Leetcode
+zellij a -c Leetcod
+leetcode e -c
+hx config.toml
+leetcode e -d
+yz
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode e -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+leetcode t -d
+leetcode x -d
+ls
+yz
+ls
+..
+ls
+cd .dotfiles/
+ls
+..
+ls
+hx dot-sync
+dot_sync

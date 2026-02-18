@@ -24,6 +24,7 @@ sync_file() {
 #          ╚══════════════════════════════════════════════════════════╝
 sync_file "doom/" "doom/"
 sync_file "nvim/" "nvim/"
+sync_file "helix/" "helix"
 
 #          ╔══════════════════════════════════════════════════════════╗
 #          ║                          Fonts                           ║
@@ -36,8 +37,10 @@ sync_file ".fonts/" ".fonts/"
 # ───────────────────────────────── Yazi ─────────────────────────────────
 sync_file "yazi/" "yazi/"
 sync_file "fish/" "fish/"
+sync_file "nushell/" "nushell/"
 sync_file "fastfetch/" "fastfetch/"
 sync_file "wezterm/" "wezterm/"
+sync_file "alacritty/" "alacritty/"
 sync_file "kitty/" "kitty/"
 sync_file "ghostty/" "ghostty/"
 sync_file "zellij/" "zellij/"

@@ -1,0 +1,114 @@
+theme = "custom"
+
+[editor]
+cursorline = true
+line-number = "relative"
+end-of-line-diagnostics = "hint"
+completion-replace = true
+atomic-save = false
+true-color = true
+color-modes = true
+# bufferline = "multiple"
+shell = [
+  "nu",
+  "-c",
+]
+popup-border = "all"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+
+[editor.smart-tab]
+supersede-menu = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+]
+center = [
+  "version-control",
+]
+right = [
+  # "workspace-diagnostics",
+  "diagnostics",
+  "selections",
+  "file-indent-style",
+  "position",
+  "total-line-numbers",
+  "file-encoding",
+  "file-type",
+]
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[editor.whitespace.characters]
+space = "·"
+tab = "→"
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+
+[editor.indent-guides]
+render = true
+character = "╎"  # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal]
+tab = "move_parent_node_end"
+S-tab = "move_parent_node_start"
+S-d = ":yank-diagnostic"
+C-y = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi --chooser-file=/tmp/unique-file",
+  ':sh $"(ansi -e "?1049h")(ansi -e "?2004h")" | save --force /dev/tty',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
+]
+C-j = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_down",
+  "paste_before",
+]
+C-k = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+
+[keys.normal."space"]
+z = [
+  ":sh rm -f /tmp/unique-file",
+  ":insert-output yazi --chooser-file=/tmp/unique-file",
+  ':sh $"(ansi -e "?1049h")(ansi -e "?2004h")" | save --force /dev/tty',
+  ":open %sh{cat /tmp/unique-file}",
+  ":redraw",
+]
+
+[keys.insert]
+"C-[" = "normal_mode"
+"S-tab" = "move_parent_node_start"
+
+[keys.select]
+"C-[" = "normal_mode"
+S-tab = "move_parent_node_start"
